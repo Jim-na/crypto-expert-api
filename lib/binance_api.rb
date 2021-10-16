@@ -6,15 +6,20 @@ require_relative 'CurrencyPair'
 module CryptoExpert
   # library for Binance Web API
   class BinanceApi
-    API_PROJECT_ROOT = 'https://api.binance.com/api/v3/'
+    attr_reader :currencypair_list
+
+    API_PROJECT_ROOT = 'https://api.binance.com/api/v3'
 
     module Errors
+      class BadRequest < StandardError; end
+
       class NotFound < StandardError; end
 
       class Unauthorized < StandardError; end
     end
 
     HTTP_ERROR = {
+      400 => Errors::BadRequest,
       401 => Errors::Unauthorized,
       404 => Errors::NotFound
     }.freeze
@@ -25,22 +30,25 @@ module CryptoExpert
     end
 
     def currencypair(symbol)
-      return false unless @currencypair_list.include?(symbol) # TODO : error raising?
-
-      response = call_binance_api('/ticker/price?symbol={#symbol}').parse
+      response = call_binance_api("ticker/price?symbol=#{symbol}").parse
       CurrencyPair.new(response['symbol'], response['price'])
     end
 
     # format binance api path (URL)
-    def call_binance_api(_path)
+    def call_binance_api(path)
       binance_url = "#{API_PROJECT_ROOT}/#{path}"
-      HTTP.headers('Content-Type' => 'application/json').get(binance_url)
+      response = HTTP.headers('Content-Type' => 'application/json').get(binance_url)
+      successful?(response) ? response : raise(HTTP_ERROR[response.code])
     end
 
     # get the list of currencypair in binance
     def currencylist_get
-      response = call_binance_api('/exchangeInfo')
+      response = call_binance_api('exchangeInfo')
       response.parse['symbols'].map { |pair| pair['symbol'] }
+    end
+
+    def successful?(response)
+      !HTTP_ERROR.keys.include?(response.code)
     end
   end
 end
