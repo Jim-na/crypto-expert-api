@@ -4,7 +4,7 @@ require 'http'
 require 'yaml'
 
 BASIC_URL = "https://api.binance.com/api/v3/"
-config = YAML.safe_load(File.read('config/secrets.yml'))
+#config = YAML.safe_load(File.read('config/secrets.yml'))
 
 def binance_api(path)
   "#{BASIC_URL}#{path}"
@@ -13,10 +13,10 @@ end
 def call_binance_url(url)
   HTTP.headers('Content-Type' => 'application/json').get(url)
 end
-
+binance_response = {}
 project_url = binance_api('exchangeInfo')
-binance_response[project_url] = call_binance_url(config, project_url)
-puts binance_response
+binance_response[project_url] = call_binance_url(project_url)
+puts binance_response[project_url]
 
 
 # gh_response = {}
