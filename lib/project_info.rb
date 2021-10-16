@@ -14,11 +14,17 @@ def call_binance_url(url)
   HTTP.headers('Content-Type' => 'application/json').get(url)
 end
 binance_response = {}
+results = {}
 project_url = binance_api('exchangeInfo')
 binance_response[project_url] = call_binance_url(project_url)
-puts binance_response[project_url]
+project = binance_response[project_url].parse
 
+results['timezone'] = project['timezone']
+results['serverTime'] = project['serverTime']
+results['rateLimits'] = project['rateLimits']
+results['symbols'] = project['symbols'].map{|pair| pair['symbol']}
 
+File.write('spec/fixtures/results.yml',results.to_yaml)
 # gh_response = {}
 # gh_results = {}
 
