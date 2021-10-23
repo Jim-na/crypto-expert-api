@@ -1,101 +1,301 @@
 ---
-COTIUSDT: '0.00036833'
-CRVUSDT: '0.00010000'
-CTKUSDT: '0.00023291'
-CVCUSDT: '0.00034082'
-DASHUSDT: '0.00040331'
-DEFIUSDT: '0.00063954'
-DENTUSDT: '0.00042935'
-DGBUSDT: '0.00051301'
-DODOUSDT: '0.00039661'
-DOGEBUSD: '0.00057677'
-DOGEUSDT: '0.00058354'
-DOTUSDT: '0.00028825'
-DYDXUSDT: '0.00049835'
-EGLDUSDT: '0.00037787'
-ENJUSDT: '0.00067419'
-EOSUSDT: '0.00030933'
-ETCUSDT: '0.00020857'
-ETHBUSD: '0.00018596'
-ETHUSDT: '0.00023902'
-FILUSDT: '0.00057437'
-FLMUSDT: '0.00041188'
-FTMUSDT: '0.00040654'
-FTTBUSD: '0.00092024'
-GALAUSDT: '0.00067228'
-GRTUSDT: '0.00058668'
-GTCUSDT: '0.00066400'
-HBARUSDT: '0.00052363'
-HNTUSDT: '0.00010000'
-HOTUSDT: '0.00043494'
-ICPUSDT: '0.00063797'
-ICXUSDT: '0.00024575'
-IOSTUSDT: '0.00045830'
-IOTAUSDT: '0.00010000'
-IOTXUSDT: '0.00059541'
-KAVAUSDT: '0.00017227'
-KEEPUSDT: '0.00053615'
-KLAYUSDT: '0.00061994'
-KNCUSDT: '0.00037425'
-KSMUSDT: '0.00010000'
-LINAUSDT: '0.00068980'
-LINKUSDT: '0.00020743'
-LITUSDT: '0.00023917'
-LRCUSDT: '0.00010000'
-LTCUSDT: '0.00036656'
-LUNAUSDT: '0.00037008'
-MANAUSDT: '0.00050078'
-MASKUSDT: '0.00093106'
-MATICUSDT: '0.00039329'
-MKRUSDT: '0.00016753'
-MTLUSDT: '0.00013737'
-NEARUSDT: '0.00046745'
-NEOUSDT: '0.00036087'
-NKNUSDT: '0.00027894'
-NUUSDT: '0.00014758'
-OCEANUSDT: '0.00050710'
-OGNUSDT: '0.00062454'
-OMGUSDT: '0.00010000'
-ONEUSDT: '0.00039579'
-ONTUSDT: '0.00036992'
-QTUMUSDT: '0.00010000'
-RAYUSDT: '0.00037325'
-REEFUSDT: '0.00046385'
-RENUSDT: '0.00030512'
-RLCUSDT: '0.00060696'
-RSRUSDT: '0.00087738'
-RUNEUSDT: "-0.00116362"
-RVNUSDT: '0.00066680'
-SANDUSDT: '0.00019782'
-SCUSDT: '0.00024234'
-SFPUSDT: '0.00062268'
-SKLUSDT: '0.00045210'
-SNXUSDT: '0.00050917'
-SOLBUSD: '0.00052918'
-SOLUSDT: '0.00053716'
-SRMUSDT: '0.00032398'
-STMXUSDT: '0.00070195'
-STORJUSDT: '0.00010000'
-SUSHIUSDT: '0.00059043'
-SXPUSDT: '0.00076244'
-THETAUSDT: '0.00043922'
-TLMUSDT: '0.00061746'
-TOMOUSDT: '0.00056680'
-TRBUSDT: '0.00062602'
-TRXUSDT: '0.00028419'
-UNFIUSDT: '0.00028122'
-UNIUSDT: '0.00037282'
-VETUSDT: '0.00045206'
-WAVESUSDT: '0.00015195'
-XEMUSDT: '0.00024864'
-XLMUSDT: '0.00011795'
-XMRUSDT: '0.00010000'
-XRPBUSD: '0.00045051'
-XRPUSDT: '0.00050200'
-XTZUSDT: '0.00042869'
-YFIIUSDT: '0.00010000'
-YFIUSDT: '0.00010000'
-ZECUSDT: '0.00020794'
-ZENUSDT: '0.00054825'
-ZILUSDT: '0.00042917'
-ZRXUSDT: '0.00010000'
+- symbol: COTIUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00049104'
+- symbol: CRVUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010000'
+- symbol: CTKUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00049266'
+- symbol: CVCUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00053180'
+- symbol: DASHUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00038729'
+- symbol: DEFIUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00058719'
+- symbol: DENTUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00039522'
+- symbol: DGBUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00028747'
+- symbol: DODOUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00050617'
+- symbol: DOGEBUSD
+  fundingTime: 1634976000001
+  fundingRate: '0.00057466'
+- symbol: DOGEUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00050970'
+- symbol: DOTUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010000'
+- symbol: DYDXUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00058421'
+- symbol: EGLDUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00016704'
+- symbol: ENJUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00061719'
+- symbol: EOSUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00011690'
+- symbol: ETCUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00018009'
+- symbol: ETHBUSD
+  fundingTime: 1634976000001
+  fundingRate: '0.00017469'
+- symbol: ETHUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00015138'
+- symbol: FILUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00046686'
+- symbol: FLMUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00020516'
+- symbol: FTMUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00058096'
+- symbol: FTTBUSD
+  fundingTime: 1634976000001
+  fundingRate: '0.00065628'
+- symbol: GALAUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00044862'
+- symbol: GRTUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00047073'
+- symbol: GTCUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00056208'
+- symbol: HBARUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00046998'
+- symbol: HNTUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00024664'
+- symbol: HOTUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00046440'
+- symbol: ICPUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00064386'
+- symbol: ICXUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00049074'
+- symbol: IOSTUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00054873'
+- symbol: IOTAUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00037505'
+- symbol: IOTXUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00061972'
+- symbol: KAVAUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010000'
+- symbol: KEEPUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00063788'
+- symbol: KLAYUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00025842'
+- symbol: KNCUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00061395'
+- symbol: KSMUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010000'
+- symbol: LINAUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00045557'
+- symbol: LINKUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010688'
+- symbol: LITUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00043508'
+- symbol: LRCUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00020314'
+- symbol: LTCUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010000'
+- symbol: LUNAUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00053664'
+- symbol: MANAUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00056808'
+- symbol: MASKUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00032649'
+- symbol: MATICUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00011465'
+- symbol: MKRUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00015726'
+- symbol: MTLUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00027632'
+- symbol: NEARUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00052487'
+- symbol: NEOUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00034452'
+- symbol: NKNUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00026828'
+- symbol: NUUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00028918'
+- symbol: OCEANUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00040260'
+- symbol: OGNUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00044583'
+- symbol: OMGUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010000'
+- symbol: ONEUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00019067'
+- symbol: ONTUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00032415'
+- symbol: QTUMUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010000'
+- symbol: RAYUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00018346'
+- symbol: REEFUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00037121'
+- symbol: RENUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00027303'
+- symbol: RLCUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00059326'
+- symbol: RSRUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010000'
+- symbol: RUNEUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010000'
+- symbol: RVNUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00030625'
+- symbol: SANDUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010476'
+- symbol: SCUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00056646'
+- symbol: SFPUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00049355'
+- symbol: SKLUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00039405'
+- symbol: SNXUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00055247'
+- symbol: SOLBUSD
+  fundingTime: 1634976000001
+  fundingRate: '0.00034712'
+- symbol: SOLUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00026164'
+- symbol: SRMUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00027024'
+- symbol: STMXUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00030151'
+- symbol: STORJUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010000'
+- symbol: SUSHIUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00049843'
+- symbol: SXPUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00047769'
+- symbol: THETAUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00030369'
+- symbol: TLMUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00058848'
+- symbol: TOMOUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00029467'
+- symbol: TRBUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00036486'
+- symbol: TRXUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00023325'
+- symbol: UNFIUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00040053'
+- symbol: UNIUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00034953'
+- symbol: VETUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00051084'
+- symbol: WAVESUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00036131'
+- symbol: XEMUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00047584'
+- symbol: XLMUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00030382'
+- symbol: XMRUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010000'
+- symbol: XRPBUSD
+  fundingTime: 1634976000001
+  fundingRate: '0.00041303'
+- symbol: XRPUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00044445'
+- symbol: XTZUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00038659'
+- symbol: YFIIUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010000'
+- symbol: YFIUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010000'
+- symbol: ZECUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00010000'
+- symbol: ZENUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00024030'
+- symbol: ZILUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00014312'
+- symbol: ZRXUSDT
+  fundingTime: 1634976000001
+  fundingRate: '0.00011059'

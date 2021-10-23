@@ -32,7 +32,7 @@ describe 'Tests Binance API library' do
     it 'SAD: should raise exception on unfound currency pair' do
       _(proc do
         CryptoExpert::BinanceApi.new('token').currencypair('BTCETH')
-      end).must_raise CryptoExpert::BinanceApi::Errors::BadRequest
+      end).must_raise CryptoExpert::BinanceApi::Response::BadRequest
     end
   end
 end
