@@ -10,14 +10,14 @@ SYMBOL = 'ETHBTC'
 describe 'Tests Binance API library' do
   describe 'CurrencyPair list' do
     it 'HAPPY: should provide correct currencyPair list' do
-      binance = CryptoExpert::BinanceApi.new('token')
+      binance = CryptoExpert::Info.new('token')
       _(binance.currencypair_list.size).must_equal CORRECT['symbols'].size
     end
   end
 
   describe 'CurrencyPair get information' do
     before do
-      @currencypair = CryptoExpert::BinanceApi.new('token').currencypair(SYMBOL)
+      @currencypair = CryptoExpert::Info.new('token').currencypair(SYMBOL)
     end
     it 'HAPPY: should get CurrencyPair' do
       _(@currencypair).must_be_kind_of CryptoExpert::CurrencyPair
@@ -31,7 +31,7 @@ describe 'Tests Binance API library' do
     end
     it 'SAD: should raise exception on unfound currency pair' do
       _(proc do
-        CryptoExpert::BinanceApi.new('token').currencypair('BTCETH')
+        CryptoExpert::Info.new('token').currencypair('BTCETH')
       end).must_raise CryptoExpert::BinanceApi::Response::BadRequest
     end
   end

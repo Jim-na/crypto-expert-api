@@ -6,25 +6,48 @@ require_relative 'CurrencyPair'
 module CryptoExpert
   BASIC_URL = 'https://api.binance.com/api/v3/'
   FUTURE_URL = 'https://fapi.binance.com/'
-  # library for Binance Web API
-  class BinanceApi
+  # all the info needed
+  class Info
     attr_reader :currencypair_list
 
     def initialize(token)
-      @binance_token = token
+      @token = token
+      BinanceApi.new(@token)
       @currencypair_list = currencylist_get
     end
 
     def currencypair(symbol)
-      response = Request.new(BASIC_URL, nil).get("ticker/price?symbol=#{symbol}").parse
+      response = BinanceApi::Request.new(BASIC_URL, nil).get("ticker/price?symbol=#{symbol}").parse
       CurrencyPair.new(response['symbol'], response['price'])
     end
 
     # get the list of currencypair in binance
     def currencylist_get
-      response = Request.new(BASIC_URL, nil).get('exchangeInfo').parse
+      response = BinanceApi::Request.new(BASIC_URL, nil).get('exchangeInfo').parse
       response['symbols'].map { |pair| pair['symbol'] }
     end
+  end
+
+  # library for Binance Web API
+  class BinanceApi
+    # attr_reader :currencypair_list
+
+    def initialize(token)
+      @binance_token = token
+      # @currencypair_list = currencylist_get
+    end
+
+    # def currencypair(symbol)
+    #   response = Request.new(BASIC_URL, nil).get("ticker/price?symbol=#{symbol}").parse
+    #   CurrencyPair.new(response['symbol'], response['price'])
+    # end
+
+    # # get the list of currencypair in binance
+    # def currencylist_get
+    #   response = Request.new(BASIC_URL, nil).get('exchangeInfo').parse
+    #   response['symbols'].map { |pair| pair['symbol'] }
+    # end
+
     # http response error
     class Response < SimpleDelegator
       BadRequest = Class.new(StandardError)
