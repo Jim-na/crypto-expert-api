@@ -12,6 +12,7 @@ gem 'minitest-rg', '~> 5.0'
 gem 'simplecov', '~> 0'
 gem 'vcr', '~> 6.0'
 gem 'webmock', '~> 3.0'
+gem 'simplecov', '~> 0'
 
 # Utility Tools
 gem 'rake'

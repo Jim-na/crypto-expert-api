@@ -1,17 +1,30 @@
 # frozen_string_literal: true
 
-require  'minitest/autorun'
-require  'minitest/rg'
-require  'yaml'
-require_relative '../lib/binance_api'
+require_relative 'spec_helper'
 
-CORRECT = YAML.safe_load(File.read('fixtures/results.yml'))
-SYMBOL = 'ETHBTC'
 describe 'Tests Binance API library' do
+  VCR.configure do |c|
+    c.cassette_library_dir = CASSETTES_FOLDER
+    c.hook_into :webmock
+
+    # c.filter_sensitive_data('<GITHUB_TOKEN>') { GITHUB_TOKEN }
+    # c.filter_sensitive_data('<GITHUB_TOKEN_ESC>') { CGI.escape(GITHUB_TOKEN) }
+  end
+
+  before do
+    VCR.insert_cassette CASSETTES_FILE,
+                        record: :new_episodes,
+                        match_requests_on: %i[method uri headers]
+  end
+
+  after do
+    VCR.eject_cassette
+  end
+
   describe 'CurrencyPair list' do
     it 'HAPPY: should provide correct currencyPair list' do
       binance = CryptoExpert::Info.new('token')
-      _(binance.currencypair_list.size).must_equal CORRECT['symbols'].size
+      _(binance.currencypair_list).must_equal CORRECT['symbols']
     end
   end
 
