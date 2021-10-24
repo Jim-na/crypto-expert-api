@@ -5,7 +5,6 @@ module CryptoExpert
   module HttpApi
     # http response error
     class Response < SimpleDelegator
-
       BadRequest = Class.new(StandardError)
       Unauthorized = Class.new(StandardError)
       NotFound = Class.new(StandardError)
