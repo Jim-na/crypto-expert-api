@@ -5,9 +5,9 @@ module CryptoExpert
   class CurrencyPair
     attr_reader :symbol, :price
 
-    def initialize(symbol, price)
-      @symbol = symbol
-      @price = price
+    def initialize(response)
+      @symbol = response['symbol']
+      @price = response['price']
     end
   end
 end

@@ -9,10 +9,10 @@ require  'yaml'
 require  'vcr'
 require  'webmock'
 
-require_relative '../lib/binance_api'
+require_relative '../lib/info_api'
 
 CORRECT = YAML.safe_load(File.read('./spec/fixtures/results.yml'))
 SYMBOL = 'ETHBTC'
 
 CASSETTES_FOLDER = './spec/fixtures/cassettes'
-CASSETTES_FILE = 'binance_api'
+CASSETTES_FILE = 'info_api'
