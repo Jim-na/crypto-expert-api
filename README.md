@@ -7,7 +7,9 @@ We offer information from the markets, such as exchanges price, funding rate , K
 Short-term usability goals
 
 - to show all the information that we thought the investor in cryptocurrency market will need.
-  Long-term goals
+
+Long-term goals
+
 - Combine all useful info to give a investment suggestion.
 - Build a tg bot(or other bot) to make an order directly and offer some customized notification alert.
 
