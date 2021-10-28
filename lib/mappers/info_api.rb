@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'binance_api'
+# require_relative 'binance_api'
 
 module CryptoExpert
   # all the info needed

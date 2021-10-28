@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'http_api'
-require_relative 'CurrencyPair'
+# require_relative 'currencypair'
 module CryptoExpert
   # library for Binance Web API
   class BinanceApi
