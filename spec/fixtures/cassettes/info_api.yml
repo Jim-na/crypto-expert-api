@@ -288,4 +288,341 @@ http_interactions:
       encoding: UTF-8
       string: '{"code":-1121,"msg":"Invalid symbol."}'
   recorded_at: Sun, 24 Oct 2021 08:26:48 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/fapi/v1/premiumIndex?symbol=ETHUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '228'
+      Connection:
+      - close
+      Date:
+      - Fri, 29 Oct 2021 10:03:38 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Mbx-Used-Weight-1m:
+      - '1'
+      X-Response-Time:
+      - 0ms
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 7c49a9b1de541df168365abd214691ff.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE51-C1
+      X-Amz-Cf-Id:
+      - o95S24LClQVLJ4zx5l2_WXLebdP4dhitoifiI8h5l4by9ySzYlc3zw==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"symbol":"ETHUSDT","markPrice":"4334.98000000","indexPrice":"4331.85578908","estimatedSettlePrice":"4331.36518177","lastFundingRate":"0.00037749","interestRate":"0.00010000","nextFundingTime":1635523200000,"time":1635501818005}'
+  recorded_at: Fri, 29 Oct 2021 10:03:38 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/fapi/v1/premiumIndex?symbol=TINAJIMBO
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '38'
+      Connection:
+      - close
+      Date:
+      - Fri, 29 Oct 2021 10:03:38 GMT
+      Server:
+      - Tengine
+      X-Mbx-Used-Weight-1m:
+      - '2'
+      X-Response-Time:
+      - 0ms
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 80eb2464d25f6af90e01b2c2197d2ffa.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE51-C1
+      X-Amz-Cf-Id:
+      - 5fK8B8UR3gwzB1S7ndnHGBl4qUWfdPzsYskXZP9OfMMKArG9Kwfk4Q==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"code":-1121,"msg":"Invalid symbol."}'
+  recorded_at: Fri, 29 Oct 2021 10:03:39 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/fapi/v1/fundingRate
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '7643'
+      Connection:
+      - close
+      Date:
+      - Fri, 29 Oct 2021 10:03:39 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      - accept-encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 ec4d5e18da821a10fe37918f056967b0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE51-C1
+      X-Amz-Cf-Id:
+      - GZDFUSSBDhqH1OExFD_ZR3WtecNYePJyTREdw4b8jtoix03Mf98Rcg==
+    body:
+      encoding: UTF-8
+      string: '[{"symbol":"CRVUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"CTKUSDT","fundingTime":1635494400007,"fundingRate":"0.00024031"},{"symbol":"CTSIUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"CVCUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"DASHUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"DEFIUSDT","fundingTime":1635494400007,"fundingRate":"0.00026017"},{"symbol":"DENTUSDT","fundingTime":1635494400007,"fundingRate":"0.00017311"},{"symbol":"DGBUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"DODOUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"DOGEBUSD","fundingTime":1635494400007,"fundingRate":"0.00052297"},{"symbol":"DOGEUSDT","fundingTime":1635494400007,"fundingRate":"0.00046321"},{"symbol":"DOTUSDT","fundingTime":1635494400007,"fundingRate":"0.00015797"},{"symbol":"DYDXUSDT","fundingTime":1635494400007,"fundingRate":"0.00015324"},{"symbol":"EGLDUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"ENJUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"EOSUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"ETCUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"ETHBUSD","fundingTime":1635494400007,"fundingRate":"0.00034949"},{"symbol":"ETHUSDT","fundingTime":1635494400007,"fundingRate":"0.00040402"},{"symbol":"FILUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"FLMUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"FTMUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"FTTBUSD","fundingTime":1635494400007,"fundingRate":"0.00013108"},{"symbol":"GALAUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"GRTUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"GTCUSDT","fundingTime":1635494400007,"fundingRate":"0.00013340"},{"symbol":"HBARUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"HNTUSDT","fundingTime":1635494400007,"fundingRate":"0.00021246"},{"symbol":"HOTUSDT","fundingTime":1635494400007,"fundingRate":"0.00013478"},{"symbol":"ICPUSDT","fundingTime":1635494400007,"fundingRate":"0.00039133"},{"symbol":"ICXUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"IOSTUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"IOTAUSDT","fundingTime":1635494400007,"fundingRate":"0.00003338"},{"symbol":"IOTXUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"KAVAUSDT","fundingTime":1635494400007,"fundingRate":"0.00003634"},{"symbol":"KEEPUSDT","fundingTime":1635494400007,"fundingRate":"0.00021461"},{"symbol":"KLAYUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"KNCUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"KSMUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"LINAUSDT","fundingTime":1635494400007,"fundingRate":"0.00035201"},{"symbol":"LINKUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"LITUSDT","fundingTime":1635494400007,"fundingRate":"0.00012098"},{"symbol":"LRCUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"LTCUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"LUNAUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"MANAUSDT","fundingTime":1635494400007,"fundingRate":"0.00024414"},{"symbol":"MASKUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"MATICUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"MKRUSDT","fundingTime":1635494400007,"fundingRate":"0.00015157"},{"symbol":"MTLUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"NEARUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"NEOUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"NKNUSDT","fundingTime":1635494400007,"fundingRate":"0.00022920"},{"symbol":"NUUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"OCEANUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"OGNUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"OMGUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"ONEUSDT","fundingTime":1635494400007,"fundingRate":"0.00020941"},{"symbol":"ONTUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"QTUMUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"RAYUSDT","fundingTime":1635494400007,"fundingRate":"-0.00022259"},{"symbol":"REEFUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"RENUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"RLCUSDT","fundingTime":1635494400007,"fundingRate":"0.00020140"},{"symbol":"RSRUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"RUNEUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"RVNUSDT","fundingTime":1635494400007,"fundingRate":"0.00028055"},{"symbol":"SANDUSDT","fundingTime":1635494400007,"fundingRate":"0.00036205"},{"symbol":"SCUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"SFPUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"SKLUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"SNXUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"SOLBUSD","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"SOLUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"SRMUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"STMXUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"STORJUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"SUSHIUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"SXPUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"THETAUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"TLMUSDT","fundingTime":1635494400007,"fundingRate":"0.00011516"},{"symbol":"TOMOUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"TRBUSDT","fundingTime":1635494400007,"fundingRate":"0.00019295"},{"symbol":"TRXUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"UNFIUSDT","fundingTime":1635494400007,"fundingRate":"0.00013403"},{"symbol":"UNIUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"VETUSDT","fundingTime":1635494400007,"fundingRate":"0.00013397"},{"symbol":"WAVESUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"XEMUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"XLMUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"XMRUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"XRPBUSD","fundingTime":1635494400007,"fundingRate":"0.00014559"},{"symbol":"XRPUSDT","fundingTime":1635494400007,"fundingRate":"0.00017898"},{"symbol":"XTZUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"YFIIUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"YFIUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"ZECUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"ZENUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"ZILUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"},{"symbol":"ZRXUSDT","fundingTime":1635494400007,"fundingRate":"0.00010000"}]'
+  recorded_at: Fri, 29 Oct 2021 10:03:39 GMT
+- request:
+    method: get
+    uri: https://api.binance.com/api/v3/ticker/price?symbol=ETHUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '44'
+      Connection:
+      - close
+      Date:
+      - Fri, 29 Oct 2021 10:03:40 GMT
+      Server:
+      - nginx
+      X-Mbx-Uuid:
+      - e0458bae-a763-45d7-ab8b-f6f8c85dbd31
+      X-Mbx-Used-Weight:
+      - '1'
+      X-Mbx-Used-Weight-1m:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'self'
+      X-Content-Security-Policy:
+      - default-src 'self'
+      X-Webkit-Csp:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, OPTIONS
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 4e7b30670ccb8a3f3101333ef882f9b0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE51-C1
+      X-Amz-Cf-Id:
+      - bYPLdNGlqjcAPip875jDta77Z04eKTDEk_5vROEXvie8g_ikXVbjLA==
+    body:
+      encoding: UTF-8
+      string: '{"symbol":"ETHUSDT","price":"4331.22000000"}'
+  recorded_at: Fri, 29 Oct 2021 10:03:40 GMT
+- request:
+    method: get
+    uri: https://api.binance.com/api/v3/ticker/price?symbol=TINAJIMBO
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '38'
+      Connection:
+      - close
+      Date:
+      - Fri, 29 Oct 2021 10:03:40 GMT
+      Server:
+      - nginx
+      X-Mbx-Uuid:
+      - 5f9571c6-7496-432e-a1d2-e0f9df71aa1b
+      X-Mbx-Used-Weight:
+      - '2'
+      X-Mbx-Used-Weight-1m:
+      - '2'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'self'
+      X-Content-Security-Policy:
+      - default-src 'self'
+      X-Webkit-Csp:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 a55d34628b043ad0c3a5f728ad027e04.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE51-C1
+      X-Amz-Cf-Id:
+      - NrhKoU49cWfwonW1lryiujYtJryDXeCXZ8BVtJqHpPmzOuyU02AeMg==
+    body:
+      encoding: UTF-8
+      string: '{"code":-1121,"msg":"Invalid symbol."}'
+  recorded_at: Fri, 29 Oct 2021 10:03:40 GMT
 recorded_with: VCR 6.0.0

@@ -6,13 +6,9 @@ module CryptoExpert
   # all the info needed
   class InfoApi
     def initialize(token)
-      @binance = BinanceApi.new(token)
+      @binance = Binance::Api.new(token)
       ## TODO : @ftx?
       # @currencypair_list = currencylist_get
-    end
-
-    def currencypair(symbol)
-      @binance.currencypair(symbol)
     end
 
     def currencypair_list

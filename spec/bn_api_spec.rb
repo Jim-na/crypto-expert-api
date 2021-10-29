@@ -20,32 +20,59 @@ describe 'Tests Binance API library' do
   after do
     VCR.eject_cassette
   end
-
-  describe 'CurrencyPair list' do
+  
+  
+  describe 'Exchange info' do
     it 'HAPPY: should provide correct currencyPair list' do
-      info = CryptoExpert::InfoApi.new('token')
-      _(info.currencypair_list).must_equal CORRECT['symbols']
+      info = CryptoExpert::Binance::ExchangeMapper.new(BINANCE_TOKEN).get()
+      _(info.currencylist).must_equal CORRECT['symbols']
+    end
+    it 'HAPPY: should provide correct funding rate list' do
+      info = CryptoExpert::Binance::ExchangeMapper.new(BINANCE_TOKEN)
+      _(info.fundingratelist).must_equal CORRECT['fundingRate']
     end
   end
 
-  describe 'CurrencyPair get information' do
+  describe 'Spot Pair get information' do
     before do
-      @currencypair = CryptoExpert::InfoApi.new('token').currencypair(SYMBOL)
+      @spotpair = CryptoExpert::Binance::SpotPairMapper.new(BINANCE_TOKEN).get(SYMBOL)
     end
-    it 'HAPPY: should get CurrencyPair' do
-      _(@currencypair).must_be_kind_of CryptoExpert::CurrencyPair
+    it 'HAPPY: should get Spot CurrencyPair' do
+      _(@spotpair).must_be_kind_of CryptoExpert::Entity::SpotPair
     end
-    it 'HAPPY: should get CurrencyPair symbol' do
-      _(@currencypair.symbol).wont_be_nil
-      _(@currencypair.symbol).must_equal SYMBOL
+    it 'HAPPY: should get Spot CurrencyPair symbol' do
+      _(@spotpair.symbol).wont_be_nil
+      _(@spotpair.symbol).must_equal SYMBOL
     end
-    it 'HAPPY: should get CurrencyPair price' do
-      _(@currencypair.price).wont_be_nil
+    it 'HAPPY: should get Spot CurrencyPair price' do
+      _(@spotpair.price).wont_be_nil
     end
-    it 'SAD: should raise exception on unfound currency pair' do
+    it 'SAD: should raise exception on notfound currency pair' do
       _(proc do
-        CryptoExpert::InfoApi.new('token').currencypair('BTCETH')
+        CryptoExpert::Binance::SpotPairMapper.new(BINANCE_TOKEN).get('TINAJIMBO')
       end).must_raise CryptoExpert::HttpApi::Response::BadRequest
     end
   end
+  describe 'Future Pair get information' do
+    before do
+      @futurepair = CryptoExpert::Binance::FuturePairMapper.new(BINANCE_TOKEN).get(SYMBOL)
+    end
+    it 'HAPPY: should get Future CurrencyPair' do
+      _(@futurepair).must_be_kind_of CryptoExpert::Entity::FuturePair
+    end
+    it 'HAPPY: should get Future CurrencyPair symbol' do
+      _(@futurepair.symbol).wont_be_nil
+      _(@futurepair.symbol).must_equal SYMBOL
+    end
+    it 'HAPPY: should get Future CurrencyPair price' do
+      _(@futurepair.price).wont_be_nil
+    end
+    it 'SAD: should raise exception on notfound currency pair' do
+      _(proc do
+        CryptoExpert::Binance::FuturePairMapper.new(BINANCE_TOKEN).get('TINAJIMBO')
+      end).must_raise CryptoExpert::HttpApi::Response::BadRequest
+    end
+  end
+  
+  
 end

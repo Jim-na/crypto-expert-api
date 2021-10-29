@@ -13,7 +13,9 @@ require_relative '../lib/mappers/info_api'
 require_relative '../init'
 
 CORRECT = YAML.safe_load(File.read('../spec/fixtures/results.yml'))
-SYMBOL = 'ETHBTC'
+BINANCE_TOKEN = YAML.safe_load(File.read('../config/secrets.yml'))
+
+SYMBOL = 'ETHUSDT'
 
 CASSETTES_FOLDER = '../spec/fixtures/cassettes'
 CASSETTES_FILE = 'info_api'
