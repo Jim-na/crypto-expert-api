@@ -23,13 +23,17 @@ describe 'Tests Binance API library' do
   
   
   describe 'Exchange info' do
+    before do
+      @info = CryptoExpert::Binance::ExchangeMapper.new(BINANCE_TOKEN).get()
+    end
     it 'HAPPY: should provide correct currencyPair list' do
-      info = CryptoExpert::Binance::ExchangeMapper.new(BINANCE_TOKEN).get()
-      _(info.currencylist).must_equal CORRECT['symbols']
+      _(@info.currencylist).must_equal CORRECT['symbols']
     end
     it 'HAPPY: should provide correct funding rate list' do
-      info = CryptoExpert::Binance::ExchangeMapper.new(BINANCE_TOKEN)
-      _(info.fundingratelist).must_equal CORRECT['fundingRate']
+      _(@info.fundingratelist).must_equal CORRECT['fundingRate']
+    end
+    it 'HAPPY: should provide correct funding rate list' do
+      _(@info.timezone).must_equal CORRECT['timezone']
     end
   end
 
