@@ -9,11 +9,10 @@ require  'yaml'
 require  'vcr'
 require  'webmock'
 
-require_relative '../lib/mappers/info_api'
 require_relative '../init'
 
-CORRECT = YAML.safe_load(File.read('../spec/fixtures/results.yml'))
-BINANCE_TOKEN = YAML.safe_load(File.read('../config/secrets.yml'))
+CORRECT = YAML.safe_load(File.read('./spec/fixtures/results.yml'))
+BINANCE_TOKEN = YAML.safe_load(File.read('./config/secrets.yml'))
 
 SYMBOL = 'ETHUSDT'
 
