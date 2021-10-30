@@ -5,6 +5,7 @@ soa project
 We offer information from the markets, such as exchanges price, funding rate , KOL's suggestion, whale alert ... and more.
 
 - RUN `ruby ./init.rb` to init all relative file
+- I can't use `rackup` , so **I use `bundle exec rackup` to run the app.**
 
 Short-term usability goals
 
@@ -20,7 +21,7 @@ API Library
 - ~~Info API : an api to get information from different exchanges. <= this is the main class to get info.~~
 - Binance::API : define the api to binance to get info.
 - Currency pair : define the pair ,for example, ETHUSDT, to store information of each pair.
-    - Spot: price
-    - Future: price, funding rate
+  - Spot: price
+  - Future: price, funding rate
 - Exchange Info : to get time zone, current list and funding rate list of exchanges
 - Http API : define the http request to the client.
