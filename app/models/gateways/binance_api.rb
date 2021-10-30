@@ -10,7 +10,6 @@ module CryptoExpert
       include HttpApi
       BASIC_URL = 'https://api.binance.com/api/v3/'
       FUTURE_URL = 'https://fapi.binance.com/'
-      attr_reader :currencypair_list
 
       def initialize(token)
         @token = token
