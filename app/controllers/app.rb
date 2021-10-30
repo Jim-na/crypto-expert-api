@@ -12,7 +12,6 @@ module CryptoExpert
 
     route do |routing|
       routing.assets # load CSS
-
       # GET /
       routing.root do
         view 'home'
