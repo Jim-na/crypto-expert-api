@@ -1,5 +1,6 @@
 config/secrets.yml
 spec/test.rb
+spec/coverage/
 coverage/*
 !coverage/.resultset.json
 .DS_Store

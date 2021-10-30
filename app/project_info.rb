@@ -7,7 +7,7 @@ require 'openssl'
 BASIC_URL = 'https://api.binance.com/api/v3/'
 FUTURE_URL = 'https://fapi.binance.com/'
 config = YAML.safe_load(File.read('./config/secrets.yml'))
-
+# puts config
 def spot_api(path)
   "#{BASIC_URL}#{path}"
 end
