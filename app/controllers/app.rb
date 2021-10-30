@@ -35,11 +35,11 @@ module CryptoExpert
             spotpair = CryptoExpert::Binance::SpotPairMapper
               .new('token')
               .get(symbol)
-            futurepair =  CryptoExpert::Binance::FuturePairMapper
-              .new(BINANCE_TOKEN)
-              .get(symbol)
+            # futurepair =  CryptoExpert::Binance::FuturePairMapper
+            #   .new(BINANCE_TOKEN)
+            #   .get(symbol)
 
-            view 'spot', locals: { spot: spotpair , future:futurepair }
+            view 'spot', locals: { spot: spotpair }
             # view 'spot'
           end
         end
