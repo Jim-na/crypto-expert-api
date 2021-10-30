@@ -1,12 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/aaa/Documents/GitHub/crypto-expert/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/init.rb": {
         "lines": [
+          null,
+          null,
           1
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/models/init.rb": {
         "lines": [
           null,
           null,
@@ -18,7 +20,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/entities/exchangeinfo.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/models/entities/exchangeinfo.rb": {
         "lines": [
           null,
           null,
@@ -39,7 +41,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/entities/futurepair.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/models/entities/futurepair.rb": {
         "lines": [
           null,
           null,
@@ -69,7 +71,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/entities/spotpair.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/models/entities/spotpair.rb": {
         "lines": [
           null,
           null,
@@ -100,7 +102,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/gateways/binance_api.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/models/gateways/binance_api.rb": {
         "lines": [
           null,
           null,
@@ -110,7 +112,6 @@
           null,
           1,
           null,
-          1,
           1,
           1,
           1,
@@ -144,7 +145,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/gateways/http_api.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/models/gateways/http_api.rb": {
         "lines": [
           null,
           null,
@@ -195,7 +196,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/mappers/exchange_mapper.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/models/mappers/exchange_mapper.rb": {
         "lines": [
           null,
           null,
@@ -255,7 +256,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/mappers/futurepair_mapper.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/models/mappers/futurepair_mapper.rb": {
         "lines": [
           null,
           null,
@@ -315,7 +316,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/mappers/info_api.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/models/mappers/info_api.rb": {
         "lines": [
           null,
           null,
@@ -337,7 +338,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/mappers/spotpair_mapper.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/models/mappers/spotpair_mapper.rb": {
         "lines": [
           null,
           null,
@@ -393,6 +394,6 @@
         ]
       }
     },
-    "timestamp": 1635526599
+    "timestamp": 1635564281
   }
 }

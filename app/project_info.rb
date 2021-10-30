@@ -7,7 +7,7 @@ require 'openssl'
 BASIC_URL = 'https://api.binance.com/api/v3/'
 FUTURE_URL = 'https://fapi.binance.com/'
 config = YAML.safe_load(File.read('./config/secrets.yml'))
-
+# puts config
 def spot_api(path)
   "#{BASIC_URL}#{path}"
 end
@@ -51,4 +51,4 @@ binance_response[funding_rate_url] = call_future_url(funding_rate_url, config)
 funding_rate = binance_response[funding_rate_url].parse
 funding_rate.map { |pair| results['fundingRate'][pair['symbol']] = pair['fundingRate'] }
 
-File.write('../spec/fixtures/results.yml', results.to_yaml)
+File.write('./spec/fixtures/results.yml', results.to_yaml)
