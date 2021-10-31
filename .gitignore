@@ -1,3 +1,8 @@
 config/secrets.yml
-spec/fixtures/
 spec/test.rb
+spec/coverage/
+coverage/*
+!coverage/.resultset.json
+.DS_Store
+spec/test
+test
