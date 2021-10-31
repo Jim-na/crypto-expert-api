@@ -32,4 +32,3 @@ gem 'pry'
 gem 'flog'
 gem 'reek'
 gem 'rubocop'
-

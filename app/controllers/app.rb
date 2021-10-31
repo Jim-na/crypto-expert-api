@@ -33,8 +33,8 @@ module CryptoExpert
           # GET /project/owner/project
           routing.get do
             spotpair = CryptoExpert::Binance::SpotPairMapper
-              .new('token')
-              .get(symbol)
+                       .new('token')
+                       .get(symbol)
             # futurepair =  CryptoExpert::Binance::FuturePairMapper
             #   .new(BINANCE_TOKEN)
             #   .get(symbol)
@@ -43,7 +43,6 @@ module CryptoExpert
             # view 'spot'
           end
         end
-        
       end
     end
   end

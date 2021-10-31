@@ -20,11 +20,10 @@ describe 'Tests Binance API library' do
   after do
     VCR.eject_cassette
   end
-  
-  
+
   describe 'Exchange info' do
     before do
-      @info = CryptoExpert::Binance::ExchangeMapper.new(BINANCE_TOKEN).get()
+      @info = CryptoExpert::Binance::ExchangeMapper.new(BINANCE_TOKEN).get
     end
     it 'HAPPY: should provide correct currencyPair list' do
       _(@info.currencylist).must_equal CORRECT['symbols']
@@ -77,6 +76,4 @@ describe 'Tests Binance API library' do
   #     end).must_raise CryptoExpert::HttpApi::Response::BadRequest
   #   end
   # end
-  
-  
 end
