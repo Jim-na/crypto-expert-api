@@ -6,7 +6,7 @@ Sequel.migration do
   change do
     create_table(:spot) do
       primary_key :id
-      foreign_key :exchangename, :exchange
+      foreign_key :exchange_id, :exchange
 
       # Integer     :origin_id, unique: true
       String      :symbol, unique: true, null: false

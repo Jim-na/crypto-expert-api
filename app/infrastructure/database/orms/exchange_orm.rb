@@ -6,11 +6,11 @@ module CryptoExpert
   module Database
     # Object-Relational Mapper for Members
     class ExchangeOrm < Sequel::Model(:symbol)
-      many_to_one :spotpair,
+      one_to_many :spotpair,
                   class: :'CryptoExpert::Database::SpotOrm',
                   key: :symbol
                   
-      many_to_one :futurepair,
+      one_to_many :futurepair,
                   class: :'CryptoExpert::Database::FutureOrm',
                   key: :symbol
 

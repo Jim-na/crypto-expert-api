@@ -11,6 +11,10 @@ gem 'hirb', '~> 0'
 gem 'hirb-unicode', '~> 0'
 gem 'sequel', '~> 5.49'
 
+group :development, :test do
+    gem 'sqlite3', '~> 1.4'
+end
+
 # Web Application
 gem 'puma', '~> 5.5'
 gem 'roda', '~> 3.49'

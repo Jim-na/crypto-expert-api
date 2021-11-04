@@ -34,5 +34,5 @@ module CryptoExpert
         end
       end
     end
-  end
+end
   
