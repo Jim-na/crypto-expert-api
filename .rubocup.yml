@@ -5,6 +5,10 @@ AllCops:
   NewCops: enable
   Exclude:
     - "_snippets/*"
+  Include:
+    - "Gemfile"
+    - "Rakefile"
+    - "**/*.rb"
 
 # ignore block length in test code only
 Metrics/BlockLength:
