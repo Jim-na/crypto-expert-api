@@ -1,0 +1,20 @@
+# frozen_string_literal: true
+
+require 'sequel'
+
+Sequel.migration do
+  change do
+    create_table(:future) do
+      primary_key :id
+      foreign_key :exchangename, :exchange
+
+      # Integer     :origin_id, unique: true
+      String      :symbol, unique: true, null: false
+      String      :price
+      String      :funding_rate
+
+      DateTime :created_at
+      DateTime :updated_at
+    end
+  end
+end
