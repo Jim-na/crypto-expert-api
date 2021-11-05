@@ -5,10 +5,10 @@ require 'sequel'
 module CryptoExpert
   module Database
     # Object-Relational Mapper for Members
-    class SpotOrm < Sequel::Model(:symbol)
+    class SpotOrm < Sequel::Model(:spots)
         many_to_one :exchange,
                   class: :'CryptoExpert::Database::ExchangeOrm',
-                  key: :owner_id
+                  key: :exchanges
 
     #   many_to_many :contributed_projects,
     #                class: :'CodePraise::Database::ProjectOrm',

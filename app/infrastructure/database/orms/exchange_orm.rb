@@ -5,14 +5,14 @@ require 'sequel'
 module CryptoExpert
   module Database
     # Object-Relational Mapper for Members
-    class ExchangeOrm < Sequel::Model(:symbol)
+    class ExchangeOrm < Sequel::Model(:exchanges)
       one_to_many :spotpair,
                   class: :'CryptoExpert::Database::SpotOrm',
-                  key: :symbol
+                  key: :spots
                   
       one_to_many :futurepair,
                   class: :'CryptoExpert::Database::FutureOrm',
-                  key: :symbol
+                  key: :futures
 
     #   many_to_many :contributed_projects,
     #                class: :'CodePraise::Database::ProjectOrm',
@@ -21,8 +21,8 @@ module CryptoExpert
 
       plugin :timestamps, update_on_create: true
 
-      def self.find_or_create(symbol_name)
-        # first(username: member_info[:username]) || create(member_info)
+      def self.find_or_create(exchange_info)
+        first(exchangename: exchange_info[:exchangename]) || create(exchange_info)
       end
     end
   end

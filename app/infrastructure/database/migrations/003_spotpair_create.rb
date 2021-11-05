@@ -4,7 +4,7 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:spot) do
+    create_table(:spots) do
       primary_key :id
       foreign_key :exchange_id, :exchange
 

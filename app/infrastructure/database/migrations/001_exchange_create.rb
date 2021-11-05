@@ -4,7 +4,7 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:exchange) do
+    create_table(:exchanges) do
       primary_key :id
 
       # Integer     :origin_id, unique: true

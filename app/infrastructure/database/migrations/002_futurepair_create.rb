@@ -4,7 +4,7 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:future) do
+    create_table(:futures) do
       primary_key :id
       foreign_key :exchange_id, :exchange
 
