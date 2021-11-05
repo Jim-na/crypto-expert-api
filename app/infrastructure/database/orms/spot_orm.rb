@@ -6,10 +6,10 @@ module CryptoExpert
   module Database
     # Object-Relational Mapper for Members
     class SpotOrm < Sequel::Model(:spots)
-        many_to_one :exchange,
+        one_to_many :exchange,
                   class: :'CryptoExpert::Database::ExchangeOrm',
                   key: :exchanges
-
+        
     #   many_to_many :contributed_projects,
     #                class: :'CodePraise::Database::ProjectOrm',
     #                join_table: :projects_members,

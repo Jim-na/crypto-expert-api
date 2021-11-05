@@ -6,7 +6,7 @@ module CryptoExpert
   module Database
     # Object-Relational Mapper for Members
     class FutureOrm < Sequel::Model(:futures)
-        many_to_one :exchange,
+      one_to_many :exchange,
                   class: :'CryptoExpert::Database::ExchangeOrm',
                   key: :exchanges
 

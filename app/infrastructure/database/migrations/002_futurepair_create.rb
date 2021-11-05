@@ -6,7 +6,7 @@ Sequel.migration do
   change do
     create_table(:futures) do
       primary_key :id
-      foreign_key :exchange_id, :exchange
+      foreign_key :exchange_id, :exchanges
 
       # Integer     :origin_id, unique: true
       String      :symbol, unique: true, null: false
