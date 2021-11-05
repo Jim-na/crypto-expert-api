@@ -4,15 +4,13 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:exchanges) do
+    create_table(:spots) do
       primary_key :id
+      # foreign_key :exchange_id, :exchanges
 
       # Integer     :origin_id, unique: true
-      String      :exchangename, unique: true, null: false
-      Array       :spotpair_list
-      Array       :futurepair_list
-      Array       :fundingrate_list
-    #   String      :
+      String      :symbol, unique: true, null: false
+      String      :price
 
       DateTime :created_at
       DateTime :updated_at
