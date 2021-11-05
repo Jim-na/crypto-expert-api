@@ -12,13 +12,13 @@ module CryptoExpert
         
       many_to_many :spotpairs,
                    class: :'CryptoExpert::Database::ExchangeOrm',
-                   join_table: :exchanges
-                  #  left_key: :member_id, right_key: :project_id
+                   join_table: :exchange_spotpair,
+                   left_key: :exchange_id, right_key: :spot_id
 
       plugin :timestamps, update_on_create: true
 
       def self.find_or_create(symbol_name)
-        # first(username: member_info[:username]) || create(member_info)
+        first(symbol: symbol_name[:symbol]) || create(symbol_name)
       end
     end
   end

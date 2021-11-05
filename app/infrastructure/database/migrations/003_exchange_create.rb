@@ -6,7 +6,6 @@ Sequel.migration do
   change do
     create_table(:exchanges) do
       primary_key :id
-      foreign_key :spotpair, :spots
       # foreign_key :futurepair, :futures
 
       # Integer     :origin_id, unique: true
@@ -23,10 +22,10 @@ Sequel.migration do
 end
 =begin
 cd CryptoExpert/Database
-btc = SpotOrm.new(symbol: 'BTCUSDT', price: '150000')
-btc.save
-test = ExchangeOrm.new(exchangename:'Binance')
-test.save
+btc = SpotOrm.create(symbol: 'BTCUSDT', price: '150000')
+eth = SpotOrm.create(symbol: 'ETHUSDT', price: '5000')
+bin = ExchangeOrm.create(exchangename:'Binance')
+ftx = ExchangeOrm.create(exchangename:'FTX')
 btc = SpotOrm.first
 test.add_spotpair(btc)
 test.spotpair
