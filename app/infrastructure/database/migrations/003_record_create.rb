@@ -4,12 +4,17 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:exchange_spotpair) do
-      primary_key [:exchange_id, :spot_id]
+    create_table(:records) do
+      primary_key :id
       foreign_key :exchange_id, :exchanges
       foreign_key :spot_id, :spots
 
-      index [:exchange_id, :spot_id]
+      Float :addqty
+      Float :minusqty
+      Float :price
+      Bool :buy
+      DateTime :time
+
     end
   end
 end
