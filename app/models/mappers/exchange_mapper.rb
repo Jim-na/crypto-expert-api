@@ -8,6 +8,7 @@ module CryptoExpert
         @token = token
         @gateway_class = gateway_class
         @gateway = @gateway_class.new(@token)
+        @name = 'Binance'
       end
 
       def get
@@ -31,7 +32,8 @@ module CryptoExpert
           Entity::ExchangeInfo.new(
             currencylist: currencylist,
             timezone: timezone,
-            fundingratelist: fundingratelist
+            fundingratelist: fundingratelist,
+            name: name
           )
         end
 
@@ -50,6 +52,10 @@ module CryptoExpert
           @all_funding_rate.map { |pair| results[pair['symbol']] = pair['fundingRate'] }
           results
         end
+        def name
+          @name
+        end
+
       end
     end
   end

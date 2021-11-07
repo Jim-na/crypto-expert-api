@@ -17,14 +17,27 @@ module CryptoExpert
         view 'home'
       end
 
+      routing.root do # rubocop:disable Metrics/BlockLength
+        exchanges = CryptoExpert::Repository::For.klass(Entity::ExchangeInfo).all
+        view 'home', locals: { exchanges: exchanges }
+      end
+
       routing.on 'spot' do
         routing.is do
           # POST /project/
           routing.post do
             symbol = routing.params['symbol'].upcase
-            # routing.halt 400 unless (gh_url.include? 'github.com') &&
-            #                         (gh_url.split('/').count >= 3)
-            # owner, project = gh_url.split('/')[-2..]
+            routing.redirect "spot/#{symbol}"
+
+            # Get pair from Binance
+            spotPair = CryptoExpert::Binance::SpotPairMapper
+              .new('token')
+              .get(symbol)
+
+            # Add project to database
+            CryptoExpert::Repository::For.entity(spotPair).db_find_or_create(spotPair)
+
+            # Redirect viewer to project page
             routing.redirect "spot/#{symbol}"
           end
         end
@@ -32,13 +45,9 @@ module CryptoExpert
         routing.on String do |symbol|
           # GET /project/owner/project
           routing.get do
-            spotpair = CryptoExpert::Binance::SpotPairMapper
-                       .new('token')
-                       .get(symbol)
-            # futurepair =  CryptoExpert::Binance::FuturePairMapper
-            #   .new(BINANCE_TOKEN)
-            #   .get(symbol)
-
+            spotpair = CryptoExpert::Repository::For.klass(Entity::SpotPair)
+                       .find_symbol(symbol)
+            puts spotpair
             view 'spot', locals: { spot: spotpair }
             # view 'spot'
           end

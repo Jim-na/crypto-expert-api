@@ -6,10 +6,11 @@ Sequel.migration do
   change do
     create_table(:spots) do
       primary_key :id
+      foreign_key :exchangeid, :exchanges, null: false
 
-      String      :symbol, unique: true, null: false
-      Float       :price
-
+      String      :symbol, null: false
+      Float       :price, null: false
+      DateTime    :timestamp
       DateTime :created_at
       DateTime :updated_at
     end

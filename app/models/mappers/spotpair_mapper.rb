@@ -13,10 +13,6 @@ module CryptoExpert
       def get(symbol_list)
         data = @gateway.spotpair(symbol_list)
         SpotPairMapper.build_entity(data)
-        # symbol_list.map do |symbol|
-        #   data = @gateway.spotpair(symbol)
-        #   SpotPairMapper.build_entity(data)
-        # end
       end
 
       def self.build_entity(data)
@@ -27,12 +23,14 @@ module CryptoExpert
       class DataMapper
         def initialize(data)
           @data = data
+          @exchange = 'Binance'
         end
 
         def build_entity
           Entity::SpotPair.new(
             symbol: symbol,
-            price: price
+            price: price,
+            exchange: exchange
           )
         end
 
@@ -43,7 +41,10 @@ module CryptoExpert
         end
 
         def price
-          @data['price']
+          @data['price'].to_f
+        end
+        def exchange
+          @exchange
         end
       end
     end

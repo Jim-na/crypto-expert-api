@@ -10,18 +10,9 @@ module CryptoExpert
       include Dry.Types
 
       attribute :symbol,        Strict::String
-      attribute :price,         String.optional
-      # attribute :futureprice,   Float.optional
-      # attribute :fundingrate,   Float.optional
+      attribute :price,         Float.optional
+      attribute :exchange,      String.optional
     end
   end
 
-  # class CurrencyPair
-  #   attr_reader :symbol, :price
-
-  #   def initialize(response)
-  #     @symbol = response['symbol']
-  #     @price = response['price']
-  #   end
-  # end
 end
