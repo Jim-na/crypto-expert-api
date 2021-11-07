@@ -16,5 +16,4 @@ BINANCE_TOKEN = YAML.safe_load(File.read('./config/secrets.yml'))
 
 SYMBOL = 'ETHUSDT'
 
-CASSETTES_FOLDER = '../spec/fixtures/cassettes'
-CASSETTES_FILE = 'info_api'
+
