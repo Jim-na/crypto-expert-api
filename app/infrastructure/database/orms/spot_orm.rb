@@ -14,6 +14,9 @@ module CryptoExpert
       def self.find_or_create(info)
         first(symbol: info[:symbol], exchangeid: info[:exchange]) || create(info)
       end
+      def create(info)
+          create(info)
+      end
     end
   end
 end

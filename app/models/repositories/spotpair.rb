@@ -13,7 +13,7 @@ module CryptoExpert
           return nil unless db_record
           exchange = ExchangeInfo.find_exchangename(db_record[:exchangeid])
           Entity::SpotPair.new(
-            symbol:    db_record.id,
+            symbol:    db_record.symbol,
             price:     db_record.price,
             exchange:  exchange
           )
@@ -27,6 +27,9 @@ module CryptoExpert
   
         def self.db_find_or_create(entity)
           Database::SpotOrm.find_or_create(symbol: entity.symbol,exchangeid: ExchangeInfo.find_exchangeid(entity.exchange), price: entity.price)
+        end
+        def  self.create(entity)
+          Database::SpotOrm.create(entity)
         end
       end
     end
