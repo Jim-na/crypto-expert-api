@@ -12,6 +12,7 @@ module CryptoExpert
       attribute :currencylist, Array.optional
       attribute :timezone, String.optional
       attribute :fundingratelist, Hash.optional
+      attribute :name, String.optional
     end
   end
 end

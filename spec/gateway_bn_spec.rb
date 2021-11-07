@@ -1,24 +1,15 @@
 # frozen_string_literal: true
 
 require_relative 'spec_helper'
-
+require_relative 'helpers/vcr_helper'
 describe 'Tests Binance API library' do
-  VCR.configure do |c|
-    c.cassette_library_dir = CASSETTES_FOLDER
-    c.hook_into :webmock
-
-    # c.filter_sensitive_data('<GITHUB_TOKEN>') { GITHUB_TOKEN }
-    # c.filter_sensitive_data('<GITHUB_TOKEN_ESC>') { CGI.escape(GITHUB_TOKEN) }
-  end
-
+  VcrHelper.setup_vcr
   before do
-    VCR.insert_cassette CASSETTES_FILE,
-                        record: :new_episodes,
-                        match_requests_on: %i[method uri headers]
+    VcrHelper.configure_vcr_for_bn
   end
 
   after do
-    VCR.eject_cassette
+    VcrHelper.eject_vcr
   end
 
   describe 'Exchange info' do
@@ -56,24 +47,4 @@ describe 'Tests Binance API library' do
       end).must_raise CryptoExpert::HttpApi::Response::BadRequest
     end
   end
-  # describe 'Future Pair get information' do
-  #   before do
-  #     @futurepair = CryptoExpert::Binance::FuturePairMapper.new(BINANCE_TOKEN).get(SYMBOL)
-  #   end
-  #   it 'HAPPY: should get Future CurrencyPair' do
-  #     _(@futurepair).must_be_kind_of CryptoExpert::Entity::FuturePair
-  #   end
-  #   it 'HAPPY: should get Future CurrencyPair symbol' do
-  #     _(@futurepair.symbol).wont_be_nil
-  #     _(@futurepair.symbol).must_equal SYMBOL
-  #   end
-  #   it 'HAPPY: should get Future CurrencyPair price' do
-  #     _(@futurepair.price).wont_be_nil
-  #   end
-  #   it 'SAD: should raise exception on notfound currency pair' do
-  #     _(proc do
-  #       CryptoExpert::Binance::FuturePairMapper.new(BINANCE_TOKEN).get('TINAJIMBO')
-  #     end).must_raise CryptoExpert::HttpApi::Response::BadRequest
-  #   end
-  # end
 end
