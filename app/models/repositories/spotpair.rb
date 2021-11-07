@@ -5,6 +5,10 @@ module CryptoExpert
     module Repository
       # Repository for Members
       class SpotPair
+        def self.all
+          Database::SpotOrm.all.map{ |spotpair| rebuild_entity(spotpair)}
+        end
+        
         def self.find_symbol(symbol)
           rebuild_entity Database::SpotOrm.first(symbol: symbol)
         end

@@ -13,13 +13,11 @@ module CryptoExpert
     route do |routing|
       routing.assets # load CSS
       # GET /
-      routing.root do
-        view 'home'
-      end
 
       routing.root do # rubocop:disable Metrics/BlockLength
-        exchanges = CryptoExpert::Repository::For.klass(CryptoExpert::Entity::ExchangeInfo).all
-        view 'home', locals: { exchanges: exchanges }
+        pairlist = CryptoExpert::Repository::For.klass(CryptoExpert::Entity::SpotPair).all
+        # puts pairlist
+        view 'home', locals: { pairlist: pairlist }
       end
 
       routing.on 'spot' do
@@ -45,7 +43,6 @@ module CryptoExpert
           routing.get do
             spotpair = CryptoExpert::Repository::For.klass(CryptoExpert::Entity::SpotPair)
                        .find_symbol(symbol)
-            puts spotpair
             view 'spot', locals: { spot: spotpair }
 
           end
