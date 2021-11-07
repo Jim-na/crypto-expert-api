@@ -7,7 +7,8 @@ module DatabaseHelper
       CryptoExpert::App.DB.run('PRAGMA foreign_keys = OFF')
       CryptoExpert::Database::ExchangeOrm.map(&:destroy)
       CryptoExpert::Database::SpotOrm.map(&:destroy)
-      CryptoExpert::Database::FutureOrm.map(&:destroy)
+      CryptoExpert::Database::CurrencyListOrm.map(&:destroy)
+      CryptoExpert::Database::FundingRateListOrm.map(&:destroy)
       CryptoExpert::App.DB.run('PRAGMA foreign_keys = ON')
     end
 end

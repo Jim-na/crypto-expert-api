@@ -8,7 +8,7 @@ describe 'Integration Tests of Binance API and Database' do
   VcrHelper.setup_vcr
 
   before do
-    VcrHelper.configure_vcr_for_github
+    VcrHelper.configure_vcr_for_bn
   end
 
   after do
@@ -20,16 +20,16 @@ describe 'Integration Tests of Binance API and Database' do
       DatabaseHelper.wipe_database
     end
 
-    it 'HAPPY: should be able to save project from Github to database' do
-      spotPair = CryptoExpert::Binance::SpotPairMapper
-        .new('token')
-        .get(symbol)
+    it 'HAPPY: should be able to save project from Binance to database' do
+      exchangeinfo = CryptoExpert::Binance::ExchangeMapper.new('token').get
+      CryptoExpert::Repository::For.klass(CryptoExpert::Entity::ExchangeInfo).db_find_or_create(exchangeinfo)
+      
+      spotPair = CryptoExpert::Binance::SpotPairMapper.new('token').get(SYMBOL)
 
-      rebuilt = CodePraise::Repository::For.entity(project).create(spotPair)
+      rebuilt = CryptoExpert::Repository::For.klass(CryptoExpert::Entity::SpotPair).db_find_or_create(spotPair)
 
       _(rebuilt.symbol).must_equal(spotPair.symbol)
       _(rebuilt.price).must_equal(spotPair.price)
-      _(rebuilt.exchange).must_equal(project.exchange)
 
     end
   end

@@ -8,7 +8,7 @@ module CryptoExpert
         @token = token
         @gateway_class = gateway_class
         @gateway = @gateway_class.new(@token)
-        @name = 'Binance'
+         
       end
 
       def get
@@ -26,6 +26,7 @@ module CryptoExpert
         def initialize(data, all_funding_rate)
           @data = data
           @all_funding_rate = all_funding_rate
+          @name = 'Binance'
         end
 
         def build_entity

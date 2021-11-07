@@ -43,7 +43,7 @@ module CryptoExpert
             Database::CurrencyListOrm.find_or_create({'symbol': currencypair, 'exchangeid': val[:id]})
           end
           entity.fundingratelist.each do |symbol, fundingrate|
-            Database::FundingRateListOrm.find_or_create({'symbol': symbol, 'exchangeid': val[:id], 'fundingrate': fundingrate})
+            Database::FundingRateListOrm.find_or_create({'symbol': symbol, 'exchangeid': val[:id], 'price': fundingrate})
           end
         end
       end

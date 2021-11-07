@@ -5,7 +5,7 @@ require 'webmock'
 
 # Setting up VCR
 module VcrHelper
-    CASSETTES_FOLDER = 'spec/fixtures/cassettes'.freeze
+    CASSETTES_FOLDER = './spec/fixtures/cassettes'.freeze
     CASSETTES_FILE = 'binance_api'.freeze
 
   def self.setup_vcr
@@ -18,8 +18,8 @@ module VcrHelper
   def self.configure_vcr_for_bn
 
     VCR.insert_cassette CASSETTES_FILE,
-                        match_requests_on: %i[method uri headers]
-    puts "here"
+                    record: :none,
+                    match_requests_on: %i[method uri headers]
   end
 
   def self.eject_vcr
