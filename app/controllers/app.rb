@@ -14,7 +14,7 @@ module CryptoExpert
       routing.assets # load CSS
       # GET /
 
-      routing.root do # rubocop:disable Metrics/BlockLength
+      routing.root do
         pairlist = CryptoExpert::Repository::For.klass(CryptoExpert::Entity::SpotPair).all
         # puts pairlist
         view 'home', locals: { pairlist: pairlist }
@@ -26,12 +26,12 @@ module CryptoExpert
           routing.post do
             symbol = routing.params['symbol'].upcase
             # Get pair from Binance
-            spotPair = CryptoExpert::Binance::SpotPairMapper
-              .new('token')
-              .get(symbol)
+            spotpair = CryptoExpert::Binance::SpotPairMapper
+                       .new('token')
+                       .get(symbol)
 
             # Add project to database
-            CryptoExpert::Repository::For.klass(CryptoExpert::Entity::SpotPair).db_find_or_create(spotPair)
+            CryptoExpert::Repository::For.klass(CryptoExpert::Entity::SpotPair).db_find_or_create(spotpair)
 
             # Redirect viewer to project page
             routing.redirect "spot/#{symbol}"
@@ -42,9 +42,8 @@ module CryptoExpert
           # GET /project/owner/project
           routing.get do
             spotpair = CryptoExpert::Repository::For.klass(CryptoExpert::Entity::SpotPair)
-                       .find_symbol(symbol)
+                                                    .find_symbol(symbol)
             view 'spot', locals: { spot: spotpair }
-
           end
         end
       end

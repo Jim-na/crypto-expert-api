@@ -14,5 +14,4 @@ module CryptoExpert
       attribute :exchange,      String.optional
     end
   end
-
 end

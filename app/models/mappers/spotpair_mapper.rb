@@ -43,9 +43,8 @@ module CryptoExpert
         def price
           @data['price'].to_f
         end
-        def exchange
-          @exchange
-        end
+
+        attr_reader :exchange
       end
     end
   end
