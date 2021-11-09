@@ -9,7 +9,7 @@ Sequel.migration do
       foreign_key :exchangeid, :exchanges, null: false
 
       String      :symbol
-      unique      [:exchangeid, :symbol]
+      unique      %i[exchangeid symbol]
 
       DateTime :created_at
       DateTime :updated_at

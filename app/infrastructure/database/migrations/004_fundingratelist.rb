@@ -10,8 +10,7 @@ Sequel.migration do
 
       String      :symbol
       String      :price
-      unique      [:exchangeid, :symbol]
-
+      unique      %i[exchangeid symbol]
 
       DateTime :created_at
       DateTime :updated_at

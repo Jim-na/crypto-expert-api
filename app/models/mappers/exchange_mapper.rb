@@ -8,7 +8,6 @@ module CryptoExpert
         @token = token
         @gateway_class = gateway_class
         @gateway = @gateway_class.new(@token)
-         
       end
 
       def get
@@ -53,10 +52,8 @@ module CryptoExpert
           @all_funding_rate.map { |pair| results[pair['symbol']] = pair['fundingRate'] }
           results
         end
-        def name
-          @name
-        end
 
+        attr_reader :name
       end
     end
   end
