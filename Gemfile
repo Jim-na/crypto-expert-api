@@ -2,6 +2,19 @@
 
 source 'https://rubygems.org'
 
+# Configuration and Utilities
+gem 'figaro', '~> 1.2'
+gem 'rake'
+
+# Database
+gem 'hirb', '~> 0'
+gem 'hirb-unicode', '~> 0'
+gem 'sequel', '~> 5.49'
+
+group :development, :test do
+    gem 'sqlite3', '~> 1.4'
+end
+
 # Web Application
 gem 'puma', '~> 5.5'
 gem 'roda', '~> 3.49'
@@ -22,8 +35,6 @@ gem 'simplecov', '~> 0'
 gem 'vcr', '~> 6.0'
 gem 'webmock', '~> 3.0'
 
-# Utility Tools
-gem 'rake'
 
 # Debugging
 gem 'pry'

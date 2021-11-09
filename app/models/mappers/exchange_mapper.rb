@@ -25,13 +25,15 @@ module CryptoExpert
         def initialize(data, all_funding_rate)
           @data = data
           @all_funding_rate = all_funding_rate
+          @name = 'Binance'
         end
 
         def build_entity
           Entity::ExchangeInfo.new(
             currencylist: currencylist,
             timezone: timezone,
-            fundingratelist: fundingratelist
+            fundingratelist: fundingratelist,
+            name: name
           )
         end
 
@@ -50,6 +52,8 @@ module CryptoExpert
           @all_funding_rate.map { |pair| results[pair['symbol']] = pair['fundingRate'] }
           results
         end
+
+        attr_reader :name
       end
     end
   end

@@ -25,3 +25,9 @@ API Library
   - Future: price, funding rate
 - Exchange Info : to get time zone, current list and funding rate list of exchanges
 - Http API : define the http request to the client.
+
+Database
+
+ER-diagram
+
+![](https://i.imgur.com/4vW3rvC.png)

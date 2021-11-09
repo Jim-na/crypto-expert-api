@@ -13,8 +13,11 @@ module CryptoExpert
     route do |routing|
       routing.assets # load CSS
       # GET /
+
       routing.root do
-        view 'home'
+        pairlist = CryptoExpert::Repository::For.klass(CryptoExpert::Entity::SpotPair).all
+        # puts pairlist
+        view 'home', locals: { pairlist: pairlist }
       end
 
       routing.on 'spot' do
@@ -22,9 +25,15 @@ module CryptoExpert
           # POST /project/
           routing.post do
             symbol = routing.params['symbol'].upcase
-            # routing.halt 400 unless (gh_url.include? 'github.com') &&
-            #                         (gh_url.split('/').count >= 3)
-            # owner, project = gh_url.split('/')[-2..]
+            # Get pair from Binance
+            spotpair = CryptoExpert::Binance::SpotPairMapper
+                       .new('token')
+                       .get(symbol)
+
+            # Add project to database
+            CryptoExpert::Repository::For.klass(CryptoExpert::Entity::SpotPair).db_find_or_create(spotpair)
+
+            # Redirect viewer to project page
             routing.redirect "spot/#{symbol}"
           end
         end
@@ -32,15 +41,9 @@ module CryptoExpert
         routing.on String do |symbol|
           # GET /project/owner/project
           routing.get do
-            spotpair = CryptoExpert::Binance::SpotPairMapper
-                       .new('token')
-                       .get(symbol)
-            # futurepair =  CryptoExpert::Binance::FuturePairMapper
-            #   .new(BINANCE_TOKEN)
-            #   .get(symbol)
-
+            spotpair = CryptoExpert::Repository::For.klass(CryptoExpert::Entity::SpotPair)
+                                                    .find_symbol(symbol)
             view 'spot', locals: { spot: spotpair }
-            # view 'spot'
           end
         end
       end
