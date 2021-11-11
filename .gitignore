@@ -7,3 +7,4 @@ coverage/*
 spec/test
 test
 *.db
+.bundle/

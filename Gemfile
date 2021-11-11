@@ -6,6 +6,10 @@ source 'https://rubygems.org'
 gem 'figaro', '~> 1.2'
 gem 'rake'
 
+group :production do
+    gem 'pg'
+end
+
 # Database
 gem 'hirb', '~> 0'
 gem 'hirb-unicode', '~> 0'
