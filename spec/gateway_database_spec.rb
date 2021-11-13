@@ -21,12 +21,10 @@ describe 'Integration Tests of Binance API and Database' do
     end
 
     it 'HAPPY: should be able to save project from Binance to database' do
-      exchangeinfo = CryptoExpert::Binance::ExchangeMapper.new('token').get
-      CryptoExpert::Repository::For.klass(CryptoExpert::Entity::ExchangeInfo).db_find_or_create(exchangeinfo)
-      
-      spotPair = CryptoExpert::Binance::SpotPairMapper.new('token').get(SYMBOL)
 
-      rebuilt = CryptoExpert::Repository::For.klass(CryptoExpert::Entity::SpotPair).db_find_or_create(spotPair)
+      majorpair = CryptoExpert::Binance::MajorPairMapper.new('token').get(SYMBOL)
+
+      rebuilt = CryptoExpert::Repository::For.klass(CryptoExpert::Entity::MajorPair).db_find_or_create(majorpair)
 
       _(rebuilt.symbol).must_equal(spotPair.symbol)
       _(rebuilt.price).must_equal(spotPair.price)
