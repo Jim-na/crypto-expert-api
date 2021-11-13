@@ -26,9 +26,13 @@ describe 'Integration Tests of Binance API and Database' do
 
       rebuilt = CryptoExpert::Repository::For.klass(CryptoExpert::Entity::MajorPair).db_find_or_create(majorpair)
 
-      _(rebuilt.symbol).must_equal(spotPair.symbol)
-      _(rebuilt.price).must_equal(spotPair.price)
-
+      _(rebuilt.symbol).must_equal(majorpair.symbol)
+      _(rebuilt.spot_volume).must_equal(majorpair.spot_volume)
+      _(rebuilt.future_volume).must_equal(majorpair.future_volume)
+      _(rebuilt.funding_rate).must_equal(majorpair.funding_rate)
+      _(rebuilt.open_interest).must_equal(majorpair.open_interest)
+      _(rebuilt.longshort_ratio).must_equal(majorpair.longshort_ratio)
+      
     end
   end
 end

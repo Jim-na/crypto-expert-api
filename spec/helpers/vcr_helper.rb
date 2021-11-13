@@ -18,7 +18,7 @@ module VcrHelper
   def self.configure_vcr_for_bn
 
     VCR.insert_cassette CASSETTES_FILE,
-                    record: :new_episodes,
+                    record: :none,
                     match_requests_on: %i[method uri headers]
   end
 
