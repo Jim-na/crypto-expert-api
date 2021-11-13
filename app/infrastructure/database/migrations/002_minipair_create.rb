@@ -4,11 +4,12 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:exchanges) do
+    create_table(:minipair) do
       primary_key :id
 
-      String      :exchangename, unique: true, null: false
-      String      :timezone
+      String      :symbol , null: false
+      Float       :volume
+      DateTime    :time
     end
   end
 end

@@ -8,8 +8,8 @@ module CryptoExpert
     # Finds the right repository for an entity object or class
     module For
       ENTITY_REPOSITORY = {
-        Entity::ExchangeInfo => ExchangeInfo,
-        Entity::SpotPair => SpotPair
+        Entity::MajorPair => MajorPair,
+        Entity::MiniPair => MiniPair
       }.freeze
 
       def self.klass(entity_klass)
