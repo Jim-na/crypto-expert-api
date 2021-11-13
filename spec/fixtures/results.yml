@@ -1,8 +1,8 @@
 ---
 BTCUSDT:
-  time: !ruby/object:DateTime 2021-11-13 12:00:00.000000000 Z
-  spot_volume: "688.78270000"
-  future_volume: "3314.610"
-  longshort_ratio: "3.4863"
-  open_interest: "58762.53400000"
-  funding_rate: "0.00031732"
+  time: 1636808400000
+  spot_volume: '982.02587000'
+  future_volume: '4729.172'
+  longshort_ratio: '3.4823'
+  open_interest: '58828.56100000'
+  funding_rate: '0.00031732'

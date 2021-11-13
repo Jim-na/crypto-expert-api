@@ -24,11 +24,23 @@ describe 'Tests Binance API library' do
       _(@majorpair.symbol).must_equal SYMBOL
     end
     it 'HAPPY: should get Major CurrencyPair spot volume' do
-      _(@majorpair.price).wont_be_nil
+      _(@majorpair.spot_volume).wont_be_nil
+    end
+    it 'HAPPY: should get Major CurrencyPair future volume' do
+      _(@majorpair.future_volume).wont_be_nil
+    end
+    it 'HAPPY: should get Major CurrencyPair funding rate' do
+      _(@majorpair.funding_rate).wont_be_nil
+    end
+    it 'HAPPY: should get Major CurrencyPair open interest' do
+      _(@majorpair.open_interest).wont_be_nil
+    end
+    it 'HAPPY: should get Major CurrencyPair longshort ratio' do
+      _(@majorpair.longshort_ratio).wont_be_nil
     end
     it 'SAD: should raise exception on notfound currency pair' do
       _(proc do
-        CryptoExpert::Binance::SpotPairMapper.new(BINANCE_API_KEY).get('TINAJIMBO')
+        CryptoExpert::Binance::MajorPairMapper.new(BINANCE_API_KEY).get('TINAJIMBO')
       end).must_raise CryptoExpert::HttpApi::Response::BadRequest
     end
   end

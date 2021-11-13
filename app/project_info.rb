@@ -40,7 +40,7 @@ funding_rate = future_api("fapi/v1/fundingRate?symbol=#{SYMBOL}&limit=#{LIMIT}")
 
 time = call_future_url(longshort_ratio,config)[0]['timestamp']
 majorpair[SYMBOL] = {}
-majorpair[SYMBOL]['time'] = Time.at(time/1000).utc.to_datetime
+majorpair[SYMBOL]['time'] = time
 majorpair[SYMBOL]['spot_volume'] = call_spot_url(spot_klines_url)[0][5]
 majorpair[SYMBOL]['future_volume'] = call_future_url(future_klines_url,config)[0][5]
 majorpair[SYMBOL]['longshort_ratio'] = call_future_url(longshort_ratio,config)[0]['longShortRatio']
