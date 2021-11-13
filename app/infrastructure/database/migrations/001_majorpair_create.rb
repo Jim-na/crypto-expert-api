@@ -12,7 +12,7 @@ Sequel.migration do
       Float       :funding_rate
       Float       :longshort_ratio
       Float       :open_interest
-      Float       :future_valume
+      Float       :future_volume
       DateTime    :time
 
     end
