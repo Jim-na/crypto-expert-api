@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/aaa/Documents/GitHub/crypto-expert/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/init.rb": {
         "lines": [
           null,
           null,
@@ -10,14 +10,14 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/config/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/config/init.rb": {
         "lines": [
           null,
           null,
           1
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/config/environment.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -52,7 +52,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/init.rb": {
         "lines": [
           null,
           null,
@@ -61,7 +61,17 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/domain/init.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/domain/currencypair/init.rb": {
         "lines": [
           null,
           null,
@@ -73,7 +83,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/entities/exchangeinfo.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/domain/currencypair/entities/exchangeinfo.rb": {
         "lines": [
           null,
           null,
@@ -95,7 +105,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/entities/spotpair.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/domain/currencypair/entities/spotpair.rb": {
         "lines": [
           null,
           null,
@@ -116,7 +126,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/mappers/exchange_mapper.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/domain/currencypair/mappers/exchange_mapper.rb": {
         "lines": [
           null,
           null,
@@ -125,52 +135,52 @@
           null,
           1,
           1,
-          1,
-          1,
-          1,
+          3,
+          3,
+          3,
           null,
           null,
           1,
-          1,
-          1,
-          1,
+          3,
+          3,
+          3,
           null,
           null,
           1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
+          3,
           null,
           null,
           null,
           1,
-          null,
           1,
-          1744,
-          null,
-          null,
-          1,
-          1,
+          3,
+          3,
+          3,
           null,
           null,
           1,
+          3,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           1,
-          101,
+          null,
           1,
+          5232,
+          null,
+          null,
+          1,
+          3,
+          null,
+          null,
+          1,
+          3,
+          303,
+          3,
           null,
           null,
           1,
@@ -180,7 +190,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/mappers/spotpair_mapper.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/domain/currencypair/mappers/spotpair_mapper.rb": {
         "lines": [
           null,
           null,
@@ -189,43 +199,43 @@
           null,
           1,
           1,
-          1,
-          1,
-          1,
+          5,
+          5,
+          5,
           null,
           null,
           1,
-          1,
-          1,
+          5,
+          4,
           null,
           null,
           1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
+          4,
           null,
           null,
           null,
           1,
+          1,
+          4,
+          4,
+          null,
           null,
           1,
-          1,
+          4,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           1,
+          null,
           1,
+          4,
+          null,
+          null,
+          1,
+          4,
           null,
           null,
           1,
@@ -235,7 +245,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/repositories/exchangeinfo.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/domain/currencypair/repositories/exchangeinfo.rb": {
         "lines": [
           null,
           null,
@@ -257,16 +267,16 @@
           null,
           null,
           1,
-          1,
-          null,
-          null,
-          1,
           0,
           null,
           null,
           1,
           0,
           null,
+          null,
+          1,
+          0,
+          null,
           0,
           0,
           0,
@@ -278,12 +288,12 @@
           null,
           null,
           1,
-          1,
-          1,
-          1743,
+          0,
+          0,
+          0,
           null,
-          1,
-          100,
+          0,
+          0,
           null,
           null,
           null,
@@ -292,7 +302,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/repositories/for.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/domain/currencypair/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -309,55 +319,7 @@
           null,
           null,
           1,
-          2,
-          null,
-          null,
-          1,
           0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/repositories/spotpair.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
           null,
           null,
           1,
@@ -368,7 +330,55 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/models/repositories/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/domain/currencypair/repositories/spotpair.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/domain/currencypair/repositories/init.rb": {
         "lines": [
           null,
           null,
@@ -377,7 +387,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/infrastructure/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/infrastructure/init.rb": {
         "lines": [
           null,
           null,
@@ -387,7 +397,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/infrastructure/gateways/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/infrastructure/gateways/init.rb": {
         "lines": [
           null,
           null,
@@ -396,7 +406,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/infrastructure/gateways/binance_api.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/infrastructure/gateways/binance_api.rb": {
         "lines": [
           null,
           null,
@@ -412,12 +422,12 @@
           1,
           null,
           1,
-          2,
+          8,
           null,
           null,
           null,
           1,
-          1,
+          5,
           null,
           null,
           null,
@@ -427,19 +437,19 @@
           null,
           null,
           1,
-          1,
+          3,
           null,
           null,
           null,
           1,
-          1,
+          3,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/infrastructure/gateways/http_api.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/infrastructure/gateways/http_api.rb": {
         "lines": [
           null,
           null,
@@ -459,30 +469,30 @@
           null,
           null,
           1,
-          3,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
+          11,
           null,
           null,
           1,
           1,
-          3,
-          3,
+          null,
+          null,
           null,
           null,
           1,
-          3,
           1,
+          11,
+          11,
           null,
           null,
-          2,
-          null,
+          1,
+          11,
           3,
-          3,
+          null,
+          null,
+          8,
+          null,
+          11,
+          11,
           null,
           null,
           null,
@@ -490,7 +500,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/infrastructure/database/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/infrastructure/database/init.rb": {
         "lines": [
           null,
           null,
@@ -500,7 +510,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/infrastructure/database/orms/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/infrastructure/database/orms/init.rb": {
         "lines": [
           null,
           null,
@@ -509,7 +519,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/infrastructure/database/orms/currencylist_orm.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/infrastructure/database/orms/currencylist_orm.rb": {
         "lines": [
           null,
           null,
@@ -525,14 +535,14 @@
           1,
           null,
           1,
-          1743,
+          0,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/infrastructure/database/orms/exchange_orm.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/infrastructure/database/orms/exchange_orm.rb": {
         "lines": [
           null,
           null,
@@ -553,75 +563,75 @@
           null,
           null,
           1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/infrastructure/database/orms/fundingratelist_orm.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/infrastructure/database/orms/spot_orm.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/controllers/init.rb": {
+        "lines": [
+          null,
           null,
           1,
           2,
-          null,
-          null,
-          null,
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/infrastructure/database/orms/fundingratelist_orm.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          100,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/infrastructure/database/orms/spot_orm.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/controllers/init.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          2,
-          null
-        ]
-      },
-      "/Users/aaa/Documents/GitHub/crypto-expert/app/controllers/app.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/app/controllers/app.rb": {
         "lines": [
           null,
           null,
@@ -677,7 +687,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert/spec/helpers/vcr_helper.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/spec/helpers/vcr_helper.rb": {
         "lines": [
           null,
           null,
@@ -698,37 +708,18 @@
           null,
           1,
           null,
-          1,
+          7,
           null,
           null,
           null,
           null,
           1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/aaa/Documents/GitHub/crypto-expert/spec/helpers/database_helper.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
+          7,
           null,
           null
         ]
       }
     },
-    "timestamp": 1636470005
+    "timestamp": 1636781137
   }
 }

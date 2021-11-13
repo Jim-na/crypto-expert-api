@@ -14,7 +14,7 @@ describe 'Tests Binance API library' do
 
   describe 'Exchange info' do
     before do
-      @info = CryptoExpert::Binance::ExchangeMapper.new(BINANCE_TOKEN).get
+      @info = CryptoExpert::Binance::ExchangeMapper.new(BINANCE_API_KEY).get
     end
     it 'HAPPY: should provide correct currencyPair list' do
       _(@info.currencylist).must_equal CORRECT['symbols']
@@ -29,7 +29,7 @@ describe 'Tests Binance API library' do
 
   describe 'Spot Pair get information' do
     before do
-      @spotpair = CryptoExpert::Binance::SpotPairMapper.new(BINANCE_TOKEN).get(SYMBOL)
+      @spotpair = CryptoExpert::Binance::SpotPairMapper.new(BINANCE_API_KEY).get(SYMBOL)
     end
     it 'HAPPY: should get Spot CurrencyPair' do
       _(@spotpair).must_be_kind_of CryptoExpert::Entity::SpotPair
@@ -43,7 +43,7 @@ describe 'Tests Binance API library' do
     end
     it 'SAD: should raise exception on notfound currency pair' do
       _(proc do
-        CryptoExpert::Binance::SpotPairMapper.new(BINANCE_TOKEN).get('TINAJIMBO')
+        CryptoExpert::Binance::SpotPairMapper.new(BINANCE_API_KEY).get('TINAJIMBO')
       end).must_raise CryptoExpert::HttpApi::Response::BadRequest
     end
   end
