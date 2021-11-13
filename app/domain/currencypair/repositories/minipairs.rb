@@ -21,6 +21,10 @@ module CryptoExpert
           time: db_record.time
         )
       end
+
+      def self.db_find_or_create(entity)
+        Database::MiniPairOrm.find_or_create(entity.to_attr_hash)
+      end
     end
   end
 end

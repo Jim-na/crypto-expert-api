@@ -2,7 +2,7 @@
 
 module CryptoExpert
   module Binance
-    # map the Spot Pair info
+    # map the Ｍajor Pair info
     class MajorPairMapper
       def initialize(token, gateway_class = Binance::Api)
         @token = token
