@@ -2,8 +2,8 @@
 
 module CryptoExpert
   module Repository
-    # Repository for MajorPair
-    class MajorPair
+    # Repository for MajorPairs
+    class MajorPairs
       def self.all
         Database::MajorPairOrm.all.map { |majorpair| rebuild_entity(majorpair) }
       end

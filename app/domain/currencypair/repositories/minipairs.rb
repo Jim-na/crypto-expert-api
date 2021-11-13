@@ -2,8 +2,8 @@
 
 module CryptoExpert
   module Repository
-    # Repository for MiniPair
-    class MiniPair
+    # Repository for MiniPairs
+    class MiniPairs
       def self.all
         Database::MiniPairOrm.all.map { |minipair| rebuild_entity(minipair) }
       end
