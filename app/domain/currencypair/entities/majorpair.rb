@@ -10,8 +10,9 @@ module CryptoExpert
       include Dry.Types
 
       attribute :symbol,        Strict::String
-      attribute :datetime,         DateTime.optional
-      attribute :volume,         Float.optional
+      attribute :time,         DateTime.optional
+      attribute :spot_volume,         Float.optional
+      attribute :future_volume,         Float.optional
       attribute :funding_rate,         Float.optional
       attribute :longshort_ratio,         Float.optional
       attribute :open_interest,         Float.optional
