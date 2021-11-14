@@ -6,7 +6,7 @@ module CryptoExpert
       class MiniPairMapper
         def initialize(symbol)
           @symbol = symbol
-          @now = TempMiniPairMapper.new(CryptoExpert::App.config.BINANCE_API_KEY).get(symbol)
+          @now = CryptoExpert::Binance::TempMiniPairMapper.new(CryptoExpert::App.config.BINANCE_API_KEY).get(symbol)
           @history = CryptoExpert::Repository::TempMiniPairs.find_symbol(symbol)
         end
   
@@ -40,7 +40,11 @@ module CryptoExpert
           end
 
           def increase_percent
-            (@data['now'].volume - @data['history'].volume) / @data['history'].volume
+            if @data['history'] != nil
+              (@data['now'].volume - @data['history'].volume) / @data['history'].volume
+            else 
+              0.0
+            end
           end
   
         end
