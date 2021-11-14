@@ -5,7 +5,7 @@ require 'sequel'
 module CryptoExpert
   module Database
     # Object-Relational Mapper for Members
-    class MiniPairOrm < Sequel::Model(:minipair)
+    class TempMiniPairOrm < Sequel::Model(:tempminipair)
 
       plugin :timestamps, update_on_create: true
 

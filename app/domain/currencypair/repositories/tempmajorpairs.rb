@@ -3,19 +3,19 @@
 module CryptoExpert
   module Repository
     # Repository for MajorPairs
-    class MajorPairs
+    class TempMajorPairs
       def self.all
-        Database::MajorPairOrm.all.map { |majorpair| rebuild_entity(majorpair) }
+        Database::TempMajorPairOrm.all.map { |majorpair| rebuild_entity(majorpair) }
       end
 
       def self.find_symbol(symbol)
-        rebuild_entity Database::MajorPairOrm.first(symbol: symbol)
+        rebuild_entity Database::TempMajorPairOrm.first(symbol: symbol)
       end
 
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
-        Entity::MajorPairOrm.new(
+        Entity::TempMajorPairOrm.new(
           symbol: db_record.symbol,
           spot_volume: db_record.spot_volume,
           funding_rate: db_record.funding_rate,
@@ -27,7 +27,7 @@ module CryptoExpert
       end
 
       def self.db_find_or_create(entity)
-        Database::MajorPairOrm.find_or_create(entity.to_attr_hash)
+        Database::TempMajorPairOrm.find_or_create(entity.to_attr_hash)
       end
     end
   end

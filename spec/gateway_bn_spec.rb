@@ -12,59 +12,59 @@ describe 'Tests Binance API library' do
     VcrHelper.eject_vcr
   end
 
-  describe 'Major Pair get information' do
+  describe 'Temp Major Pair get information' do
     before do
-      @majorpair = CryptoExpert::Binance::MajorPairMapper.new(BINANCE_API_KEY).get(MAJOR_SYMBOL)
+      @tempmajorpair = CryptoExpert::Binance::TempMajorPairMapper.new(BINANCE_API_KEY).get(MAJOR_SYMBOL)
     end
-    it 'HAPPY: should get Major CurrencyPair' do
-      _(@majorpair).must_be_kind_of CryptoExpert::Entity::MajorPair
+    it 'HAPPY: should get Temp Major CurrencyPair' do
+      _(@tempmajorpair).must_be_kind_of CryptoExpert::Entity::TempMajorPair
     end
-    it 'HAPPY: should get Major CurrencyPair symbol' do
-      _(@majorpair.symbol).wont_be_nil
-      _(@majorpair.symbol).must_equal MAJOR_SYMBOL
+    it 'HAPPY: should get Temp Major CurrencyPair symbol' do
+      _(@tempmajorpair.symbol).wont_be_nil
+      _(@tempmajorpair.symbol).must_equal MAJOR_SYMBOL
     end
-    it 'HAPPY: should get Major CurrencyPair spot volume' do
-      _(@majorpair.spot_volume).wont_be_nil
+    it 'HAPPY: should get Temp Major CurrencyPair spot volume' do
+      _(@tempmajorpair.spot_volume).wont_be_nil
     end
-    it 'HAPPY: should get Major CurrencyPair future volume' do
-      _(@majorpair.future_volume).wont_be_nil
+    it 'HAPPY: should get Temp Major CurrencyPair future volume' do
+      _(@tempmajorpair.future_volume).wont_be_nil
     end
-    it 'HAPPY: should get Major CurrencyPair funding rate' do
-      _(@majorpair.funding_rate).wont_be_nil
+    it 'HAPPY: should get Temp Major CurrencyPair funding rate' do
+      _(@tempmajorpair.funding_rate).wont_be_nil
     end
-    it 'HAPPY: should get Major CurrencyPair open interest' do
-      _(@majorpair.open_interest).wont_be_nil
+    it 'HAPPY: should get Temp Major CurrencyPair open interest' do
+      _(@tempmajorpair.open_interest).wont_be_nil
     end
-    it 'HAPPY: should get Major CurrencyPair longshort ratio' do
-      _(@majorpair.longshort_ratio).wont_be_nil
+    it 'HAPPY: should get Temp Major CurrencyPair longshort ratio' do
+      _(@tempmajorpair.longshort_ratio).wont_be_nil
     end
     it 'SAD: should raise exception on notfound currency pair' do
       _(proc do
-        CryptoExpert::Binance::MajorPairMapper.new(BINANCE_API_KEY).get('TINAJIMBO')
+        CryptoExpert::Binance::TempMajorPairMapper.new(BINANCE_API_KEY).get('TINAJIMBO')
       end).must_raise CryptoExpert::HttpApi::Response::BadRequest
     end
   end
 
-  describe 'Mini Pair get information' do
+  describe 'Temp Mini Pair get information' do
     before do
-      @minipair = CryptoExpert::Binance::MiniPairMapper.new(BINANCE_API_KEY).get(MINI_SYMBOL)
+      @tempminipair = CryptoExpert::Binance::TempMiniPairMapper.new(BINANCE_API_KEY).get(MINI_SYMBOL)
     end
-    it 'HAPPY: should get Mini CurrencyPair' do
-      _(@minipair).must_be_kind_of CryptoExpert::Entity::MiniPair
+    it 'HAPPY: should get Temp Mini CurrencyPair' do
+      _(@tempminipair).must_be_kind_of CryptoExpert::Entity::TempMiniPair
     end
-    it 'HAPPY: should get Mini CurrencyPair symbol' do
-      _(@minipair.symbol).wont_be_nil
-      _(@minipair.symbol).must_equal MINI_SYMBOL
+    it 'HAPPY: should get Temp Mini CurrencyPair symbol' do
+      _(@tempminipair.symbol).wont_be_nil
+      _(@tempminipair.symbol).must_equal MINI_SYMBOL
     end
-    it 'HAPPY: should get Mini CurrencyPair time' do
-      _(@minipair.time).wont_be_nil
+    it 'HAPPY: should get Temp Mini CurrencyPair time' do
+      _(@tempminipair.time).wont_be_nil
     end
-    it 'HAPPY: should get Mini CurrencyPair volume' do
-      _(@minipair.volume).wont_be_nil
+    it 'HAPPY: should get Temp Mini CurrencyPair volume' do
+      _(@tempminipair.volume).wont_be_nil
     end
     it 'SAD: should raise exception on notfound currency pair' do
       _(proc do
-        CryptoExpert::Binance::MiniPairMapper.new(BINANCE_API_KEY).get('TINAJIMBO')
+        CryptoExpert::Binance::TempMiniPairMapper.new(BINANCE_API_KEY).get('TINAJIMBO')
       end).must_raise CryptoExpert::HttpApi::Response::BadRequest
     end
   end

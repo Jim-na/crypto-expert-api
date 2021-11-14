@@ -6,7 +6,7 @@ module CryptoExpert
   # Model for CurrencyPair
   module Entity
     # Domain entity for team members
-    class MajorPair < Dry::Struct
+    class TempMajorPair < Dry::Struct
       include Dry.Types
 
       attribute :symbol,        Strict::String

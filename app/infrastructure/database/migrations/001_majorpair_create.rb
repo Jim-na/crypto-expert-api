@@ -4,7 +4,7 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:majorpair) do
+    create_table(:tempmajorpair) do
       primary_key :id
 
       String      :symbol, null:false

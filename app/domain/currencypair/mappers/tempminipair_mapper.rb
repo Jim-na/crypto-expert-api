@@ -3,7 +3,7 @@
 module CryptoExpert
     module Binance
       # map the Spot Pair info
-      class MiniPairMapper
+      class TempMiniPairMapper
         def initialize(token, gateway_class = Binance::Api)
           @token = token
           @gateway_class = gateway_class
@@ -14,7 +14,7 @@ module CryptoExpert
           data = {}
           data['symbol'] = symbol
           data['spotpair_klines'] = @gateway.spotpair_klines(symbol)
-          MiniPairMapper.build_entity(data)
+          TempMiniPairMapper.build_entity(data)
         end
   
         def self.build_entity(data)
@@ -27,7 +27,7 @@ module CryptoExpert
             @data = data
           end
           def build_entity
-            Entity::MiniPair.new(
+            Entity::TempMiniPair.new(
               symbol: symbol,    
               time:time,
               volume:spot_volume,

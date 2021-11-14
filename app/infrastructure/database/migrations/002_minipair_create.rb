@@ -4,7 +4,7 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:minipair) do
+    create_table(:tempminipair) do
       primary_key :id
 
       String      :symbol , null: false

@@ -3,7 +3,7 @@
 module CryptoExpert
   module Binance
     # map the Ｍajor Pair info
-    class MajorPairMapper
+    class TempMajorPairMapper
       def initialize(token, gateway_class = Binance::Api)
         @token = token
         @gateway_class = gateway_class
@@ -17,7 +17,7 @@ module CryptoExpert
         data['funding_rate'] = @gateway.funding_rate(symbol)
         data['spotpair_klines'] = @gateway.spotpair_klines(symbol)
         data['futurepair_klines'] = @gateway.futurepair_klines(symbol)
-        MajorPairMapper.build_entity(data)
+        TempMajorPairMapper.build_entity(data)
       end
 
       def self.build_entity(data)
@@ -30,7 +30,7 @@ module CryptoExpert
           @data = data
         end
         def build_entity
-          Entity::MajorPair.new(
+          Entity::TempMajorPair.new(
             symbol: symbol,    
             time:time,
             spot_volume:spot_volume,
