@@ -2,21 +2,31 @@
 
 soa project
 
-We offer information from the markets, such as exchanges price, funding rate , KOL's suggestion, whale alert ... and more.
+We offer information and trading alert signal, which we combine and define the information from different resources, such as exchanges, social media popularity  and KOL's suggestion.
 
-- RUN `ruby ./init.rb` to init all relative file
-- I can't use `rackup` , so **I use `bundle exec rackup` to run the app.**
+### Problem
+- There are many different currencies and exchanges in cryptocurrency markets. Information is complicated and disorganized. 
+- People could get them easily but can’t utilize it to make good decisions. 
+- KOLs and information integration might help to solve this problem. 
 
 Short-term usability goals
 
 - to show all the information that we thought the investor in cryptocurrency market will need.
 
-Long-term goals
+### Long-term goals
 
-- Combine all useful info to give a investment suggestion.
-- Build a tg bot(or other bot) to make an order directly and offer some customized notification alert.
+- Combine all useful info to give a investment suggestion or signal.
+- Build a telegram bot(or other bot) to offer some customized notification alert.
+- The alert is the signal = domain logic , ex:
+  - Open interest raising rapidly with high volume and price increasing.
+  - Specified coin is blowing up social media now with more than 2 KOL’s has mentioned about it.
 
-API Library
+
+- RUN `ruby ./init.rb` to init all relative file
+- I can't use `rackup` , so **I use `bundle exec rackup` to run the app.**
+
+
+### API Library
 
 - ~~Info API : an api to get information from different exchanges. <= this is the main class to get info.~~
 - Binance::API : define the api to binance to get info.
