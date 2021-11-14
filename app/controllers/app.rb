@@ -15,37 +15,51 @@ module CryptoExpert
       # GET /
 
       routing.root do
-        pairlist = CryptoExpert::Repository::For.klass(CryptoExpert::Entity::SpotPair).all
+        pairlist = CryptoExpert::Repository::For.klass(CryptoExpert::Entity::TempMiniPair).all
         # puts pairlist
         view 'home', locals: { pairlist: pairlist }
       end
-
-      routing.on 'spot' do
+      routing.on 'kol' do
+        view 'home'
+      end
+      routing.on 'majorpair' do
+        view 'home'
+      end
+      routing.on 'minipair' do
         routing.is do
           # POST /project/
           routing.post do
             symbol = routing.params['symbol'].upcase
             # Get pair from Binance
-            spotpair = CryptoExpert::Binance::SpotPairMapper
-                       .new('token')
+            
+            minipair = CryptoExpert::Binance::TempMiniPairMapper
+                       .new(App.config.BINANCE_API_KEY)
                        .get(symbol)
 
             # Add project to database
-            CryptoExpert::Repository::For.klass(CryptoExpert::Entity::SpotPair).db_find_or_create(spotpair)
+            Repository::For.klass(Entity::TempMiniPair).db_find_or_create(minipair)
 
             # Redirect viewer to project page
-            routing.redirect "spot/#{symbol}"
+            routing.redirect "minipair/#{symbol}"
+          end
+          routing.get do
+            minipairs_list = Repository::For.klass(Entity::TempMiniPair).all
+            view 'minipair_index', locals: { pairlist: minipairs_list }
           end
         end
 
         routing.on String do |symbol|
           # GET /project/owner/project
           routing.get do
-            spotpair = CryptoExpert::Repository::For.klass(CryptoExpert::Entity::SpotPair)
+            # minipair = CryptoExpert::Binance::TempMiniPairMapper
+            #            .new(App.config.BINANCE_API_KEY)
+            #            .get(symbol)
+            minipair = Repository::For.klass(Entity::TempMiniPair)
                                                     .find_symbol(symbol)
-            view 'spot', locals: { spot: spotpair }
+            view 'minipair', locals: { pair: minipair }
           end
         end
+        
       end
     end
   end

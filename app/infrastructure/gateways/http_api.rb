@@ -34,7 +34,7 @@ module CryptoExpert
       def get(url)
         http_response = if @token
                           HTTP.headers('Content-Type' => 'application/json',
-                                       'X-MBX-APIKEY' => @token['apikey']).get("#{@resource_root}#{url}")
+                                       'X-MBX-APIKEY' => @token).get("#{@resource_root}#{url}")
                         else
                           HTTP.headers('Content-Type' => 'application/json').get("#{@resource_root}#{url}")
                         end

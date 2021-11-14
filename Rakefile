@@ -102,3 +102,7 @@ namespace :quality do
     sh "flog #{CODE}"
   end
 end
+
+namespace :db_data do
+  desc 'get some mini pair information'
+end

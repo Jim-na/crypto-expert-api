@@ -5,14 +5,12 @@ require 'sequel'
 module CryptoExpert
   module Database
     # Object-Relational Mapper for Members
-    class FundingRateListOrm < Sequel::Model(:fundingratelist)
-      many_to_one :exchange,
-                  class: :'CryptoExpert::Database::ExchangeOrm'
+    class TempMajorPairOrm < Sequel::Model(:tempmajorpair)
 
       plugin :timestamps, update_on_create: true
 
       def self.find_or_create(info)
-        first(symbol: info[:symbol], exchangeid: info[:exchangeid]) || create(info)
+        first(symbol: info[:symbol]) || create(info)
       end
     end
   end

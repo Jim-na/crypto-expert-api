@@ -1,16 +1,29 @@
 .container
-  .row
-    h2 
-      span.pair.symbol
-        = spot.symbol
-  .row
-    h4
-      span
-        = "Spot Price"
-    text
-      span.pair.price style="padding-left:20px"
-        = spot.price
-/  .row
+  .col-12.col-md-9 
+    .jumbotron.text-left
+      .row
+        h4  
+          span.pair.symbol
+            = pair.symbol
+      .row
+        h5
+          span
+            = "Spot Volume"
+        text
+          span.pair.volume style="padding-left:20px"
+            = pair.volume
+      .row
+        h5
+          span
+            = "Time"
+        text
+          span.pair.time style="padding-left:20px"
+              = Time.at(pair.time/1000).utc.to_datetime
+  .col-12.col-md-9
+    h4 
+      ="Here is tradingview chart"
+        
+  /  .row
 /    h4
 /      span
 /        = "Future Mark Price"

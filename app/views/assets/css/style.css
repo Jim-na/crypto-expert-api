@@ -6,26 +6,50 @@ h1 {
   text-decoration: none;
 }
 
-.top-buffer { margin-top:20px; }
+.top-buffer {
+  margin-top: 20px;
+}
 
 .posting.body {
   font-size: 1.2em;
 }
-
-.project.attribute {
+.navbar-brand {
   font-weight: bold;
+  font-size: 2em;
+}
+a {
+  text-decoration: none;
 }
 
-.project.detail {
+.pair-table{
+  box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
+  background-color:white;
+  padding: 20px;
+}
+@media(max-width:1000px){
+  .pair-table{
+      display:none
+  }
+}
+
+.pair.symbol {
+  font-weight: bold;
+  text-align: center;
+}
+
+.table_symbol {
+  color: grey;
+  font-weight: bold;
+  text-align: center;
+}
+.table_volume {
   color: grey;
 }
-
-.project.owner {
-  font-weight: bold
+.table_time {
+  color: grey;
 }
-
-.project.name {
-  
+.table_change {
+  color: red;
 }
 
 .vcenter {
@@ -47,19 +71,70 @@ h1 {
                               horizontally inside the column */
 }
 
-.top-buffer { margin-top:20px; }
+.top-buffer {
+  margin-top: 20px;
+}
 
 .blank-row {
   height: 30px;
 }
 
 .query-bar {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   padding: 5px 5px 5px 5px;
 }
 
 footer {
   padding: 0.5in;
-  font-size:11px;
-  color:rgb(100, 100, 100);
+  font-size: 11px;
+  color: rgb(100, 100, 100);
+}
+
+.nav-pills > li.nav-item > a.active > a,
+.nav-pills > li.nav-item > a.active > a:hover,
+.nav-pills > li.nav-item > a.active > a:focus {
+  color: #ffffff;
+  background-color: #428bca;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #428bca;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #428bca;
+}
+
+a.nav-link {
+  color: #428bca;
+}
+a.btn {
+  color: #fff !important;
+}
+.store-card {
+  margin-bottom: 1rem;
+}
+.card-body {
+  background-color: #f0f8ff;
+}
+@media (max-width: 768px) {
+  .myChart {
+    height: 300px;
+  }
+}
+.active-cyan-2 input.form-control[type="text"]:focus:not([readonly]) {
+  border-bottom: 1px solid #4dd0e1;
+  box-shadow: 0 1px 0 0 #4dd0e1;
+}
+.active-cyan input.form-control[type="text"] {
+  border-bottom: 1px solid #4dd0e1;
+  box-shadow: 0 1px 0 0 #4dd0e1;
+}
+.active-cyan .fa,
+.active-cyan-2 .fa {
+  color: #4dd0e1;
 }

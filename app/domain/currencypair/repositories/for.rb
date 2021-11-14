@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require_relative 'spotpair'
-require_relative 'exchangeinfo'
+require_relative 'tempmajorpairs'
+require_relative 'tempminipairs'
 
 module CryptoExpert
   module Repository
     # Finds the right repository for an entity object or class
     module For
       ENTITY_REPOSITORY = {
-        Entity::ExchangeInfo => ExchangeInfo,
-        Entity::SpotPair => SpotPair
+        Entity::TempMajorPair => TempMajorPairs,
+        Entity::TempMiniPair => TempMiniPairs
       }.freeze
 
       def self.klass(entity_klass)

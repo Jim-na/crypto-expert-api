@@ -6,12 +6,16 @@ module CryptoExpert
   # Model for CurrencyPair
   module Entity
     # Domain entity for team members
-    class SpotPair < Dry::Struct
+    class TempMiniPair < Dry::Struct
       include Dry.Types
 
       attribute :symbol,        Strict::String
-      attribute :price,         Float.optional
-      attribute :exchange,      String.optional
+      attribute :time,          Integer.optional
+      attribute :volume,        Float.optional
+
+      def to_attr_hash
+        to_hash.reject { |key, _| [:id].include? key }
+      end
     end
   end
 end
