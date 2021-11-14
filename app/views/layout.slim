@@ -1,7 +1,16 @@
 doctype html
 html
   head
-    title Crypto All in One
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width, initial-scale=1.0"]
+    meta[name="description" content=""]
+    meta[name="author" content=""]
+    title
+    script[src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.min.js" integrity="sha256-TI0rIaxop+pDlHNVI6kDCFvmpxNYUnVH/SMjknZ/W0Y=" crossorigin="anonymous"]
+    script[src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"]
+    script[src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"]
+    script[src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"]
+    link[rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"]
 
     / Bootstrap CSS and theme (United Theme)
     link{
@@ -14,29 +23,40 @@ html
     / link rel='stylesheet' href='/presentation/assets/css/style.css'
     == assets(:css)
   body
-    / Popper
-    script{ 
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-      crossorigin="anonymous" 
-    }
-
-    / Bootstrap
-    script{
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    }
-
-    .container id='html_body'
-      section
-        .row style="vertical-align: middle;"
-          .col-12
-            h1 
-              a.text-underline-hover href="/" Crypto All in One
-
+    .container
+      .header
+        nav.navbar.navbar-expand-sm
+          a.navbar-brand href="/"  Crypto Alert
+          button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button" 
+            span.navbar-toggler-icon
+          #navbarNavAltMarkup.collapse.navbar-collapse.text-right
+            ul.nav.nav-pills.justify-content-end
+              li.nav-item
+                a.nav-link href="/majorpair"  Major Pair
+              li.nav-item
+              li
+                a.nav-link.active href="/minipair"  Mini Pair
+              li.nav-item
+              li
+                a.nav-link href="/kol"  KOL
+            ul.nav.navbar-nav.ml-auto
+              /! Search form
+            form.form-inline.d-flex.justify-content-center.md-form.form-sm.active-cyan.active-cyan-2.mt-2 action="/minipair" method='POST' id='show-minipair-form'
+              .md-form.my-0
+                i.fas.fa-search.text-white.ml-3 aria-hidden="true" 
+                input { 
+                  type='text' name='symbol'
+                  aria-label="Search"
+                  id='symbol_input' class="form-control"
+                  placeholder="e.g. BTCUSDT"
+                }
+                button { 
+                  type='submit' id='minipair-submit' class='submit' 
+                  value='submit' class="btn active-cyan" 
+                } Search
+                
       section
         == yield
-
       footer
-        = "We offer KOL info just for suggestions"
+        p &copy; SOA TIBO
+

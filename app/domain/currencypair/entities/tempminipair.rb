@@ -16,9 +16,6 @@ module CryptoExpert
       def to_attr_hash
         to_hash.reject { |key, _| [:id].include? key }
       end
-      def datetime
-        Time.at(self.time/1000).utc.to_datetime
-      end
     end
   end
 end

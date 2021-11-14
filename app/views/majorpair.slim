@@ -1,0 +1,77 @@
+.container
+  .row
+    h2 
+      span.pair.symbol
+        = pair.symbol
+  .row
+    h4
+      span
+        = "Spot Volume"
+    text
+      span.pair.price style="padding-left:20px"
+        = pair.spot_volume
+  .row
+    h4
+      span
+        = "Future Volume"
+    text
+      span.pair.price style="padding-left:20px"
+        = pair.future_volume
+  .row
+    h4
+      span
+        = "Future volume"
+    text
+      span.pair.price style="padding-left:20px"
+        = pair.future_volume 
+  .row
+    h4
+      span
+        = "Funding Rate"
+    text
+      span.pair.price style="padding-left:20px"
+        = pair.funding_rate
+  .row
+    h4
+      span
+        = "Open Interest"
+    text
+      span.pair.price style="padding-left:20px"
+        = pair.open_interest
+  .row
+    h4
+      span
+        = "Long Short Ratio"
+    text
+      span.pair.price style="padding-left:20px"
+        = pair.longshort_ratio
+  /  .row
+/    h4
+/      span
+/        = "Future Mark Price"
+/    text
+/      span.pair.price style="padding-left:20px"
+/      = future.price
+/  .row
+/    h4
+/      span
+/        = "Future Funding Rate"
+/    text
+/      span.pair.price style="padding-left:20px"
+/        = future.fundingrate
+        
+  / .container
+  /   .row
+  /     .col-lg-1.col-md-2.col-sm-2
+  /       span.project.attribute Repo:
+  /     .col-lg-11.col-md-10.col-sm-6
+  /       span.project.detail
+  /         = project.git_url
+  /   .row.top-buffer
+  /     .col-lg-1.col-md-2.col-sm-2
+  /       span.project.attribute Members:
+  /     .col-lg-11.col-md-10.col-sm-6
+  /       .row
+  /         - project.members.each do |member|
+  /           .col-sm-12
+  /             a.project.detail href="https://github.com/#{member.username}" #{member.username}

@@ -1,21 +1,35 @@
 .container
-  form role="form" action="/spot" method='POST' id='show-project-form'
-    .row.vertical-align.query-bar
-      .col-md-2.col-sm-3
-        .text-right Currency Pair:
-      .col-md-8.col-sm-6
-        input { 
-          type='text' name='symbol'
-          id='symbol_input' class="form-control"
-          placeholder="e.g. BTCUSDT"
-        }
-      .col-md-2.col-sm-3
-        button { 
-          type='submit' id='repo-form-submit' class='submit' 
-          value='submit' class="btn btn-success" 
-        } Show Price
+  .jumbotron.text-left
     .row
-      .col-md-12.blank-row
+      .col-sm-4
+        h4
+          | Target Major Pair
+        li
+          a[href="/BTCUSDT"]
+            |  BTCUSDT
+        li
+          |  ETHUSDT 
+        li
+          |  SOLUSDT 
+      .col-sm-4
+        h4
+          | Target Mini Pair
+        li
+          |  MANAUSDT 
+        li
+          |  MBOXUSDT 
+        li
+          |  OMGUSDT 
+      .col-sm-4
+        h4
+          | Target KOL 
+        li
+          |  The BULL 
+        li
+          |  Rose 
+        li
+          |  Benson 
+.container
     - if pairlist.any?
       table class="table table-hover" id="spotpair_table"
         thead

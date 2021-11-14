@@ -2,15 +2,23 @@
   .row
     h2 
       span.pair.symbol
-        = spot.symbol
+        = pair.symbol
   .row
     h4
       span
-        = "Spot Price"
+        = "Spot Volume"
     text
       span.pair.price style="padding-left:20px"
-        = spot.price
-/  .row
+        = pair.volume
+  .row
+    h4
+      span
+        = "Time"
+    text
+      span.pair.price style="padding-left:20px"
+          = Time.at(pair.time/1000).utc.to_datetime
+        
+  /  .row
 /    h4
 /      span
 /        = "Future Mark Price"

@@ -1,0 +1,35 @@
+.container
+  .row
+    h2 
+      span
+        ="INDEX"
+  /  .row
+/    h4
+/      span
+/        = "Future Mark Price"
+/    text
+/      span.pair.price style="padding-left:20px"
+/      = future.price
+/  .row
+/    h4
+/      span
+/        = "Future Funding Rate"
+/    text
+/      span.pair.price style="padding-left:20px"
+/        = future.fundingrate
+        
+  / .container
+  /   .row
+  /     .col-lg-1.col-md-2.col-sm-2
+  /       span.project.attribute Repo:
+  /     .col-lg-11.col-md-10.col-sm-6
+  /       span.project.detail
+  /         = project.git_url
+  /   .row.top-buffer
+  /     .col-lg-1.col-md-2.col-sm-2
+  /       span.project.attribute Members:
+  /     .col-lg-11.col-md-10.col-sm-6
+  /       .row
+  /         - project.members.each do |member|
+  /           .col-sm-12
+  /             a.project.detail href="https://github.com/#{member.username}" #{member.username}
