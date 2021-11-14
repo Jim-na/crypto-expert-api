@@ -10,7 +10,7 @@ module CryptoExpert
       include Dry.Types
 
       attribute :symbol,                Strict::String
-      attribute :volume_percent,        Float.optional
+      attribute :increase_percent,      Float.optional
 
     end
   end
