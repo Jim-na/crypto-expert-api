@@ -1,35 +1,34 @@
+body
+   == assets(:js, defer: true)
 .container
-  .row
-    h2 
-      span
-        ="INDEX"
-  /  .row
-/    h4
-/      span
-/        = "Future Mark Price"
-/    text
-/      span.pair.price style="padding-left:20px"
-/      = future.price
-/  .row
-/    h4
-/      span
-/        = "Future Funding Rate"
-/    text
-/      span.pair.price style="padding-left:20px"
-/        = future.fundingrate
-        
-  / .container
-  /   .row
-  /     .col-lg-1.col-md-2.col-sm-2
-  /       span.project.attribute Repo:
-  /     .col-lg-11.col-md-10.col-sm-6
-  /       span.project.detail
-  /         = project.git_url
-  /   .row.top-buffer
-  /     .col-lg-1.col-md-2.col-sm-2
-  /       span.project.attribute Members:
-  /     .col-lg-11.col-md-10.col-sm-6
-  /       .row
-  /         - project.members.each do |member|
-  /           .col-sm-12
-  /             a.project.detail href="https://github.com/#{member.username}" #{member.username}
+    .jumbotron.text-center
+        .row
+            h5 This is minipair table
+.container
+    - if pairlist.any?
+      #pair-table.pair-table
+        table#pair-table.table.table-hover
+            thead
+            tr
+                th Minipair Symbol
+                th Time
+                th Volume
+                th 24H Volume Changes
+                th Signal
+            tbody
+            - pairlist.each do |pair|
+                tr class="table-row pair-row"
+                td id='td_price'
+                    span class="table_symbol" 
+                    a [href = "/minipair/#{pair.symbol}"] #{pair.symbol} 
+                td id='td_minipair'
+                    span class="table_time"
+                    = Time.at(pair.time/1000).utc.to_datetime
+                td id='td_volume'
+                    span class="table_volume"
+                    = pair.volume
+                td id='td_changes'
+                    span class="table_changes"
+                    = pair.volume
+                td id='td_signal'
+                    span class="table_signal"

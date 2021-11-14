@@ -13,20 +13,43 @@ h1 {
 .posting.body {
   font-size: 1.2em;
 }
-
-.project.attribute {
+.navbar-brand {
   font-weight: bold;
+  font-size: 2em;
+}
+a {
+  text-decoration: none;
 }
 
-.project.detail {
+.pair-table{
+  box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
+  background-color:white;
+  padding: 20px;
+}
+@media(max-width:1000px){
+  .pair-table{
+      display:none
+  }
+}
+
+.pair.symbol {
+  font-weight: bold;
+  text-align: center;
+}
+
+.table_symbol {
+  color: grey;
+  font-weight: bold;
+  text-align: center;
+}
+.table_volume {
   color: grey;
 }
-
-.project.owner {
-  font-weight: bold;
+.table_time {
+  color: grey;
 }
-
-.project.name {
+.table_change {
+  color: red;
 }
 
 .vcenter {
