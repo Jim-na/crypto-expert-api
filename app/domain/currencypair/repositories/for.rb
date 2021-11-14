@@ -9,7 +9,7 @@ module CryptoExpert
     module For
       ENTITY_REPOSITORY = {
         Entity::MajorPair => MajorPairs,
-        #Entity::MiniPair => MiniPairs
+        Entity::MiniPair => MiniPairs
       }.freeze
 
       def self.klass(entity_klass)

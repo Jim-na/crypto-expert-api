@@ -10,8 +10,8 @@ module CryptoExpert
       include Dry.Types
 
       attribute :symbol,        Strict::String
-      attribute :time,         DateTime.optional
-      attribute :volume,         Float.optional
+      attribute :time,          DateTime.optional
+      attribute :volume,        Float.optional
 
       def to_attr_hash
         to_hash.reject { |key, _| [:id].include? key }
