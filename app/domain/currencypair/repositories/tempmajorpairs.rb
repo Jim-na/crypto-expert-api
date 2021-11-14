@@ -22,7 +22,7 @@ module CryptoExpert
           open_interest: db_record.open_interest,
           future_volume: db_record.future_volume,
           longshort_ratio: db_record.longshort_ratio,
-          time: db_record.time
+          time: db_record.time.to_i
         )
       end
 

@@ -18,7 +18,7 @@ module CryptoExpert
         Entity::TempMiniPair.new(
           symbol: db_record.symbol,
           volume: db_record.volume,
-          time: db_record.time
+          time: db_record.time.to_i
         )
       end
 

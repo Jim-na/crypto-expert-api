@@ -13,7 +13,7 @@ Sequel.migration do
       Float       :longshort_ratio
       Float       :open_interest
       Float       :future_volume
-      Integer     :time
+      String      :time
 
     end
   end

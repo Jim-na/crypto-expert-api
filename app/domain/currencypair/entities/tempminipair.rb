@@ -14,7 +14,9 @@ module CryptoExpert
       attribute :volume,        Float.optional
 
       def to_attr_hash
-        to_hash.reject { |key, _| [:id].include? key }
+        hash = to_hash.reject { |key, _| [:id].include? key }
+        hash[time].to_s
+        hash
       end
     end
   end

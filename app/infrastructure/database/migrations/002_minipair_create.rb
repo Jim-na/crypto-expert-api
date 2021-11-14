@@ -9,7 +9,7 @@ Sequel.migration do
 
       String      :symbol , null: false
       Float       :volume
-      Integer     :time
+      String      :time
     end
   end
 end
