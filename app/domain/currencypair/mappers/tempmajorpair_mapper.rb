@@ -48,7 +48,6 @@ module CryptoExpert
 
         def time
           time = @data['longshort_ratio'][0]['timestamp']
-          Time.at(time/1000).utc.to_datetime
         end
         
         def spot_volume

@@ -3,18 +3,14 @@
 module CryptoExpert
     module Binance
       # map the Spot Pair info
-      class TempMiniPairMapper
-        def initialize(token, gateway_class = Binance::Api)
-          @token = token
-          @gateway_class = gateway_class
-          @gateway = @gateway_class.new(@token)
+      class MiniPairMapper
+        def initialize(token)
+          @now = TempMiniPairMapper.new(CryptoExpert::App.config.BINANCE_API_KEY).get(token)
+          @history = CryptoExpert::Repository::TempMiniPairs.find_symbol(symbol)
         end
   
         def get(symbol)
-          data = {}
-          data['symbol'] = symbol
-          data['spotpair_klines'] = @gateway.spotpair_klines(symbol)
-          TempMiniPairMapper.build_entity(data)
+          MiniPairMapper.build_entity(data)
         end
   
         def self.build_entity(data)
@@ -27,7 +23,7 @@ module CryptoExpert
             @data = data
           end
           def build_entity
-            Entity::TempMiniPair.new(
+            Entity::MiniPair.new(
               symbol: symbol,    
               time:time,
               volume:spot_volume,
@@ -39,13 +35,6 @@ module CryptoExpert
             @data['symbol']
           end
   
-          def time
-            time = @data['spotpair_klines'][0][0]
-          end
-          
-          def spot_volume
-            @data['spotpair_klines'][0][5].to_f
-          end
         end
       end
     end

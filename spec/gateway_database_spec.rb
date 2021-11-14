@@ -32,6 +32,15 @@ describe 'Integration Tests of Binance API and Database' do
       _(rebuilt.funding_rate).must_equal(tempmajorpair.funding_rate)
       _(rebuilt.open_interest).must_equal(tempmajorpair.open_interest)
       _(rebuilt.longshort_ratio).must_equal(tempmajorpair.longshort_ratio)
+
+      result = CryptoExpert::Repository::TempMajorPairs.find_symbol(MAJOR_SYMBOL)
+      _(rebuilt.symbol).must_equal(result.symbol)
+      _(rebuilt.spot_volume).must_equal(result.spot_volume)
+      _(rebuilt.future_volume).must_equal(result.future_volume)
+      _(rebuilt.funding_rate).must_equal(result.funding_rate)
+      _(rebuilt.open_interest).must_equal(result.open_interest)
+      _(rebuilt.longshort_ratio).must_equal(result.longshort_ratio)
+
     end
 
     it 'HAPPY: should be able to save MiniPair from Binance to database' do
@@ -42,6 +51,10 @@ describe 'Integration Tests of Binance API and Database' do
 
       _(rebuilt.symbol).must_equal(tempminipair.symbol)
       _(rebuilt.volume).must_equal(tempminipair.volume)
+
+      result = CryptoExpert::Repository::TempMiniPairs.find_symbol(MINI_SYMBOL)
+      _(rebuilt.symbol).must_equal(result.symbol)
+      _(rebuilt.volume).must_equal(result.volume)
     end
   end
 end

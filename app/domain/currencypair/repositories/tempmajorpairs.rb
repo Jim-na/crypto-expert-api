@@ -15,7 +15,7 @@ module CryptoExpert
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
-        Entity::TempMajorPairOrm.new(
+        Entity::TempMajorPair.new(
           symbol: db_record.symbol,
           spot_volume: db_record.spot_volume,
           funding_rate: db_record.funding_rate,

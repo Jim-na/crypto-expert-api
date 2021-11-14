@@ -15,7 +15,7 @@ module CryptoExpert
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
-        Entity::TempMiniPairOrm.new(
+        Entity::TempMiniPair.new(
           symbol: db_record.symbol,
           volume: db_record.volume,
           time: db_record.time

@@ -9,17 +9,21 @@ module CryptoExpert
     class TempMajorPair < Dry::Struct
       include Dry.Types
 
-      attribute :symbol,        Strict::String
-      attribute :time,         DateTime.optional
+      attribute :symbol,              Strict::String
+      attribute :time,                Integer.optional
       attribute :spot_volume,         Float.optional
-      attribute :future_volume,         Float.optional
-      attribute :funding_rate,         Float.optional
-      attribute :longshort_ratio,         Float.optional
-      attribute :open_interest,         Float.optional
+      attribute :future_volume,       Float.optional
+      attribute :funding_rate,        Float.optional
+      attribute :longshort_ratio,     Float.optional
+      attribute :open_interest,       Float.optional
       
       def to_attr_hash
         to_hash.reject { |key, _| [:id].include? key }
       end
+      def datetime
+        Time.at(self.time/1000).utc.to_datetime
+      end
     end
+
   end
 end
