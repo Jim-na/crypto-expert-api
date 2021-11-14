@@ -53,11 +53,12 @@ namespace :db do
 
   desc 'Delete dev or test database file (set correct RACK_ENV)'
   task :drop => :config do
+    '''
     if app.environment == :production
       puts 'Do not damage production database!'
       return
     end
-
+    '''
     FileUtils.rm(CryptoExpert::App.config.DB_FILENAME)
     puts "Deleted #{CryptoExpert::App.config.DB_FILENAME}"
   end
