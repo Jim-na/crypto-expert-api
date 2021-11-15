@@ -72,7 +72,7 @@ end
 
 desc 'run tests'
 task :spec do
-  sh 'ruby spec/bn_api_spec.rb'
+  sh 'ruby spec/gateway_bn_spec.rb'
 end
 
 namespace :vcr do
