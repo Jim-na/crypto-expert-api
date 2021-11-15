@@ -4,6 +4,9 @@ soa project
 
 We offer information and trading alert signal, which we combine and define the information from different resources, such as exchanges, social media popularity  and KOL's suggestion.
 
+## Note:
+Binance Api **will fail in NTHU ip**. We used vpn to get binance.com.
+
 ### Problem
 - There are many different currencies and exchanges in cryptocurrency markets. Information is complicated and disorganized. 
 - People could get them easily but can’t utilize it to make good decisions. 

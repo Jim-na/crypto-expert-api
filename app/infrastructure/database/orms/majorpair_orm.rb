@@ -6,7 +6,6 @@ module CryptoExpert
   module Database
     # Object-Relational Mapper for Members
     class TempMajorPairOrm < Sequel::Model(:tempmajorpair)
-
       plugin :timestamps, update_on_create: true
 
       def self.find_or_create(info)
