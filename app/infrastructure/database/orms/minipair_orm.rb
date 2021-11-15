@@ -6,13 +6,11 @@ module CryptoExpert
   module Database
     # Object-Relational Mapper for Members
     class TempMiniPairOrm < Sequel::Model(:tempminipair)
-
       plugin :timestamps, update_on_create: true
 
       def self.find_or_create(info)
         first(symbol: info[:symbol]) || create(info)
       end
-
     end
   end
 end

@@ -31,7 +31,7 @@ module CryptoExpert
           routing.post do
             symbol = routing.params['symbol'].upcase
             # Get pair from Binance
-            
+
             minipair = CryptoExpert::Binance::TempMiniPairMapper
                        .new(App.config.BINANCE_API_KEY)
                        .get(symbol)
@@ -55,11 +55,10 @@ module CryptoExpert
             #            .new(App.config.BINANCE_API_KEY)
             #            .get(symbol)
             minipair = Repository::For.klass(Entity::TempMiniPair)
-                                                    .find_symbol(symbol)
+                                      .find_symbol(symbol)
             view 'minipair', locals: { pair: minipair }
           end
         end
-        
       end
     end
   end

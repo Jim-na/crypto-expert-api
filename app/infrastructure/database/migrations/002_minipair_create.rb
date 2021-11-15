@@ -7,7 +7,7 @@ Sequel.migration do
     create_table(:tempminipair) do
       primary_key :id
 
-      String      :symbol , null: false
+      String      :symbol, null: false
       Float       :volume
       String      :time
     end

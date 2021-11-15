@@ -1004,4 +1004,73 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '[[1636902000000,"64387.46","64387.46","64024.60","64117.84","5748.493",1636905599999,"368959706.65161",72662,"2883.185","185065388.06282","0"],[1636905600000,"64117.84","64229.92","63888.00","64176.11","4901.627",1636909199999,"314093154.83958",58759,"2283.406","146354104.12284","0"]]'
   recorded_at: Sun, 14 Nov 2021 16:31:38 GMT
+- request:
+    method: get
+    uri: https://api.binance.com/api/v3/klines?interval=1h&limit=2&symbol=fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '108'
+      Connection:
+      - close
+      Date:
+      - Mon, 15 Nov 2021 02:52:05 GMT
+      Server:
+      - nginx
+      X-Mbx-Uuid:
+      - 9a59154c-7b07-40c8-9aaf-6766da6e7771
+      X-Mbx-Used-Weight:
+      - '1'
+      X-Mbx-Used-Weight-1m:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'self'
+      X-Content-Security-Policy:
+      - default-src 'self'
+      X-Webkit-Csp:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 f00ea1bee8d7ea7a9b5f075d3383a44e.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE51-C1
+      X-Amz-Cf-Id:
+      - CeIButMhiaoWnJBIq1uE25VzJDTHGPw0gS-CAGrIVN3YzvutshfF0g==
+    body:
+      encoding: UTF-8
+      string: '{"code":-1100,"msg":"Illegal characters found in parameter ''symbol'';
+        legal range is ''^[A-Z0-9-_.]{1,20}$''."}'
+  recorded_at: Mon, 15 Nov 2021 02:52:05 GMT
 recorded_with: VCR 6.0.0

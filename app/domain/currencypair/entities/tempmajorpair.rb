@@ -16,14 +16,12 @@ module CryptoExpert
       attribute :funding_rate,        Float.optional
       attribute :longshort_ratio,     Float.optional
       attribute :open_interest,       Float.optional
-      
+
       def to_attr_hash
         hash = to_hash.reject { |key, _| [:id].include? key }
         hash[time].to_s
         hash
       end
-    
     end
-
   end
 end
