@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var table = $(".pair-table").DataTable({
+  var table = $("#sortable").DataTable({
     initComplete: function (settings, json) {},
     language: {
       sProcessing: "Processing.",
@@ -27,5 +27,5 @@ $(document).ready(function () {
     },
     buttons: ["copy", "excel", "colvis"],
   });
-  table.buttons().container().appendTo("#pairtable_wrapper .col-md-6:eq(0)");
+  table.buttons().container().appendTo("#example_wrapper .col-md-6:eq(0)");
 });
