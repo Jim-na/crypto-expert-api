@@ -73,8 +73,8 @@ module CryptoExpert
                           Repository::For.klass(Entity::TempMiniPair).find_symbol(pair)}
               viewable_minipairs = Views::MiniPairList.new(minipairs)
             rescue
-              flash.now[:notice] = 'Add a Mini Pair to get started'
-              viewable_minipairs = []
+              flash[:error] = 'Add a Mini Pair to get started'
+              routing.redirect '/'
             end
             
             # session[:watching] = minipairs.map{|pair| pair.symbol}
