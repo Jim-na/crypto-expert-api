@@ -9,10 +9,8 @@ module Views
       @minipair = minipair.map.with_index { |pair, i| MiniPair.new(pair, i) }
     end
 
-    def each
-      @minipair.each do |pair|
-        yield pair
-      end
+    def each(&block)
+      @minipair.each(&block)
     end
 
     def any?
@@ -20,4 +18,3 @@ module Views
     end
   end
 end
-

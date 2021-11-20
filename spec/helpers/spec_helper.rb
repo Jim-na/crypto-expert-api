@@ -17,9 +17,7 @@ BINANCE_API_KEY = CryptoExpert::App.config.BINANCE_API_KEY
 MAJOR_SYMBOL = 'BTCUSDT'
 MINI_SYMBOL = 'ELFUSDT'
 
-
 # Helper method for acceptance tests
 def homepage
-    CryptoExpert::App.config.APP_HOST
+  CryptoExpert::App.config.APP_HOST
 end
-  

@@ -7,7 +7,7 @@ gem 'figaro', '~> 1.2'
 gem 'rake'
 
 group :production do
-    gem 'pg'
+  gem 'pg'
 end
 
 # Database
@@ -16,7 +16,7 @@ gem 'hirb-unicode', '~> 0'
 gem 'sequel', '~> 5.49'
 
 group :development, :test do
-    gem 'sqlite3', '~> 1.4'
+  gem 'sqlite3', '~> 1.4'
 end
 
 # Web Application
@@ -34,17 +34,17 @@ gem 'openssl'
 
 # Testing
 group :test do
-    gem 'minitest', '~> 5.0'
-    gem 'minitest-rg', '~> 5.0'
-    gem 'simplecov', '~> 0'
-    gem 'vcr', '~> 6.0'
-    gem 'webmock', '~> 3.0'
-  
-    gem 'headless', '~> 2.3'
-    gem 'watir', '~> 7.0'
-    gem 'webdrivers', '~> 5.0'
+  gem 'minitest', '~> 5.0'
+  gem 'minitest-rg', '~> 5.0'
+  gem 'simplecov', '~> 0'
+  gem 'vcr', '~> 6.0'
+  gem 'webmock', '~> 3.0'
+
+  gem 'headless', '~> 2.3'
+  gem 'watir', '~> 7.0'
+  gem 'webdrivers', '~> 5.0'
 end
-  
+
 # Debugging
 gem 'pry'
 

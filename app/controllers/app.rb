@@ -13,10 +13,10 @@ module CryptoExpert
     plugin :render, engine: 'slim', views: 'app/presentation/view_html'
     # plugin :public, root: 'app/presentation/public'
     plugin :assets, path: 'app/presentation/assets',
-                    css: 'style.css', js:'table_sort.js'
-    
+                    css: 'style.css', js: 'table_sort.js'
+
     use Rack::MethodOverride # for other HTTP verbs (with plugin all_verbs)
-    
+
     route do |routing|
       routing.assets # load CSS and js
 
@@ -42,51 +42,52 @@ module CryptoExpert
               begin
                 # Get pair from Binance
                 minipair = Binance::TempMiniPairMapper
-                          .new(App.config.BINANCE_API_KEY)
-                          .get(symbol)
-              rescue
+                  .new(App.config.BINANCE_API_KEY)
+                  .get(symbol)
+              rescue StandardError
                 flash[:error] = 'Could not find this pair'
                 routing.redirect '/'
               end
               # Add minipair to database
               begin
                 Repository::For.klass(Entity::TempMiniPair).db_find_or_create(minipair)
-              rescue StandardError => err
-                puts err.backtrace.join("\n")
+              rescue StandardError => e
+                puts e.backtrace.join("\n")
                 flash[:error] = 'Having trouble accessing the database'
               end
             end
             # Still got bug when under "/minipair" to search another pair??
             begin
               session[:watching].insert(0, minipair.symbol).uniq!
-            rescue
+            rescue StandardError
               flash[:error] = 'Having trouble accessing the cookies'
             end
             puts session[:watching]
             routing.redirect "minipair/#{symbol}"
           end
-          
+
           routing.get do
             # minipairs = Repository::For.klass(Entity::TempMiniPair).all()
             puts session[:watching]
             begin
-              minipairs = session[:watching].map{|pair| 
-                          Repository::For.klass(Entity::TempMiniPair).find_symbol(pair)}
-              viewable_minipairs = Views::MiniPairList.new(minipairs) 
-            rescue StandardError => err
-              puts err.backtrace.join("\n")
+              minipairs = session[:watching].map do |pair|
+                Repository::For.klass(Entity::TempMiniPair).find_symbol(pair)
+              end
+              viewable_minipairs = Views::MiniPairList.new(minipairs)
+            rescue StandardError => e
+              puts e.backtrace.join("\n")
               flash[:error] = 'Add a Mini Pair to get started'
               routing.redirect '/'
             end
-            
+
             # begin
-            #   viewable_minipairs = Views::MiniPairList.new(minipairs) 
+            #   viewable_minipairs = Views::MiniPairList.new(minipairs)
             # rescue StandardError => err
             #   puts err.backtrace.join("\n")
             #   flash[:error] = 'Add a Mini Pair to get started'
             #   viewable_minipairs = []
             # end
-            
+
             # session[:watching] = minipairs.map{|pair| pair.symbol}
             view 'minipair_index', locals: { pairlist: viewable_minipairs }
           end
@@ -100,7 +101,7 @@ module CryptoExpert
           # GET /minipair/{symbol}
           routing.get do
             minipair = Repository::For.klass(Entity::TempMiniPair)
-                                      .find_symbol(symbol)
+              .find_symbol(symbol)
             view 'minipair', locals: { pair: minipair }
           end
         end

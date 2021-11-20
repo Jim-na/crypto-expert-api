@@ -8,9 +8,9 @@ task :default do
   puts `rake -T`
 end
 
-desc 'Run tests once'
+desc 'Run unit and integration tests'
 Rake::TestTask.new(:spec) do |t|
-  t.pattern = 'spec/test/*_spec.rb'
+  t.pattern = 'spec/tests/{integration,unit}/**/*_spec.rb'
   t.warning = false
 end
 
@@ -19,11 +19,11 @@ task :respec do
   sh "rerun -c 'rake spec' --ignore 'coverage/*'"
 end
 
-desc 'Keep restarting web app upon changes'
-task :rerack do
-  sh "rerun -c rackup --ignore 'coverage/*'"
+desc 'Run acceptance tests'
+task :spec_accept do
+  puts 'NOTE: run app in test environment in another process'
+  sh 'ruby spec/tests/acceptance/acceptance_spec.rb'
 end
-
 
 namespace :db do
   task :config do
@@ -35,25 +35,25 @@ namespace :db do
   end
 
   desc 'Run migrations'
-  task :migrate => :config do
+  task migrate: :config do
     Sequel.extension :migration
     puts "Migrating #{app.environment} database to latest"
     Sequel::Migrator.run(app.DB, 'app/infrastructure/database/migrations')
   end
 
   desc 'Wipe records from all tables'
-  task :wipe => :config do
+  task wipe: :config do
     if app.environment == :production
       puts 'Do not damage production database!'
       return
     end
-
+    require_relative 'app/infrastructure/database/init'
+    require_relative 'spec/helpers/database_helper'
     DatabaseHelper.wipe_database
   end
 
   desc 'Delete dev or test database file (set correct RACK_ENV)'
-  task :drop => :config do
-
+  task drop: :config do
     if app.environment == :production
       puts 'Do not damage production database!'
       return
@@ -67,12 +67,6 @@ end
 desc 'Run application console'
 task :console do
   sh 'pry -r ./init'
-end
-
-
-desc 'run tests'
-task :spec do
-  sh 'ruby spec/gateway_bn_spec.rb'
 end
 
 namespace :vcr do
