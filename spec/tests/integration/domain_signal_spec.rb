@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'spec_helper'
-require_relative 'helpers/vcr_helper'
+require_relative '../../helpers/spec_helper'
+require_relative '../../helpers/vcr_helper'
+
 describe 'Tests Domain Entity' do
   VcrHelper.setup_vcr
   before do
@@ -14,7 +15,7 @@ describe 'Tests Domain Entity' do
 
   describe 'Mini Pair get information' do
     before do
-      @minipair = CryptoExpert::Binance::MiniPairMapper.new(MINI_SYMBOL).get()
+      @minipair = CryptoExpert::Binance::MiniPairMapper.new(MINI_SYMBOL).get
     end
     it 'HAPPY: should get Mini CurrencyPair' do
       _(@minipair).must_be_kind_of CryptoExpert::Entity::MiniPair

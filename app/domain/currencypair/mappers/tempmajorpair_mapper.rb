@@ -49,7 +49,7 @@ module CryptoExpert
         end
 
         def time
-          time = @data['longshort_ratio'][0]['timestamp']
+          @data['longshort_ratio'][0]['timestamp']
         end
 
         def spot_volume

@@ -42,7 +42,7 @@ module CryptoExpert
         end
 
         def time
-          time = @data['spotpair_klines'][0][0]
+          @data['spotpair_klines'][0][0]
         end
 
         def spot_volume

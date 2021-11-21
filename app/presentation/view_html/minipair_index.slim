@@ -1,0 +1,32 @@
+.container
+    .jumbotron.text-center
+        .row
+            h5 This is minipair table
+.container
+    - if pairlist.any?
+      div class="pairtable"
+        table class="table table-hover pair-table"
+            thead
+            tr
+                th Minipair Symbol
+                th Time
+                th Volume
+                th 24H Volume Changes
+                th Signal
+            tbody
+            - pairlist.each do |pair|
+                tr class="table-row pair-row" data-href="minipair/#{pair.symbol}"
+                    td id='td_price'
+                        span class="table_symbol" 
+                        a [href = "minipair/#{pair.symbol}"] #{pair.symbol} 
+                    td id='td_minipair'
+                        span class="table_time"
+                        = pair.time
+                    td id='td_volume'
+                        span class="table_volume"
+                        = pair.volume
+                    td id='td_changes'
+                        span class="table_changes"
+                        = pair.volume
+                    td id='td_signal'
+                        span class="table_signal"

@@ -42,10 +42,10 @@ module CryptoExpert
         end
 
         def increase_percent
-          if !@data['history'].nil?
-            (@data['now'].volume - @data['history'].volume) / @data['history'].volume
-          else
+          if @data['history'].nil?
             0.0
+          else
+            (@data['now'].volume - @data['history'].volume) / @data['history'].volume
           end
         end
       end

@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'spec_helper'
-require_relative 'helpers/vcr_helper'
+require_relative '../../helpers/spec_helper'
+require_relative '../../helpers/vcr_helper'
+
 describe 'Tests Binance API library' do
   VcrHelper.setup_vcr
   before do
