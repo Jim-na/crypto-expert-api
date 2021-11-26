@@ -15,10 +15,11 @@ module VcrHelper
     end
   end
 
-  def self.configure_vcr_for_bn
+  def self.configure_vcr_for_bn(recording: :new_episodes)
     VCR.insert_cassette CASSETTES_FILE,
-                        record: :new_episodes,
-                        match_requests_on: %i[method uri headers]
+                        record: recording,
+                        match_requests_on: %i[method uri headers],
+                        allow_playback_repeats: true
   end
 
   def self.eject_vcr

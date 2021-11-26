@@ -8,7 +8,7 @@ describe 'Integration Tests of Binance API and Database' do
   VcrHelper.setup_vcr
 
   before do
-    VcrHelper.configure_vcr_for_bn
+    VcrHelper.configure_vcr_for_bn(recording: :none)
   end
 
   after do

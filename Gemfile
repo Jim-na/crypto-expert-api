@@ -32,7 +32,7 @@ gem 'dry-types', '~> 1.5'
 gem 'http', '~> 5.0'
 gem 'openssl'
 
-# Testing
+# TESTING
 group :test do
   gem 'minitest', '~> 5.0'
   gem 'minitest-rg', '~> 5.0'
@@ -41,6 +41,7 @@ group :test do
   gem 'webmock', '~> 3.0'
 
   gem 'headless', '~> 2.3'
+  gem 'page-object', '~> 2.3'
   gem 'watir', '~> 7.0'
   gem 'webdrivers', '~> 5.0'
 end
