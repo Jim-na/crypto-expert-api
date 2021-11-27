@@ -10,14 +10,14 @@
           span
             = "Spot Volume"
         text
-          span.pair.volume style="padding-left:20px"
+          span.pair.volume style="padding-left:20px" id='pair.volume'
             = pair.volume
       .row
         h5
           span
             = "Time"
         text
-          span.pair.time style="padding-left:20px"
+          span.pair.time style="padding-left:20px" id='pair.time'
               = Time.at(pair.time/1000).utc.to_datetime
   .col-12.col-md-9
     h4 

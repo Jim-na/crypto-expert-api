@@ -3,7 +3,7 @@
 require_relative '../../helpers/acceptance_helper'
 require_relative 'pages/home_page'
 
-describe 'Acceptance Tests' do
+describe 'Homepage Acceptance Tests' do
   include PageObject::PageFactory
   before do
     DatabaseHelper.wipe_database
@@ -15,7 +15,7 @@ describe 'Acceptance Tests' do
     @browser.close
     # @headless.destroy
   end
-  describe 'Homepage' do
+  describe 'Visit Home Page' do
     it '(HAPPY) should get correct nav bar' do
       # GIVEN: no pair search
       # THEN: user is on the home page
@@ -39,19 +39,15 @@ describe 'Acceptance Tests' do
       @browser.url.include? MINI_SYMBOL
     end
 
-    # it '(BAD) should not be able to add an non-existent pair' do
-    #   # GIVEN: user is on the home page
-    #   @browser.goto homepage
-
-    #   # WHEN: they request a pair with an non-existent symbol
-    #   bad_symbol = 'foobar'
-    #   @browser.text_field(id: 'symbol_input').set(bad_symbol)
-    #   @browser.button(id: 'minipair-submit').click
-
-    #   # THEN: they should see a warning message
-    #   _(@browser.div(id: 'flash_bar_danger').present?).must_equal true
-    #   _(@browser.div(id: 'flash_bar_danger').text.downcase).must_include 'not find'
-    # end
+    it '(BAD) should not be able to add an non-existent pair' do
+      # GIVEN: user is on the home page
+      visit HomePage do |page|
+        # WHEN: they add a minipair symbol and submit
+        bad_symbol = 'foobar'
+        page.add_new_pair(bad_symbol)
+        # THEN: they should find the symbol they entered
+        _(page.warning_message.downcase).must_include 'not find'
+      end
+    end
   end
-  
 end
