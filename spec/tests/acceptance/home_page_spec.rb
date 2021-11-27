@@ -32,7 +32,7 @@ describe 'Homepage Acceptance Tests' do
     it '(HAPPY) should be able to request a minipair' do
       # GIVEN: user is on the home page
       visit HomePage do |page|
-      # WHEN: they add a minipair symbol and submit
+        # WHEN: they add a minipair symbol and submit
         page.add_new_pair(MINI_SYMBOL)
       end
       # THEN: they should find the symbol they entered

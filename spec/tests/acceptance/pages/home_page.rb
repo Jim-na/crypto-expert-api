@@ -5,7 +5,7 @@ class HomePage
   include PageObject
 
   page_url CryptoExpert::App.config.APP_HOST
-  
+
   div(:warning_message, id: 'flash_bar_danger')
   div(:success_message, id: 'flash_bar_success')
 
@@ -13,11 +13,10 @@ class HomePage
   element(:navbar_brand, id: 'brand')
   text_field(:symbol_input, id: 'symbol_input')
   button(:search_button, id: 'minipair-submit')
-#   element(:minipair_button, id: 'nav_mini')
-  
+  #   element(:minipair_button, id: 'nav_mini')
+
   def add_new_pair(symbol)
     self.symbol_input = symbol
-    self.search_button
+    search_button
   end
-
-end 
+end

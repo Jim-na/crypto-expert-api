@@ -2,25 +2,23 @@
 
 # Page object for home page
 class MiniPairIndexPage
-    include PageObject
-    
-    page_url CryptoExpert::App.config.APP_HOST + '/minipair'
+  include PageObject
 
-    div(:warning_message, id: 'flash_bar_danger')
-    div(:success_message, id: 'flash_bar_success')
-    # NAV BAR
-    element(:navbar, id: 'nav')
-    element(:navbar_brand, id: 'brand')
-    text_field(:symbol_input, id: 'symbol_input')
-    button(:search_button, id: 'minipair-submit')
-    
-    # minipair index page
-    table(:pairtable, id: 'pairtable')
+  page_url CryptoExpert::App.config.APP_HOST + '/minipair'
 
-    
-    def add_new_pair(symbol)
-      self.symbol_input = symbol
-      self.search_button
-    end
-    
-end 
+  div(:warning_message, id: 'flash_bar_danger')
+  div(:success_message, id: 'flash_bar_success')
+  # NAV BAR
+  element(:navbar, id: 'nav')
+  element(:navbar_brand, id: 'brand')
+  text_field(:symbol_input, id: 'symbol_input')
+  button(:search_button, id: 'minipair-submit')
+
+  # minipair index page
+  table(:pairtable, id: 'pairtable')
+
+  def add_new_pair(symbol)
+    self.symbol_input = symbol
+    search_button
+  end
+end
