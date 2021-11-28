@@ -24,6 +24,11 @@ gem 'puma', '~> 5.5'
 gem 'roda', '~> 3.49'
 gem 'slim', '~> 4.1'
 
+# Controllers and services
+gem 'dry-monads', '~> 1.4'
+gem 'dry-transaction', '~> 0.13'
+gem 'dry-validation', '~> 1.7'
+
 # Validation
 gem 'dry-struct', '~> 1.4'
 gem 'dry-types', '~> 1.5'
