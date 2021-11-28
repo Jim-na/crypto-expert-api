@@ -14,15 +14,16 @@ Rake::TestTask.new(:spec) do |t|
   t.warning = false
 end
 
+# NOTE: run `rake run:test` in another process
+desc 'Run acceptance tests'
+Rake::TestTask.new(:spec_accept) do |t|
+  t.pattern = 'spec/tests/acceptance/*_spec.rb'
+  t.warning = false
+end
+
 desc 'Keep rerunning tests upon changes'
 task :respec do
   sh "rerun -c 'rake spec' --ignore 'coverage/*'"
-end
-
-desc 'Run acceptance tests'
-task :spec_accept do
-  puts 'NOTE: run app in test environment in another process'
-  sh 'ruby spec/tests/acceptance/acceptance_spec.rb'
 end
 
 namespace :db do

@@ -44,20 +44,20 @@ html
     == assets(:js, defer: true)
     .container
       .header
-        nav.navbar.navbar-expand-sm
+        nav.navbar.navbar-expand-sm id='nav'
           a.navbar-brand id='brand' href="/"  Crypto Alert
           button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button" 
             span.navbar-toggler-icon
           #navbarNavAltMarkup.collapse.navbar-collapse.text-right
             ul.nav.nav-pills.justify-content-end
               li.nav-item
-                a.nav-link href="/majorpair"  Major Pair
+                a.nav-link id='nav_major' href="/majorpair"  Major Pair
               li.nav-item
               li
-                a.nav-link.active href="/minipair"  Mini Pair
+                a.nav-link.active id='nav_mini' href="/minipair"  Mini Pair
               li.nav-item
               li
-                a.nav-link href="/kol"  KOL
+                a.nav-link id='nav_kol' href="/kol"  KOL
             ul.nav.navbar-nav.ml-auto
               /! Search form
             form.form-inline.d-flex.justify-content-center.md-form.form-sm.active-cyan.active-cyan-2.mt-2 action="/minipair" method='POST' id='show-minipair-form'

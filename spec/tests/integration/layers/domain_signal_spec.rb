@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require_relative '../../helpers/spec_helper'
-require_relative '../../helpers/vcr_helper'
+require_relative '../../../helpers/spec_helper'
+require_relative '../../../helpers/vcr_helper'
 
 describe 'Tests Domain Entity' do
   VcrHelper.setup_vcr
   before do
-    VcrHelper.configure_vcr_for_bn
+    VcrHelper.configure_vcr_for_bn(recording: :none)
   end
 
   after do
