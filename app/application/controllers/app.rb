@@ -28,9 +28,12 @@ module CryptoExpert
       routing.on 'kol' do
         view 'home'
       end
+      
       routing.on 'majorpair' do
-        view 'home'
+        testpair = Binance::MiniPairMapper.new('ETHUSDT').get
+        view 'majorpair', locals: { pair: testpair }
       end
+      
       routing.on 'minipair' do
         routing.is do
           # POST /project/

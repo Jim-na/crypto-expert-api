@@ -11,6 +11,7 @@ module CryptoExpert
 
       attribute :symbol,                Strict::String
       attribute :increase_percent,      Float.optional
+      attribute :signal,      String.optional
     end
   end
 end
