@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-%w[controllers forms services].each do |folder|
+%w[requests services controllers forms].each do |folder|
   require_relative "#{folder}/init"
 end

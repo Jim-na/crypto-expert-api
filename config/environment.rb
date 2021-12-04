@@ -21,8 +21,6 @@ module CryptoExpert
       Figaro.load
       def self.config() = Figaro.env
 
-      use Rack::Session::Cookie, secret: config.SESSION_SECRET
-
       configure :development, :test, :app_test do
         require 'pry'; # for breakpoints
         ENV['DATABASE_URL'] = "sqlite://#{config.DB_FILENAME}"

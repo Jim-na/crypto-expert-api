@@ -5,16 +5,16 @@ require 'dry/monads'
 module CryptoExpert
   module Service
     # Retrieves array of all listed project entities
-    class ListMiniPairs
+    class ListTempMiniPairs
       include Dry::Transaction
 
-      step :list_minipair_signal
+      step :list_minipair
       step :view_minipair
 
-      private      
-      def list_minipair_signal(input)
+      private
+      def list_minipair(input)
         minipairs = input.map do |pair|
-          Binance::MiniPairMapper.new(pair).get
+          Repository::For.klass(Entity::TempMiniPair).find_symbol(pair)
         end.compact
 
       Success(minipairs)

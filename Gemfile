@@ -2,9 +2,15 @@
 
 source 'https://rubygems.org'
 ruby File.read('.ruby-version').strip
+
 # Configuration and Utilities
 gem 'figaro', '~> 1.2'
+gem 'rack-test' # for testing and can also be used to diagnose in production
 gem 'rake'
+
+# PRESENTATION LAYER
+gem 'multi_json', '~> 1.15'
+gem 'roar', '~> 1.1'
 
 group :production do
   gem 'pg'
