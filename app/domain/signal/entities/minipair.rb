@@ -13,7 +13,7 @@ module CryptoExpert
       attribute :volume_change_percent,      Float.optional
       attribute :signal,                String.optional
       attribute :time,                  Integer.optional
-      attribute :volume,                Float.optional
+      attribute :spot_volume,                Float.optional
       attribute :spot_closeprice,       Float.optional
       attribute :funding_rate,          Float.optional
       attribute :longshort_ratio,       Float.optional

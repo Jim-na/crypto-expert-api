@@ -38,7 +38,7 @@ module CryptoExpert
             volume_change_percent: volume_change_percent,
             signal: signal,
             time: time,
-            volume: volume,
+            spot_volume: spot_volume,
             spot_closeprice: spot_closeprice,
             funding_rate: funding_rate,
             longshort_ratio: longshort_ratio,
@@ -56,7 +56,7 @@ module CryptoExpert
           if @data['history'].nil?
             0.0
           else
-            (@data['now'].volume - @data['history'].volume)*100 / @data['history'].volume
+            (@data['now'].spot_volume - @data['history'].spot_volume)*100 / @data['history'].spot_volume
           end
         end
         
@@ -77,8 +77,8 @@ module CryptoExpert
           @data['now'].time
         end
         # get data now
-        def volume
-          @data['now'].volume
+        def spot_volume
+          @data['now'].spot_volume
         end
         
         def spot_closeprice
