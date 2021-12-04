@@ -6,7 +6,7 @@ require_relative '../../../helpers/vcr_helper'
 describe 'Tests Domain Entity' do
   VcrHelper.setup_vcr
   before do
-    VcrHelper.configure_vcr_for_bn(recording: :none)
+    VcrHelper.configure_vcr_for_bn(recording: :new_episodes)
   end
 
   after do

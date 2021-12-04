@@ -17,7 +17,11 @@ module CryptoExpert
 
         Entity::TempMiniPair.new(
           symbol: db_record.symbol,
-          volume: db_record.volume,
+          spot_volume: db_record.spot_volume,
+          funding_rate: db_record.funding_rate,
+          open_interest: db_record.open_interest,
+          future_volume: db_record.future_volume,
+          longshort_ratio: db_record.longshort_ratio,
           time: db_record.time.to_i
         )
       end

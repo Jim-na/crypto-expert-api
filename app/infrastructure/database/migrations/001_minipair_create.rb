@@ -8,7 +8,11 @@ Sequel.migration do
       primary_key :id
 
       String      :symbol, null: false
-      Float       :volume
+      Float       :spot_volume
+      Float       :funding_rate
+      Float       :longshort_ratio
+      Float       :open_interest
+      Float       :future_volume
       String      :time
     end
   end

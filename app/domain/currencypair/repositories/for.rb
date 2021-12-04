@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'tempmajorpairs'
 require_relative 'tempminipairs'
 
 module CryptoExpert
@@ -8,7 +7,6 @@ module CryptoExpert
     # Finds the right repository for an entity object or class
     module For
       ENTITY_REPOSITORY = {
-        Entity::TempMajorPair => TempMajorPairs,
         Entity::TempMiniPair  => TempMiniPairs
       }.freeze
 
