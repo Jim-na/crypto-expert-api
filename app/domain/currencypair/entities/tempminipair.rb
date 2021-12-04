@@ -16,6 +16,7 @@ module CryptoExpert
       attribute :funding_rate,        Float.optional
       attribute :longshort_ratio,     Float.optional
       attribute :open_interest,       Float.optional
+      attribute :spot_closeprice,     Float.optional
       # TODO: price movement direction
       # combine major and minipair
       def to_attr_hash

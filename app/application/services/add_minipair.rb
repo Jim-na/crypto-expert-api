@@ -17,7 +17,6 @@ module CryptoExpert
       BN_NOT_FOUND_MSG = 'Could not find this pair on Binance'
 
       def get_minipair(input)
-        puts "add minitpair ", input
         minipair = Binance::TempMiniPairMapper
         .new(App.config.BINANCE_API_KEY)
         .get(input)
