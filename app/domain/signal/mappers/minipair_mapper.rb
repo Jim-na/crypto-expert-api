@@ -36,7 +36,9 @@ module CryptoExpert
           Entity::MiniPair.new(
             symbol: symbol,
             increase_percent: increase_percent,
-            signal: signal
+            volume_now: volume_now,
+            signal: signal,
+            time: time,
           )
         end
 
@@ -50,8 +52,8 @@ module CryptoExpert
           if @data['history'].nil?
             0.0
           else
-            puts @data['now']
-            puts @data['history']
+            puts @data['now'].symbol, @data['now'].volume
+            puts @data['history'].symbol, @data['history'].volume
             (@data['now'].volume - @data['history'].volume)*100 / @data['history'].volume
           end
         end
@@ -61,6 +63,14 @@ module CryptoExpert
           @calculator.minipair_volume_thres(increase_percent)
         end
         
+        def time
+          @data['now'].time
+        end
+        
+        def volume_now
+          @data['now'].volume
+        end       
+        # TODO: price movement direction
       end
     end
   end

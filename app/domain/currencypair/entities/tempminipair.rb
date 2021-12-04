@@ -12,7 +12,8 @@ module CryptoExpert
       attribute :symbol,        Strict::String
       attribute :time,          Integer.optional
       attribute :volume,        Float.optional
-
+      # TODO: price movement direction
+      # combine major and minipair
       def to_attr_hash
         hash = to_hash.reject { |key, _| [:id].include? key }
         hash[time].to_s

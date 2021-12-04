@@ -1,5 +1,5 @@
 .container
-  .col-12.col-md-9 
+  .col-12
     .jumbotron.text-left
       .row
         h4  
@@ -19,10 +19,21 @@
         text
           span.pair.time style="padding-left:20px" id='pair.time'
               = Time.at(pair.time/1000).utc.to_datetime
-  .col-12.col-md-9
-    h4 
-      ="Here is tradingview chart"
+      .row
+        h5
+          span
+            = "Signal Matrix"
         
+.tradingview-widget-container
+  #tradingview_a0bd0
+  .tradingview-widget-copyright
+    a[href="https://tw.tradingview.com/symbols/#{pair.symbol}/?exchange=BINANCE" rel="noopener" target="_blank"]
+      span.blue-text
+        | #{pair.symbol} 圖表
+    | 由TradingView提供
+  script[type="text/javascript" src="https://s3.tradingview.com/tv.js"]
+  script[type="text/javascript"]
+    |  new TradingView.widget( { "width": 980, "height": 610, "symbol": "BINANCE:#{pair.symbol}", "interval": "D", "timezone": "Etc/UTC", "theme": "light", "style": "1", "locale": "zh_TW", "toolbar_bg": "#f1f3f6", "enable_publishing": false, "container_id": "tradingview_a0bd0" } ); 
   /  .row
 /    h4
 /      span
