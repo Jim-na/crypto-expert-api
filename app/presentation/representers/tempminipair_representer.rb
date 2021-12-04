@@ -14,7 +14,12 @@ module CryptoExpert
 
       property :symbol
       property :time
-      property :volume
+      property :spot_volume     
+      property :future_volume   
+      property :funding_rate    
+      property :longshort_ratio 
+      property :open_interest   
+      property :spot_closeprice 
     end
   end
 end

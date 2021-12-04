@@ -26,27 +26,8 @@ module CryptoExpert
       end
       
       routing.on 'api/v1' do
-        routing.on 'minipair' do       
+        routing.on 'tempminipair' do       
           routing.on String do |symbol|
-            # GET /minipair/{symbol}
-            # routing.get do 
-            #   path_request = Request::MiniPairPath.new(symbol,request)
-            #   # puts "get minitpair ", path_request.symbol
-            #   result = Service::AddMiniPair.new.call(requested: path_request)
-              
-            #   if result.failure?
-            #     failed = Representer::HttpResponse.new(result.failure)
-            #     routing.halt failed.http_status_code, failed.to_json
-            #   end
-
-            #   http_response = Representer::HttpResponse.new(result.value!)
-            #   response.status = http_response.http_status_code
-
-            #   Representer::MiniPair.new(
-            #     result.value!.message
-            #   ).to_json
-            # end
-            # POST /projects/{owner_name}/{project_name}
             routing.post do
               minipair_made = Service::AddMiniPair.new.call(symbol)
 
@@ -54,31 +35,18 @@ module CryptoExpert
                 failed = Representer::HttpResponse.new(minipair_made.failure)
                 routing.halt failed.http_status_code, failed.to_json
               end
-              puts minipair_made
-              puts minipair_made.value!
-      
+
               http_response = Representer::HttpResponse.new(minipair_made.value!)
-              puts http_response
               response.status = http_response.http_status_code
               Representer::TempMiniPair.new(minipair_made.value!.message).to_json
             end
           end
-          
-          # routing.is do
-          #   routing.get do
-          #     list_req = Request::EncodedMiniPairSignalList.new(routing.params)
-          #     result = Service::ListMiniPairs.new.call(list_request: list_req)
-
-          #     if result.failure?
-          #       failed = Representer::HttpResponse.new(result.failure)
-          #       routing.halt failed.http_status_code, failed.to_json
-          #     end
-
-          #     http_response = Representer::HttpResponse.new(result.value!)
-          #     response.status = http_response.http_status_code
-          #     Representer::MiniPairList.new(result.value!.message).to_json
-          #   end
-          # end
+        end
+        
+        rountin.on 'minipair' do
+          # TODO: on string => post symbol to get this symbol's signal
+          # TODO: GET /minipair => get minipair(signal) list
+          # TODO: so we need a new service to get this list 
         end
       end
     end
