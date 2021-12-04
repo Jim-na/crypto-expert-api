@@ -9,6 +9,7 @@ Sequel.migration do
 
       String      :symbol, null: false
       Float       :spot_volume
+      Float       :spot_closeprice
       Float       :funding_rate
       Float       :longshort_ratio
       Float       :open_interest
