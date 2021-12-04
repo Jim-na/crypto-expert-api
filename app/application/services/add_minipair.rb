@@ -29,8 +29,7 @@ module CryptoExpert
       end
 
       def store_minipair(input)
-        Repository::For.klass(Entity::TempMiniPair).db_find_or_create(input)
-        tempminipair = Repository::For.klass(Entity::TempMiniPair).find_symbol(input)
+        tempminipair = Repository::For.klass(Entity::TempMiniPair).db_find_or_create(input)
         Success(Response::ApiResult.new(status: :created, message: tempminipair))
       rescue StandardError => e
         puts e.backtrace.join("\n")

@@ -23,7 +23,7 @@ module CryptoExpert
       end
 
       def self.db_find_or_create(entity)
-        Database::TempMiniPairOrm.find_or_create(entity.to_attr_hash)
+        rebuild_entity Database::TempMiniPairOrm.find_or_create(entity.to_attr_hash)
       end
     end
   end
