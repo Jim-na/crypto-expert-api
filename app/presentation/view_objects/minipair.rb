@@ -29,16 +29,21 @@ module Views
       Time.at(timestamp / 1000).utc.to_datetime
     end
 
-    def volume
-      @minipair.volume
+    def volume_now
+      @minipair.volume_now
     end
 
     def volume_change_24h
       0.0
     end
+    
+    def increase_percent
+      @minipair.increase_percent
+    end
 
     def signal
-      0
+      @minipair.signal
     end
+    # TODO: price movement direction
   end
 end

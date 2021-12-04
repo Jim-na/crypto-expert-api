@@ -11,7 +11,7 @@
                 th Minipair Symbol
                 th Time
                 th Volume
-                th 24H Volume Changes
+                th Volume Increase Percent
                 th Signal
             tbody
             - pairlist.each do |pair|
@@ -24,9 +24,10 @@
                         = pair.time
                     td id='td_volume'
                         span class="table_volume"
-                        = pair.volume
+                        = pair.volume_now
                     td id='td_changes'
                         span class="table_changes"
-                        = pair.volume
+                        = pair.increase_percent
                     td id='td_signal'
                         span class="table_signal"
+                        = pair.signal

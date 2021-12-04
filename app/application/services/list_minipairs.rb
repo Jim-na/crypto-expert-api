@@ -14,7 +14,8 @@ module CryptoExpert
       private
       def list_minipair(input)
         minipairs = input.map do |pair|
-          Repository::For.klass(Entity::TempMiniPair).find_symbol(pair)
+          Binance::MiniPairMapper.new(pair).get
+          # Repository::For.klass(Entity::TempMiniPair).find_symbol(pair)
         end.compact
 
       Success(minipairs)

@@ -11,6 +11,11 @@ module CryptoExpert
 
       attribute :symbol,                Strict::String
       attribute :increase_percent,      Float.optional
+      attribute :signal,                String.optional
+      attribute :time,          Integer.optional
+      attribute :volume_now,        Float.optional
+      # TODO: price movement direction 
+      # price now - history
     end
   end
 end
