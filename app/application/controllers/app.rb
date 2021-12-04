@@ -54,8 +54,11 @@ module CryptoExpert
                 failed = Representer::HttpResponse.new(minipair_made.failure)
                 routing.halt failed.http_status_code, failed.to_json
               end
-
+              puts minipair_made
+              puts minipair_made.value!
+      
               http_response = Representer::HttpResponse.new(minipair_made.value!)
+              puts http_response
               response.status = http_response.http_status_code
               Representer::TempMiniPair.new(minipair_made.value!.message).to_json
             end

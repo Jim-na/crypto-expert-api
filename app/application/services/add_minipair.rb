@@ -20,7 +20,7 @@ module CryptoExpert
         puts "add minitpair ", input
         minipair = Binance::TempMiniPairMapper
         .new(App.config.BINANCE_API_KEY)
-        .get(input[:symbol])
+        .get(input)
         
         Success(minipair)
       rescue StandardError
@@ -29,21 +29,13 @@ module CryptoExpert
       end
 
       def store_minipair(input)
-        tempminipair = Repository::For.klass(Entity::TempMiniPair).db_find_or_create(input[:symbol])
+        tempminipair = Repository::For.klass(Entity::TempMiniPair).db_find_or_create(input)
         
         Success(tempminipair)
       rescue StandardError => e
         puts e.backtrace.join("\n")
         Failure(Response::ApiResult.new(status: :internal_error, message: DB_ERR_MSG))
       end
-      
-      # def get_minipair_signal(input)
-      #   minipair_signal = Binance::MiniPairMapper.new(input).get
-      #   Success(minipair_signal)
-      # rescue StandardError => e
-      #   puts e.backtrace.join("\n")
-      #   Failure('Could not get minipair signal')
-      # end
 
     end
   end
