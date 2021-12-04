@@ -10,10 +10,15 @@ module CryptoExpert
       include Dry.Types
 
       attribute :symbol,                Strict::String
-      attribute :increase_percent,      Float.optional
+      attribute :volume_change_percent,      Float.optional
       attribute :signal,                String.optional
       attribute :time,                  Integer.optional
-      attribute :volume_now,            Float.optional
+      attribute :volume,                Float.optional
+      attribute :spot_closeprice,       Float.optional
+      attribute :funding_rate,          Float.optional
+      attribute :longshort_ratio,       Float.optional
+      attribute :open_interest,         Float.optional
+      attribute :spot_change_percent,         Float.optional
       # TODO: price movement direction 
       # price now - history
     end

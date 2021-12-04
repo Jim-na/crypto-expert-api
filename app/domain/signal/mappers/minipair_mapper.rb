@@ -35,10 +35,14 @@ module CryptoExpert
         def build_entity
           Entity::MiniPair.new(
             symbol: symbol,
-            increase_percent: increase_percent,
-            volume_now: volume_now,
+            volume_change_percent: volume_change_percent,
             signal: signal,
             time: time,
+            volume: volume,
+            spot_closeprice: spot_closeprice,
+            funding_rate: funding_rate,
+            longshort_ratio: longshort_ratio,
+            open_interest: open_interest,
           )
         end
 
@@ -48,28 +52,50 @@ module CryptoExpert
           @data['symbol']
         end
 
-        def increase_percent
+        def volume_change_percent
           if @data['history'].nil?
             0.0
           else
-            puts @data['now'].symbol, @data['now'].volume
-            puts @data['history'].symbol, @data['history'].volume
             (@data['now'].volume - @data['history'].volume)*100 / @data['history'].volume
+          end
+        end
+        
+        def spot_change_percent
+          if @data['history'].nil?
+            0.0
+          else
+            (@data['now'].spot_closeprice - @data['history'].spot_closeprice)*100 / @data['history'].spot_closeprice
           end
         end
         
         def signal
           # puts CryptoExpert::Binance::SignalCalculator.minipair_volume_thres(50)
-          @calculator.minipair_volume_thres(increase_percent)
+          @calculator.minipair_volume_thres(volume_change_percent)
         end
         
         def time
           @data['now'].time
         end
-        
-        def volume_now
+        # get data now
+        def volume
           @data['now'].volume
-        end       
+        end
+        
+        def spot_closeprice
+          @data['now'].spot_closeprice
+        end     
+        
+        def funding_rate
+          @data['now'].funding_rate
+        end     
+        
+        def longshort_ratio
+          @data['now'].longshort_ratio
+        end     
+        
+        def open_interest
+          @data['now'].open_interest
+        end
         # TODO: price movement direction
       end
     end
