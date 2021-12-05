@@ -22,7 +22,6 @@ module CryptoExpert
         tempminipair = Binance::TempMiniPairMapper
           .new(App.config.BINANCE_API_KEY)
           .get(input)
-
         Success(tempminipair)
       rescue StandardError
         Failure(Response::ApiResult.new(status: :not_found, message: BN_NOT_FOUND_MSG))

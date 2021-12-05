@@ -25,7 +25,31 @@ describe 'Tests Domain Entity' do
       _(@minipair.symbol).must_equal MINI_SYMBOL
     end
     it 'HAPPY: should get Mini CurrencyPair time' do
-      _(@minipair.increase_percent).wont_be_nil
+      _(@minipair.time).wont_be_nil
+    end
+    it 'HAPPY: should get Mini CurrencyPair volume_change_percent' do
+      _(@minipair.volume_change_percent).wont_be_nil
+    end
+    it 'HAPPY: should get Mini CurrencyPair signal' do
+      _(@minipair.signal).wont_be_nil
+    end
+    it 'HAPPY: should get Mini CurrencyPair spot_volume' do
+      _(@minipair.spot_volume).wont_be_nil
+    end
+    it 'HAPPY: should get Mini CurrencyPair spot_closeprice' do
+      _(@minipair.spot_closeprice).wont_be_nil
+    end
+    it 'HAPPY: should get Mini CurrencyPair funding_rate' do
+      _(@minipair.funding_rate).wont_be_nil
+    end
+    it 'HAPPY: should get Mini CurrencyPair longshort_ratio' do
+      _(@minipair.longshort_ratio).wont_be_nil
+    end
+    it 'HAPPY: should get Mini CurrencyPair open_interest' do
+      _(@minipair.open_interest).wont_be_nil
+    end
+    it 'HAPPY: should get Mini CurrencyPair spot_change_percent' do
+      _(@minipair.spot_change_percent).wont_be_nil
     end
     it 'SAD: should raise exception on notfound currency pair' do
       _(proc do
