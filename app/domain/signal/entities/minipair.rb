@@ -9,17 +9,17 @@ module CryptoExpert
     class MiniPair < Dry::Struct
       include Dry.Types
 
-      attribute :symbol,                Strict::String
-      attribute :volume_change_percent,      Float.optional
+      attribute :symbol, Strict::String
+      attribute :volume_change_percent, Float.optional
       attribute :signal,                String.optional
       attribute :time,                  Integer.optional
-      attribute :spot_volume,                Float.optional
+      attribute :spot_volume, Float.optional
       attribute :spot_closeprice,       Float.optional
       attribute :funding_rate,          Float.optional
       attribute :longshort_ratio,       Float.optional
       attribute :open_interest,         Float.optional
-      attribute :spot_change_percent,         Float.optional
-      # TODO: price movement direction 
+      attribute :spot_change_percent, Float.optional
+      # TODO: price movement direction
       # price now - history
       def to_attr_hash
         hash = to_hash.reject { |key, _| [:id].include? key }

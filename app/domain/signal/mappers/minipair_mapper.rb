@@ -1,10 +1,9 @@
 # frozen_string_literal: false
 
-
 module CryptoExpert
   module Binance
     # map the Spot Pair info
-    class MiniPairMapper #< SignalCalculator
+    class MiniPairMapper # < SignalCalculator
       # extend SignalCalculator
       def initialize(symbol)
         @symbol = symbol
@@ -18,16 +17,16 @@ module CryptoExpert
         data['symbol'] = @symbol
         data['now'] = @now
         data['history'] = @history
-        MiniPairMapper.build_entity(data,@calculator)
+        MiniPairMapper.build_entity(data, @calculator)
       end
 
-      def self.build_entity(data,calculator)
-        DataMapper.new(data,calculator).build_entity
+      def self.build_entity(data, calculator)
+        DataMapper.new(data, calculator).build_entity
       end
 
       # Extracts entity specific elements from data structure
       class DataMapper
-        def initialize(data,calculator)
+        def initialize(data, calculator)
           @data = data
           @calculator = calculator
         end
@@ -57,47 +56,47 @@ module CryptoExpert
           if @data['history'].nil?
             0.0
           else
-            (@data['now'].spot_volume - @data['history'].spot_volume)*100 / @data['history'].spot_volume
+            (@data['now'].spot_volume - @data['history'].spot_volume) * 100 / @data['history'].spot_volume
           end
         end
-        
+
         def spot_change_percent
           if @data['history'].nil?
             0.0
           else
-            (@data['now'].spot_closeprice - @data['history'].spot_closeprice)*100 / @data['history'].spot_closeprice
+            (@data['now'].spot_closeprice - @data['history'].spot_closeprice) * 100 / @data['history'].spot_closeprice
           end
         end
-        
+
         def signal
           # puts CryptoExpert::Binance::SignalCalculator.minipair_volume_thres(50)
           @calculator.minipair_volume_thres(volume_change_percent)
         end
-        
+
         def time
           @data['now'].time
         end
+
         # get data now
         def spot_volume
           @data['now'].spot_volume
         end
-        
+
         def spot_closeprice
           @data['now'].spot_closeprice
-        end     
-        
+        end
+
         def funding_rate
           @data['now'].funding_rate
-        end     
-        
+        end
+
         def longshort_ratio
           @data['now'].longshort_ratio
-        end     
-        
+        end
+
         def open_interest
           @data['now'].open_interest
         end
-        # TODO: price movement direction
       end
     end
   end

@@ -12,15 +12,15 @@ module CryptoExpert
       step :store_minipair
 
       private
-      
+
       DB_ERR_MSG = 'Could not add minipair into database'
       BN_NOT_FOUND_MSG = 'Could not find this pair on Binance'
 
       def get_minipair(input)
         minipair = Binance::TempMiniPairMapper
-        .new(App.config.BINANCE_API_KEY)
-        .get(input)
-        
+          .new(App.config.BINANCE_API_KEY)
+          .get(input)
+
         Success(minipair)
       rescue StandardError
         Failure(Response::ApiResult.new(status: :not_found, message: BN_NOT_FOUND_MSG))
@@ -34,7 +34,6 @@ module CryptoExpert
         puts e.backtrace.join("\n")
         Failure(Response::ApiResult.new(status: :internal_error, message: DB_ERR_MSG))
       end
-
     end
   end
 end

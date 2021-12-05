@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative '../../../helpers/spec_helper.rb'
-require_relative '../../../helpers/vcr_helper.rb'
-require_relative '../../../helpers/database_helper.rb'
+require_relative '../../../helpers/spec_helper'
+require_relative '../../../helpers/vcr_helper'
+require_relative '../../../helpers/database_helper'
 
 require 'ostruct'
 
@@ -35,7 +35,7 @@ describe 'AddMiniPairs Service Integration Test' do
     end
     it 'SAD: should not get and store a non exist minipair' do
       # GIVEN: a valid project that exists locally and is being watched
-      result = CryptoExpert::Service::AddMiniPair.new.call("TINAJIMBO")
+      result = CryptoExpert::Service::AddMiniPair.new.call('TINAJIMBO')
 
       # THEN: we should store symbol
       _(result.success?).must_equal false

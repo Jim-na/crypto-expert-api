@@ -40,7 +40,7 @@ module CryptoExpert
             funding_rate: funding_rate,
             longshort_ratio: longshort_ratio,
             open_interest: open_interest,
-            spot_closeprice:spot_closeprice
+            spot_closeprice: spot_closeprice
           )
         end
 
@@ -57,7 +57,7 @@ module CryptoExpert
         def spot_volume
           @data['spotpair_klines'][0][5].to_f
         end
-        
+
         def spot_closeprice
           @data['spotpair_klines'][0][4].to_f
         end

@@ -7,7 +7,7 @@ module CryptoExpert
     # Finds the right repository for an entity object or class
     module For
       ENTITY_REPOSITORY = {
-        Entity::TempMiniPair  => TempMiniPairs
+        Entity::TempMiniPair => TempMiniPairs
       }.freeze
 
       def self.klass(entity_klass)

@@ -12,7 +12,7 @@ module CryptoExpert
 
     route do |routing|
       response['Content-Type'] = 'application/json'
-      
+
       # GET /
       routing.root do
         message = "Crypto-Expert API v1 at /api/v1/ in #{App.environment} mode"
@@ -24,9 +24,9 @@ module CryptoExpert
         response.status = result_response.http_status_code
         result_response.to_json
       end
-      
+
       routing.on 'api/v1' do
-        routing.on 'tempminipair' do       
+        routing.on 'tempminipair' do
           routing.on String do |symbol|
             routing.post do
               minipair_made = Service::AddMiniPair.new.call(symbol)
@@ -42,11 +42,9 @@ module CryptoExpert
             end
           end
         end
-        
+
         routing.on 'minipair' do
-          # TODO: on string => post symbol to get this symbol's signal
-          # TODO: GET /minipair => get minipair(signal) list
-          # TODO: so we need a new service to get this list
+          # TODO: => DONE: on string => post symbol to get this symbol's signal
           routing.on String do |symbol|
             routing.post do
               minipair_signal = Service::GetMiniPairSignal.new.call(symbol)
@@ -61,45 +59,26 @@ module CryptoExpert
               Representer::MiniPair.new(minipair_signal.value!.message).to_json
             end
           end
-          rounting.is do
-            # GET
+          # TODO: => DONE: GET /minipair => get minipair(signal) list
+          # TODO => DONE: so we need a new service to get this list
+          routing.is do
+            # GET /minipair?list={base64_json_array_of_minipair_symbol}
+            routing.get do
+              list_req = Request::EncodedMiniPairSignalList.new(routing.params)
+              result = Service::ListMiniPairs.new.call(list_request: list_req)
+
+              if result.failure?
+                failed = Representer::HttpResponse.new(result.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
+
+              http_response = Representer::HttpResponse.new(result.value!)
+              response.status = http_response.http_status_code
+              Representer::MiniPairList.new(result.value!.message).to_json
+            end
           end
-          
         end
       end
     end
   end
-end 
-
-=begin
-          routing.is do
-            # POST /project/
-            routing.post do
-              input = {symbol: routing.params['symbol'].upcase}
-              symbol_request = Forms::NewSymbol.new.call(input)
-              # Find minipair from database
-              minipair = Repository::For.klass(Entity::TempMiniPair).find_symbol(symbol_request[:symbol])
-              unless minipair
-                minipair_made = Service::AddMiniPair.new.call(symbol_request[:symbol])
-                if minipair_made.failure?
-                  flash[:error] = minipair_made.failure
-                  routing.redirect '/'
-                end
-                minipair = minipair_made.value!
-              end
-              # Still got bug when under "/minipair" to search another pair??
-              session[:watching].insert(0, minipair.symbol).uniq!
-              routing.redirect "minipair/#{symbol_request[:symbol]}"
-            end
-
-            routing.get do
-              viewable_minipairs_made = Service::ListTempMiniPairs.new.call(session[:watching])
-              if viewable_minipairs_made.failure?
-                flash[:error] = viewable_minipairs_made.failure
-                routing.redirect '/'
-              end
-              viewable_minipairs = viewable_minipairs_made.value!
-              view 'minipair_index', locals: { pairlist: viewable_minipairs }
-            end
-          end
-=end  
+end

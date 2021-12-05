@@ -17,14 +17,12 @@ module CryptoExpert
       attribute :longshort_ratio,     Float.optional
       attribute :open_interest,       Float.optional
       attribute :spot_closeprice,     Float.optional
-      # TODO: price movement direction
       # combine major and minipair
       def to_attr_hash
         hash = to_hash.reject { |key, _| [:id].include? key }
         hash[time].to_s
         hash
       end
-      
     end
   end
 end

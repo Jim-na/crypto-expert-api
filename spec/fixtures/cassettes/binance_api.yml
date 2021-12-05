@@ -1963,4 +1963,216 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '[[1638622800000,"190.1970","193.9000","188.5400","193.4630","390594",1638626399999,"74807923.1250",52771,"190545","36493100.8710","0"],[1638626400000,"193.4850","199.4280","192.8010","198.5460","478271",1638629999999,"93978387.8440",58344,"240455","47258360.4490","0"]]'
   recorded_at: Sat, 04 Dec 2021 14:46:59 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Date:
+      - Sun, 05 Dec 2021 08:20:56 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Application-Context:
+      - future-bigdata-service:BIN_PROD:9105
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 77ac8a650f3f2774748404b594c45e08.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - 18k3O7IUmUXZSUL1FFYZio7oHoR3YsETHPeGAR7tTeGK-p_PCsXI2A==
+    body:
+      encoding: UTF-8
+      string: "[]"
+  recorded_at: Sun, 05 Dec 2021 08:20:56 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Date:
+      - Sun, 05 Dec 2021 08:20:56 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Application-Context:
+      - future-bigdata-service:BIN_PROD:9105
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 d035bece17e94b457ce71e6b2d556e2b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - Oi6_HQiw_wqiL5wtic9x23ivpyUrOTeUM8vFj-JBj2-Rmk3Ph8Xo6A==
+    body:
+      encoding: UTF-8
+      string: "[]"
+  recorded_at: Sun, 05 Dec 2021 08:20:56 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '2'
+      Connection:
+      - close
+      Date:
+      - Sun, 05 Dec 2021 08:20:56 GMT
+      Server:
+      - Tengine
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 11ffd4d244c14ea5cdb241441724531b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - P_LenmsjCVAjqFWf-hlZvsOo2nA5HrclaAR5DQlhkJltiejhefUYFw==
+    body:
+      encoding: UTF-8
+      string: "[]"
+  recorded_at: Sun, 05 Dec 2021 08:20:56 GMT
 recorded_with: VCR 6.0.0
