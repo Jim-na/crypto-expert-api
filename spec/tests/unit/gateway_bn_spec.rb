@@ -6,7 +6,7 @@ require_relative '../../helpers/vcr_helper'
 describe 'Tests Binance API library' do
   VcrHelper.setup_vcr
   before do
-    VcrHelper.configure_vcr_for_bn(recording: :new_episodes)
+    VcrHelper.configure_vcr_for_bn(recording: :none)
   end
 
   after do
