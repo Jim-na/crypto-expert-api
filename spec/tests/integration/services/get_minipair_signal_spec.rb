@@ -10,7 +10,7 @@ describe 'GetMinipairSignal Service Integration Test' do
   VcrHelper.setup_vcr
 
   before do
-    VcrHelper.configure_vcr_for_bn(recording: :new_episodes)
+    VcrHelper.configure_vcr_for_bn(recording: :none)
   end
 
   after do
