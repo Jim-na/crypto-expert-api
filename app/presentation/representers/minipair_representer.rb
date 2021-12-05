@@ -3,8 +3,6 @@
 require 'roar/decorator'
 require 'roar/json'
 
-require_relative 'tempminipair_representer'
-
 # Represents essential Repo information for API output
 module CryptoExpert
   module Representer
@@ -14,12 +12,17 @@ module CryptoExpert
       include Roar::Hypermedia
       include Roar::Decorator::HypermediaConsumer
 
-      property :symbol
-      property :increase_percent
-      property :signal
-      property :time
-      property :volume_now
-
+      property :symbol                
+      property :volume_change_percent  
+      property :signal                
+      property :time                  
+      property :spot_volume            
+      property :spot_closeprice   
+      property :funding_rate      
+      property :longshort_ratio   
+      property :open_interest     
+      property :spot_change_percent     
+      
       link :self do
         "#{App.config.API_HOST}/api/v1/minipair/#{symbol}"
       end

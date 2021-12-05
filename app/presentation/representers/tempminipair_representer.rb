@@ -11,7 +11,8 @@ module CryptoExpert
     #   Representer::Member.new(member).to_json
     class TempMiniPair < Roar::Decorator
       include Roar::JSON
-
+      include Roar::Hypermedia
+      include Roar::Decorator::HypermediaConsumer
       property :symbol
       property :time
       property :spot_volume     
@@ -20,6 +21,17 @@ module CryptoExpert
       property :longshort_ratio 
       property :open_interest   
       property :spot_closeprice 
+      
+      link :self do
+        "#{App.config.API_HOST}/api/v1/tempminipair/#{symbol}"
+      end
+      
+      private
+
+      def symbol
+        represented.symbol
+      end
+      
     end
   end
 end

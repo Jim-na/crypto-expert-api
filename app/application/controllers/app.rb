@@ -43,10 +43,28 @@ module CryptoExpert
           end
         end
         
-        rountin.on 'minipair' do
+        routing.on 'minipair' do
           # TODO: on string => post symbol to get this symbol's signal
           # TODO: GET /minipair => get minipair(signal) list
-          # TODO: so we need a new service to get this list 
+          # TODO: so we need a new service to get this list
+          routing.on String do |symbol|
+            routing.post do
+              minipair_signal = Service::GetMiniPairSignal.new.call(symbol)
+
+              if minipair_signal.failure?
+                failed = Representer::HttpResponse.new(minipair_signal.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
+
+              http_response = Representer::HttpResponse.new(minipair_signal.value!)
+              response.status = http_response.http_status_code
+              Representer::MiniPair.new(minipair_signal.value!.message).to_json
+            end
+          end
+          rounting.is do
+            # GET
+          end
+          
         end
       end
     end

@@ -43,6 +43,7 @@ module CryptoExpert
             funding_rate: funding_rate,
             longshort_ratio: longshort_ratio,
             open_interest: open_interest,
+            spot_change_percent: spot_change_percent
           )
         end
 

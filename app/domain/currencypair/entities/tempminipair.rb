@@ -24,6 +24,7 @@ module CryptoExpert
         hash[time].to_s
         hash
       end
+      
     end
   end
 end

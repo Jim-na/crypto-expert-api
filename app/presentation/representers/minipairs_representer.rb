@@ -12,7 +12,7 @@ module CryptoExpert
     class MiniPairList < Roar::Decorator
       include Roar::JSON
 
-      collection :minipair_signal, extend: Representer::MiniPair
+      collection :minipairs, extend: Representer::MiniPair
     end
   end
 end
