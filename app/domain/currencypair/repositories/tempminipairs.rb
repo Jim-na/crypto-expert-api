@@ -17,13 +17,18 @@ module CryptoExpert
 
         Entity::TempMiniPair.new(
           symbol: db_record.symbol,
-          volume: db_record.volume,
-          time: db_record.time.to_i
+          spot_volume: db_record.spot_volume,
+          funding_rate: db_record.funding_rate,
+          open_interest: db_record.open_interest,
+          future_volume: db_record.future_volume,
+          longshort_ratio: db_record.longshort_ratio,
+          time: db_record.time.to_i,
+          spot_closeprice: db_record.spot_closeprice
         )
       end
 
       def self.db_find_or_create(entity)
-        Database::TempMiniPairOrm.find_or_create(entity.to_attr_hash)
+        rebuild_entity Database::TempMiniPairOrm.find_or_create(entity.to_attr_hash)
       end
     end
   end

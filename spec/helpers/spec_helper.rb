@@ -17,7 +17,7 @@ CORRECT = YAML.safe_load(File.read('./spec/fixtures/results.yml'))
 BINANCE_API_KEY = CryptoExpert::App.config.BINANCE_API_KEY
 
 MAJOR_SYMBOL = 'BTCUSDT'
-MINI_SYMBOL = 'ELFUSDT'
+MINI_SYMBOL = 'SOLUSDT'
 
 # Helper method for acceptance tests
 def homepage

@@ -23,7 +23,7 @@ module CryptoExpert
         Failure(
           Response::ApiResult.new(
             status: :bad_request,
-            message: 'Project list not found'
+            message: 'Minipair signal list not found'
           )
         )
       end
@@ -41,7 +41,7 @@ module CryptoExpert
 
       # Use in tests to create a ProjectList object from a list
       def self.to_request(list)
-        EncodedProjectList.new('list' => to_encoded(list))
+        EncodedMiniPairSignalList.new('list' => to_encoded(list))
       end
     end
   end

@@ -11,8 +11,12 @@ module CryptoExpert
 
       attribute :symbol,        Strict::String
       attribute :time,          Integer.optional
-      attribute :volume,        Float.optional
-      # TODO: price movement direction
+      attribute :spot_volume,         Float.optional
+      attribute :future_volume,       Float.optional
+      attribute :funding_rate,        Float.optional
+      attribute :longshort_ratio,     Float.optional
+      attribute :open_interest,       Float.optional
+      attribute :spot_closeprice,     Float.optional
       # combine major and minipair
       def to_attr_hash
         hash = to_hash.reject { |key, _| [:id].include? key }
