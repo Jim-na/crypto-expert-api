@@ -6,7 +6,7 @@ name: API continuous integration
 on:
   # Triggers the workflow for main branch on git push
   push:
-    branches: [main, develop]
+    branches: [main, develop, ci_test]
   # Triggers workflow for or any branch on pull requests
   pull_request:
     branches:
