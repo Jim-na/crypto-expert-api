@@ -16,7 +16,7 @@ describe 'Test API routes' do
   VcrHelper.setup_vcr
 
   before do
-    VcrHelper.configure_vcr_for_bn
+    VcrHelper.configure_vcr_for_bn(recording: :none)
     DatabaseHelper.wipe_database
   end
 

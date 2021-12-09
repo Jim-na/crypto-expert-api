@@ -29,7 +29,7 @@ module CryptoExpert
       configure :app_test do
         require_relative '../spec/helpers/vcr_helper'
         VcrHelper.setup_vcr
-        VcrHelper.configure_vcr_for_bn(recording: :new_episodes)
+        VcrHelper.configure_vcr_for_bn(recording: :none)
       end
 
       # Database Setup
