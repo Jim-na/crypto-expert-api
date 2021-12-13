@@ -128,10 +128,18 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
+    rack-cache (1.13.0)
+      rack (>= 0.4)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rainbow (3.0.0)
     rake (13.0.6)
+    redis (4.5.1)
+    redis-rack-cache (2.2.1)
+      rack-cache (>= 1.10, < 2)
+      redis-store (>= 1.6, < 2)
+    redis-store (1.9.0)
+      redis (>= 4, < 5)
     reek (6.0.6)
       kwalify (~> 0.7.0)
       parser (~> 3.0.0)
@@ -215,8 +223,11 @@ DEPENDENCIES
   pg
   pry
   puma (~> 5.5)
+  rack-cache (~> 1.13)
   rack-test
   rake
+  redis (~> 4.5)
+  redis-rack-cache (~> 2.2)
   reek
   roar (~> 1.1)
   roda (~> 3.49)
