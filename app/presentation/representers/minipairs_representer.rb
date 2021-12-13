@@ -4,6 +4,7 @@ require 'roar/decorator'
 require 'roar/json'
 
 require_relative 'minipair_representer'
+require_relative 'openstruct_with_links'
 
 module CryptoExpert
   module Representer
@@ -11,7 +12,8 @@ module CryptoExpert
     class MiniPairList < Roar::Decorator
       include Roar::JSON
 
-      collection :minipairs, extend: Representer::MiniPair
+      collection :minipairs, extend: Representer::MiniPair,
+                             class: Response::OpenStructWithLinks
     end
   end
 end

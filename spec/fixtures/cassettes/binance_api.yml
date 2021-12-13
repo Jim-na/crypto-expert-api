@@ -2,148 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.binance.com/api/v3/klines?interval=1h&limit=2&symbol=ELFUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-      Host:
-      - api.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '323'
-      Connection:
-      - close
-      Date:
-      - Sat, 27 Nov 2021 04:22:52 GMT
-      Server:
-      - nginx
-      Vary:
-      - Accept-Encoding
-      X-Mbx-Uuid:
-      - 3e04c733-ffc1-4cc0-9394-761be8acab09
-      X-Mbx-Used-Weight:
-      - '1'
-      X-Mbx-Used-Weight-1m:
-      - '1'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Content-Security-Policy:
-      - default-src 'self'
-      X-Content-Security-Policy:
-      - default-src 'self'
-      X-Webkit-Csp:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Pragma:
-      - no-cache
-      Expires:
-      - '0'
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, HEAD, OPTIONS
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 7f3183d4dbd6bd80a4194d7658fb2746.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - q9DSJdLfX4ZRA1jl1lSfUrP3q8QMyVkaMHQVlCK1mmsDjAVYpY3V7A==
-    body:
-      encoding: UTF-8
-      string: '[[1637982000000,"0.54310000","0.55520000","0.53720000","0.53780000","629701.00000000",1637985599999,"343306.80501000",1069,"357739.40000000","194992.13686000","0"],[1637985600000,"0.53780000","0.53850000","0.52950000","0.53850000","138713.70000000",1637989199999,"74033.96436000",337,"77239.00000000","41238.13980000","0"]]'
-  recorded_at: Sat, 27 Nov 2021 04:22:52 GMT
-- request:
-    method: get
-    uri: https://api.binance.com/api/v3/klines?interval=1h&limit=2&symbol=TINAJIMBO
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-      Host:
-      - api.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '38'
-      Connection:
-      - close
-      Date:
-      - Sat, 27 Nov 2021 04:22:52 GMT
-      Server:
-      - nginx
-      X-Mbx-Uuid:
-      - 83228c75-40be-4542-8362-6c42989d6b3b
-      X-Mbx-Used-Weight:
-      - '2'
-      X-Mbx-Used-Weight-1m:
-      - '2'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Content-Security-Policy:
-      - default-src 'self'
-      X-Content-Security-Policy:
-      - default-src 'self'
-      X-Webkit-Csp:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Pragma:
-      - no-cache
-      Expires:
-      - '0'
-      X-Cache:
-      - Error from cloudfront
-      Via:
-      - 1.1 30b9dcf2682a498ca65a84ceeaaee6c1.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - ifMClRbhvNfijVt5dUfKgva-5GQtEyrVCKpcJqssKHRIFYcGT-aFHQ==
-    body:
-      encoding: UTF-8
-      string: '{"code":-1121,"msg":"Invalid symbol."}'
-  recorded_at: Sat, 27 Nov 2021 04:22:52 GMT
-- request:
-    method: get
     uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=BTCUSDT
     body:
       encoding: UTF-8
@@ -171,7 +29,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Sat, 27 Nov 2021 04:22:53 GMT
+      - Thu, 09 Dec 2021 12:50:12 GMT
       Server:
       - Tengine
       Vary:
@@ -205,15 +63,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 f6850e35751498c1e3b732475b1f4da5.cloudfront.net (CloudFront)
+      - 1.1 d247760b572240a3b86644ef7cf65355.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TPE51-C1
+      - TPE50-C1
       X-Amz-Cf-Id:
-      - mUztALX-P73dMbQKV-ByWzpEi7xPXH06-xexrUkLqGVgZ0l940twfQ==
+      - 9nP7W8R8xgYN5UwJE5_AC2v7SZq2ytL13ufMnmWaLlxN6xTGu6oNgg==
     body:
       encoding: UTF-8
-      string: '[{"symbol":"BTCUSDT","longAccount":"0.8463","longShortRatio":"5.5062","shortAccount":"0.1537","timestamp":1637985600000}]'
-  recorded_at: Sat, 27 Nov 2021 04:22:53 GMT
+      string: '[{"symbol":"BTCUSDT","longAccount":"0.6849","longShortRatio":"2.1736","shortAccount":"0.3151","timestamp":1639051200000}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:12 GMT
 - request:
     method: get
     uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=BTCUSDT
@@ -243,7 +101,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Sat, 27 Nov 2021 04:22:53 GMT
+      - Thu, 09 Dec 2021 12:50:12 GMT
       Server:
       - Tengine
       Vary:
@@ -277,15 +135,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 055b7c72fa08d18532a096f1c33f6fd0.cloudfront.net (CloudFront)
+      - 1.1 04df3a927f6b1e080307413885ff529c.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TPE51-C1
+      - TPE50-C1
       X-Amz-Cf-Id:
-      - G28sQIqAX1EpxTdDbqN7MEkhwueX-iTfXs4fybphUszE8SVy2i0aTw==
+      - sXV4Jnqle-9IdMw7UbUnm3AqQQkw69SNLbHWRPmd_3EoWFJ9XhVDIg==
     body:
       encoding: UTF-8
-      string: '[{"symbol":"BTCUSDT","sumOpenInterest":"65693.61400000","sumOpenInterestValue":"3572155765.73799772","timestamp":1637985600000}]'
-  recorded_at: Sat, 27 Nov 2021 04:22:53 GMT
+      string: '[{"symbol":"BTCUSDT","sumOpenInterest":"39934.69000000","sumOpenInterestValue":"1962857573.64597038","timestamp":1639051200000}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:12 GMT
 - request:
     method: get
     uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=BTCUSDT
@@ -315,7 +173,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Sat, 27 Nov 2021 04:22:53 GMT
+      - Thu, 09 Dec 2021 12:50:12 GMT
       Server:
       - Tengine
       Vary:
@@ -347,15 +205,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 f00ea1bee8d7ea7a9b5f075d3383a44e.cloudfront.net (CloudFront)
+      - 1.1 5c4e99b05f9fd6102a3e039a6bd98968.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TPE51-C1
+      - TPE50-C1
       X-Amz-Cf-Id:
-      - dbCtiiBJZBKjZQtmakOHnZ-9zGthfynAWnLrNIdVtQKIgkXNHs2d5A==
+      - cQ0EoOw_W7vE5PTiL_X_xJUbWu2KQ08jG3FgD0Dw5FvDhZ6SvOTnWA==
     body:
       encoding: UTF-8
-      string: '[{"symbol":"BTCUSDT","fundingTime":1637971200005,"fundingRate":"0.00010824"}]'
-  recorded_at: Sat, 27 Nov 2021 04:22:53 GMT
+      string: '[{"symbol":"BTCUSDT","fundingTime":1639036800000,"fundingRate":"0.00010000"}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:12 GMT
 - request:
     method: get
     uri: https://api.binance.com/api/v3/klines?interval=1h&limit=2&symbol=BTCUSDT
@@ -379,21 +237,21 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '358'
+      - '359'
       Connection:
       - close
       Date:
-      - Sat, 27 Nov 2021 04:22:53 GMT
+      - Thu, 09 Dec 2021 12:50:14 GMT
       Server:
       - nginx
       Vary:
       - Accept-Encoding
       X-Mbx-Uuid:
-      - 571770d6-a0b1-411b-967f-9bf8d10c3e10
+      - 71e62bae-2e2e-438b-ac6a-a4e538b265b3
       X-Mbx-Used-Weight:
-      - '3'
+      - '1'
       X-Mbx-Used-Weight-1m:
-      - '3'
+      - '1'
       Strict-Transport-Security:
       - max-age=31536000; includeSubdomains
       X-Frame-Options:
@@ -421,15 +279,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 98dbb19f66d6bbf1d68812f4d937cbf3.cloudfront.net (CloudFront)
+      - 1.1 52ca47c2c23bcce484a3eafac368baeb.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - TPE51-C1
       X-Amz-Cf-Id:
-      - as8NSMor8gaT5OrQpibDcDHKIiAPjYZkxbUdOdbXUfPvjx3n37qBMQ==
+      - 18HgPewotZgFXXUo5J6SJZf4DByNGRxESWEQZKLwwyPoH5cbOwztPw==
     body:
       encoding: UTF-8
-      string: '[[1637982000000,"54374.25000000","54608.22000000","54262.83000000","54347.07000000","1581.79161000",1637985599999,"86125692.60023900",44548,"635.35286000","34592356.48334530","0"],[1637985600000,"54347.06000000","54497.38000000","54261.76000000","54496.91000000","544.24650000",1637989199999,"29593072.86078610",17058,"265.27374000","14425728.36540120","0"]]'
-  recorded_at: Sat, 27 Nov 2021 04:22:53 GMT
+      string: '[[1639047600000,"49312.05000000","49420.01000000","49036.36000000","49160.53000000","1010.60945000",1639051199999,"49740810.09581210",33728,"460.23241000","22651593.05595320","0"],[1639051200000,"49160.54000000","49670.50000000","48942.85000000","49404.26000000","1401.22371000",1639054799999,"69038950.79962120",41516,"713.77197000","35178608.70267890","0"]]'
+  recorded_at: Thu, 09 Dec 2021 12:50:14 GMT
 - request:
     method: get
     uri: https://fapi.binance.com/fapi/v1/klines?interval=1h&limit=2&symbol=BTCUSDT
@@ -455,11 +313,11 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '284'
+      - '287'
       Connection:
       - close
       Date:
-      - Sat, 27 Nov 2021 04:22:54 GMT
+      - Thu, 09 Dec 2021 12:50:14 GMT
       Server:
       - Tengine
       Vary:
@@ -495,1112 +353,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 17f21d76992484e023b97c9b94e008a6.cloudfront.net (CloudFront)
+      - 1.1 d035bece17e94b457ce71e6b2d556e2b.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TPE51-C1
+      - TPE50-C1
       X-Amz-Cf-Id:
-      - eeHt_2IPW3LkmgApIhoeOj7gPNBSf3CmCR_VfBHj3gveAZ-Xpm8Arw==
+      - yqxVTw1L6HAZq54oVxfz9B_N1DEHNwXLo8hi2b9Ifc89H9IDyUWc1g==
     body:
       encoding: ASCII-8BIT
-      string: '[[1637982000000,"54407.72","54638.00","54303.71","54368.67","4609.693",1637985599999,"251223481.35437",67245,"2126.096","115876591.57420","0"],[1637985600000,"54368.66","54531.45","54275.89","54514.99","1911.510",1637989199999,"103994256.99214",26293,"1101.358","59927319.51988","0"]]'
-  recorded_at: Sat, 27 Nov 2021 04:22:54 GMT
-- request:
-    method: get
-    uri: https://api.binance.com/api/v3/klines?interval=1h&limit=2&symbol=fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-      Host:
-      - api.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '108'
-      Connection:
-      - close
-      Date:
-      - Sat, 27 Nov 2021 04:22:54 GMT
-      Server:
-      - nginx
-      X-Mbx-Uuid:
-      - 19ba1102-3703-4931-ba1e-4fb35ac2f404
-      X-Mbx-Used-Weight:
-      - '4'
-      X-Mbx-Used-Weight-1m:
-      - '4'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Content-Security-Policy:
-      - default-src 'self'
-      X-Content-Security-Policy:
-      - default-src 'self'
-      X-Webkit-Csp:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Pragma:
-      - no-cache
-      Expires:
-      - '0'
-      X-Cache:
-      - Error from cloudfront
-      Via:
-      - 1.1 83381aced4f80721c0eedbbaefac9fa6.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - 59kt7oZpyjCcicPK_FUnCdtv24CldkCLK8CjrdZDl2Bm-nOGiGIv0Q==
-    body:
-      encoding: UTF-8
-      string: '{"code":-1100,"msg":"Illegal characters found in parameter ''symbol'';
-        legal range is ''^[A-Z0-9-_.]{1,20}$''."}'
-  recorded_at: Sat, 27 Nov 2021 04:22:54 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=BTCUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sat, 27 Nov 2021 04:22:54 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Application-Context:
-      - future-bigdata-service:BIN_PROD:9105
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 045a779d1945c6cfb940366bea47aa82.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - mQWacnMc3nzQ6kRlX87vj8mtNksbVuSX-g_NdV2SrbWQZXuJVMA3hg==
-    body:
-      encoding: UTF-8
-      string: '[{"symbol":"BTCUSDT","longAccount":"0.8463","longShortRatio":"5.5062","shortAccount":"0.1537","timestamp":1637985600000}]'
-  recorded_at: Sat, 27 Nov 2021 04:22:54 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=BTCUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sat, 27 Nov 2021 04:22:55 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Application-Context:
-      - future-bigdata-service:BIN_PROD:9105
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 573b65dea6781c706800bbfcf3ec1516.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - 7IiFlb38v3mLL5K5cF3YRZk-UrMDdyaxf3syeebsnRCqmAUhABxzwQ==
-    body:
-      encoding: UTF-8
-      string: '[{"symbol":"BTCUSDT","sumOpenInterest":"65693.61400000","sumOpenInterestValue":"3572155765.73799772","timestamp":1637985600000}]'
-  recorded_at: Sat, 27 Nov 2021 04:22:55 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=BTCUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '77'
-      Connection:
-      - close
-      Date:
-      - Sat, 27 Nov 2021 04:22:55 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 83381aced4f80721c0eedbbaefac9fa6.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - W7fXybnpqbwcRyiNxVPgcbXR8YBrgG-R2qYXsuD2YVvvxUc4AQ6a-Q==
-    body:
-      encoding: UTF-8
-      string: '[{"symbol":"BTCUSDT","fundingTime":1637971200005,"fundingRate":"0.00010824"}]'
-  recorded_at: Sat, 27 Nov 2021 04:22:55 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/fapi/v1/klines?interval=1h&limit=2&symbol=BTCUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '284'
-      Connection:
-      - close
-      Date:
-      - Sat, 27 Nov 2021 04:22:55 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Mbx-Used-Weight-1m:
-      - '2'
-      X-Response-Time:
-      - 0ms
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 a5360ecc08e8db6327b49f3dde2d69fe.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - iDI--qXpTLNR-7AvAWEqAQmbx58bqGn3pRIrF0WmVtI_W8t69wByWg==
-    body:
-      encoding: ASCII-8BIT
-      string: '[[1637982000000,"54407.72","54638.00","54303.71","54368.67","4609.693",1637985599999,"251223481.35437",67245,"2126.096","115876591.57420","0"],[1637985600000,"54368.66","54531.45","54275.89","54514.99","1911.831",1637989199999,"104011756.30242",26310,"1101.528","59936587.06818","0"]]'
-  recorded_at: Sat, 27 Nov 2021 04:22:55 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=TINAJIMBO
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sat, 27 Nov 2021 04:22:55 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Application-Context:
-      - future-bigdata-service:BIN_PROD:9105
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 f6850e35751498c1e3b732475b1f4da5.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - AeWcKZuHQwxIaNFRUbcvg-Qvlc3CybAIq5Ro0GrIV0392fmxHWqSWQ==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sat, 27 Nov 2021 04:22:55 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=TINAJIMBO
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sat, 27 Nov 2021 04:22:56 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Application-Context:
-      - future-bigdata-service:BIN_PROD:9105
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 82ff8b71b9d22e222e7c2d1613eb5225.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - "--xHxoBNFooa07pZx7e-CiQ963BkSDikgCCCNnriH8LA2Iux5aor1A=="
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sat, 27 Nov 2021 04:22:56 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=TINAJIMBO
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '2'
-      Connection:
-      - close
-      Date:
-      - Sat, 27 Nov 2021 04:22:56 GMT
-      Server:
-      - Tengine
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 94a5bf09bd03cd8ac68dabdad56c40b3.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - N-xKiaiAnKnKK7GEbSscINB-zaMJbS1VcL5LN8nUyNKUa6ySKsaE5A==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sat, 27 Nov 2021 04:22:56 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=ELFUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sat, 04 Dec 2021 14:35:10 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Application-Context:
-      - future-bigdata-service:BIN_PROD:9105
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 2a35f47e8effac5e2ab050c099aacc95.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - nmxcobNEZzMQXUYqG136a-bnT-ajE8t-04CFHHEhJXfb6TjqdkY74Q==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sat, 04 Dec 2021 14:35:10 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=ELFUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sat, 04 Dec 2021 14:35:10 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Application-Context:
-      - future-bigdata-service:BIN_PROD:9105
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 ec4d5e18da821a10fe37918f056967b0.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - Lm4hxhF6cEVNpC6IkXmkX8DuycG7YoVu-rez_oKFs5SVsGfJjSKhGQ==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sat, 04 Dec 2021 14:35:10 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=ELFUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '2'
-      Connection:
-      - close
-      Date:
-      - Sat, 04 Dec 2021 14:35:10 GMT
-      Server:
-      - Tengine
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 bd10c7cefd8295a0ff40302b0e4b3977.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - JkqXUngOiqt4ySgMP0ydy6COhHzjrabZK7dT9RfPN6qjlIXfoRNpSQ==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sat, 04 Dec 2021 14:35:10 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/fapi/v1/klines?interval=1h&limit=2&symbol=ELFUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '38'
-      Connection:
-      - close
-      Date:
-      - Sat, 04 Dec 2021 14:35:10 GMT
-      Server:
-      - Tengine
-      X-Mbx-Used-Weight-1m:
-      - '1'
-      X-Response-Time:
-      - 0ms
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      X-Cache:
-      - Error from cloudfront
-      Via:
-      - 1.1 8998788f3fd868ad25b9404e8c5b09f9.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - o8FKjbsX3gViNO8KhRsZTA9tqRK3Gx1O8OS5SmiY5NMmOCBBR8m1DQ==
-    body:
-      encoding: ASCII-8BIT
-      string: '{"code":-1121,"msg":"Invalid symbol."}'
-  recorded_at: Sat, 04 Dec 2021 14:35:10 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=ELFUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sat, 04 Dec 2021 14:35:11 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Application-Context:
-      - future-bigdata-service:BIN_PROD:9105
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 239ab88732bfa02ab05c2b2116638aeb.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - pMicpOB4T7JRgMkJ0EmEpkziDwurKNbIRqm5xFWC4QxKQ9F7iZYHOg==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sat, 04 Dec 2021 14:35:11 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=ELFUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sat, 04 Dec 2021 14:35:11 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Application-Context:
-      - future-bigdata-service:BIN_PROD:9105
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 8998788f3fd868ad25b9404e8c5b09f9.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - opTQ0E8RzkE6qjX7gXGcGht9fZLKy2XG6nvPGLuVMKfE5nCenG_l2A==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sat, 04 Dec 2021 14:35:11 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=ELFUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '2'
-      Connection:
-      - close
-      Date:
-      - Sat, 04 Dec 2021 14:35:11 GMT
-      Server:
-      - Tengine
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 573b65dea6781c706800bbfcf3ec1516.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - 35zGzhZpa1rnUb1EgGDxoXVJjwKas6SfKl0lYcaur1bGwM-Wd3R2sg==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sat, 04 Dec 2021 14:35:11 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/fapi/v1/klines?interval=1h&limit=2&symbol=ELFUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '38'
-      Connection:
-      - close
-      Date:
-      - Sat, 04 Dec 2021 14:35:11 GMT
-      Server:
-      - Tengine
-      X-Mbx-Used-Weight-1m:
-      - '2'
-      X-Response-Time:
-      - 3ms
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      X-Cache:
-      - Error from cloudfront
-      Via:
-      - 1.1 52ca47c2c23bcce484a3eafac368baeb.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - jW1EuHN3KjYaLzg8TBl3ENlXDjAX1c6viksUjKnma-q41hx7GCfXHA==
-    body:
-      encoding: ASCII-8BIT
-      string: '{"code":-1121,"msg":"Invalid symbol."}'
-  recorded_at: Sat, 04 Dec 2021 14:35:11 GMT
+      string: '[[1639047600000,"49291.65","49399.00","49021.82","49150.01","7708.554",1639051199999,"379239953.50193",83232,"3625.795","178395629.92422","0"],[1639051200000,"49150.00","49646.12","48935.35","49384.79","11493.891",1639054799999,"566367013.35300",121067,"6186.126","304854967.89453","0"]]'
+  recorded_at: Thu, 09 Dec 2021 12:50:14 GMT
 - request:
     method: get
     uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=SOLUSDT
@@ -1630,7 +391,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Sat, 04 Dec 2021 14:46:58 GMT
+      - Thu, 09 Dec 2021 12:50:14 GMT
       Server:
       - Tengine
       Vary:
@@ -1664,15 +425,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 ec4d5e18da821a10fe37918f056967b0.cloudfront.net (CloudFront)
+      - 1.1 42c367fe651656ce4584288ecfc3bed0.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TPE51-C1
+      - TPE50-C1
       X-Amz-Cf-Id:
-      - QMdQH1wmmO-XB_xFlNRa4Hz-1wklsD8fw8VmBhbwGWUyy06ybpazGg==
+      - JjrwIEJFeRCiOc4y6kWiiV7l8fPxUC4LbzqgZsW4udpawg0I5bYFCQ==
     body:
       encoding: UTF-8
-      string: '[{"symbol":"SOLUSDT","longAccount":"0.8403","longShortRatio":"5.2617","shortAccount":"0.1597","timestamp":1638626400000}]'
-  recorded_at: Sat, 04 Dec 2021 14:46:58 GMT
+      string: '[{"symbol":"SOLUSDT","longAccount":"0.8430","longShortRatio":"5.3694","shortAccount":"0.1570","timestamp":1639051200000}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:14 GMT
 - request:
     method: get
     uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=SOLUSDT
@@ -1702,7 +463,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Sat, 04 Dec 2021 14:46:59 GMT
+      - Thu, 09 Dec 2021 12:50:15 GMT
       Server:
       - Tengine
       Vary:
@@ -1736,15 +497,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 b1e98d6f23bf8312e5a34847053352cc.cloudfront.net (CloudFront)
+      - 1.1 d49c4749b641723498222f1791d0bf32.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TPE51-C1
+      - TPE50-C1
       X-Amz-Cf-Id:
-      - xOPm_I2sHjeT8iAGPAGLEzkUqWOG9dooi9ATfocZFu3_PfZBetDxzA==
+      - vihMZJJrXrpXfeTqVPc1JRDRQRe82CQyXCWkbAxB_cYbi3ofknKfaQ==
     body:
       encoding: UTF-8
-      string: '[{"symbol":"SOLUSDT","sumOpenInterest":"988817.00000000","sumOpenInterestValue":"191310147.50036637","timestamp":1638626400000}]'
-  recorded_at: Sat, 04 Dec 2021 14:46:58 GMT
+      string: '[{"symbol":"SOLUSDT","sumOpenInterest":"1008794.00000000","sumOpenInterestValue":"189321468.43561072","timestamp":1639051200000}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:14 GMT
 - request:
     method: get
     uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=SOLUSDT
@@ -1770,11 +531,11 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '78'
+      - '77'
       Connection:
       - close
       Date:
-      - Sat, 04 Dec 2021 14:46:59 GMT
+      - Thu, 09 Dec 2021 12:50:15 GMT
       Server:
       - Tengine
       Vary:
@@ -1806,15 +567,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 055b7c72fa08d18532a096f1c33f6fd0.cloudfront.net (CloudFront)
+      - 1.1 e3eac1f90e74bad44eff1e1336bd3c8c.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TPE51-C1
+      - TPE50-C1
       X-Amz-Cf-Id:
-      - bQVvhfczcodhTIqNvI_JmDlh5d6HuUtYQqdIbZqGv-4Z_QZeQTgcNQ==
+      - x4nXHzZCrovNwK97-ZQIf4tMTcgS0Q6iUMRr1Uh6DftZW0d0-xVE4g==
     body:
       encoding: UTF-8
-      string: '[{"symbol":"SOLUSDT","fundingTime":1638604800004,"fundingRate":"-0.00010538"}]'
-  recorded_at: Sat, 04 Dec 2021 14:46:59 GMT
+      string: '[{"symbol":"SOLUSDT","fundingTime":1639036800000,"fundingRate":"0.00010000"}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:15 GMT
 - request:
     method: get
     uri: https://api.binance.com/api/v3/klines?interval=1h&limit=2&symbol=SOLUSDT
@@ -1838,11 +599,11 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '351'
+      - '346'
       Connection:
       - close
       Date:
-      - Sat, 04 Dec 2021 14:46:59 GMT
+      - Thu, 09 Dec 2021 12:50:15 GMT
       Server:
       - nginx
       Vary:
@@ -1850,9 +611,9 @@ http_interactions:
       X-Mbx-Uuid:
       - 01c5f8a0-2317-437a-a488-77c052af82c4
       X-Mbx-Used-Weight:
-      - '1'
+      - '2'
       X-Mbx-Used-Weight-1m:
-      - '1'
+      - '2'
       Strict-Transport-Security:
       - max-age=31536000; includeSubdomains
       X-Frame-Options:
@@ -1880,15 +641,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 52ca47c2c23bcce484a3eafac368baeb.cloudfront.net (CloudFront)
+      - 1.1 7cd0cd576fa5f09b5851ea05b7feecc4.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - TPE51-C1
       X-Amz-Cf-Id:
-      - 1-reCwtXqCFLEFZNgAhUc3UGbUaQZQAcMH_y8QICmT_NIZfn47FOGg==
+      - FzwYdOES7xOpVw7LCeee1wzE8KqpFdx84PlOaXpMEJoe-Wzd_Oo1NA==
     body:
       encoding: UTF-8
-      string: '[[1638622800000,"190.22000000","193.99000000","188.61000000","193.63000000","120086.70000000",1638626399999,"23011376.46480000",35539,"61903.81000000","11864233.45650000","0"],[1638626400000,"193.61000000","199.58000000","192.90000000","198.83000000","136373.97000000",1638629999999,"26797490.88760000",41456,"72298.92000000","14204652.85120000","0"]]'
-  recorded_at: Sat, 04 Dec 2021 14:46:59 GMT
+      string: '[[1639047600000,"188.43000000","188.83000000","186.89000000","187.63000000","66954.31000000",1639051199999,"12593160.07710000",16949,"27703.15000000","5212670.46430000","0"],[1639051200000,"187.62000000","188.67000000","186.62000000","188.16000000","51776.34000000",1639054799999,"9715131.40100000",13544,"24903.61000000","4673939.75760000","0"]]'
+  recorded_at: Thu, 09 Dec 2021 12:50:15 GMT
 - request:
     method: get
     uri: https://fapi.binance.com/fapi/v1/klines?interval=1h&limit=2&symbol=SOLUSDT
@@ -1914,17 +675,17 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '269'
+      - '267'
       Connection:
       - close
       Date:
-      - Sat, 04 Dec 2021 14:46:59 GMT
+      - Thu, 09 Dec 2021 12:50:15 GMT
       Server:
       - Tengine
       Vary:
       - Accept-Encoding
       X-Mbx-Used-Weight-1m:
-      - '1'
+      - '2'
       X-Response-Time:
       - 0ms
       Access-Control-Allow-Origin:
@@ -1954,18 +715,18 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 0e2886f2f2f8b98f7eaf91c8c6ee8645.cloudfront.net (CloudFront)
+      - 1.1 1d8813dd0a050f0a8e045f20546ceb5f.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TPE51-C1
+      - TPE50-C1
       X-Amz-Cf-Id:
-      - ec0U-9C_OYX804mIKlGZFEeenB5TCXbEbNgzeAYlLHdtWvFOSI_ZTg==
+      - P1KJHqh_pR39cic3DQ-1HlBz2pwsTaZZg0u9phtx7ieJ3_6ORUdXJw==
     body:
       encoding: ASCII-8BIT
-      string: '[[1638622800000,"190.1970","193.9000","188.5400","193.4630","390594",1638626399999,"74807923.1250",52771,"190545","36493100.8710","0"],[1638626400000,"193.4850","199.4280","192.8010","198.5460","478271",1638629999999,"93978387.8440",58344,"240455","47258360.4490","0"]]'
-  recorded_at: Sat, 04 Dec 2021 14:46:59 GMT
+      string: '[[1639047600000,"188.3710","188.7900","186.8940","187.6000","117303",1639051199999,"22053661.9830",19638,"55915","10513814.9690","0"],[1639051200000,"187.6000","188.6390","186.5510","188.1030","150039",1639054799999,"28143866.0520",22384,"70843","13291682.0500","0"]]'
+  recorded_at: Thu, 09 Dec 2021 12:50:15 GMT
 - request:
     method: get
-    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=SOLUSDT
     body:
       encoding: UTF-8
       string: ''
@@ -1992,7 +753,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Sun, 05 Dec 2021 08:20:56 GMT
+      - Thu, 09 Dec 2021 12:50:15 GMT
       Server:
       - Tengine
       Vary:
@@ -2026,18 +787,18 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 77ac8a650f3f2774748404b594c45e08.cloudfront.net (CloudFront)
+      - 1.1 ba38dda2c2db318ccba0a634424fa633.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - TPE50-C1
       X-Amz-Cf-Id:
-      - 18k3O7IUmUXZSUL1FFYZio7oHoR3YsETHPeGAR7tTeGK-p_PCsXI2A==
+      - yvfY0-8aLJx2JiXkdBh8jxvjSoPR2PniUKHo6xjeKFaq40ZRa8rYiQ==
     body:
       encoding: UTF-8
-      string: "[]"
-  recorded_at: Sun, 05 Dec 2021 08:20:56 GMT
+      string: '[{"symbol":"SOLUSDT","longAccount":"0.8430","longShortRatio":"5.3694","shortAccount":"0.1570","timestamp":1639051200000}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:15 GMT
 - request:
     method: get
-    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=SOLUSDT
     body:
       encoding: UTF-8
       string: ''
@@ -2064,7 +825,1589 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Sun, 05 Dec 2021 08:20:56 GMT
+      - Thu, 09 Dec 2021 12:50:15 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Application-Context:
+      - future-bigdata-service:BIN_PROD:9105
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 deac7449c8b2f9c4fe84960445dd864b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - EF7x9Bt-tPw7c7QXpefgEVivUd7bGvj1hjdf69CKSb6ghhG3x9IcGw==
+    body:
+      encoding: UTF-8
+      string: '[{"symbol":"SOLUSDT","sumOpenInterest":"1008794.00000000","sumOpenInterestValue":"189321468.43561072","timestamp":1639051200000}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:15 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=SOLUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '77'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:15 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 ed205d58bf22e3a1089e798e92dfde68.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - 5cHs2WRWiWlqkO8Cw5G-3Rm8Tl1PFy_77zt7xKwp0J4FuTrY_9tWNg==
+    body:
+      encoding: UTF-8
+      string: '[{"symbol":"SOLUSDT","fundingTime":1639036800000,"fundingRate":"0.00010000"}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:15 GMT
+- request:
+    method: get
+    uri: https://api.binance.com/api/v3/klines?interval=1h&limit=2&symbol=SOLUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '346'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:15 GMT
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      X-Mbx-Uuid:
+      - 0dca7483-cfb6-4e7e-b790-58d80bd25dcd
+      X-Mbx-Used-Weight:
+      - '3'
+      X-Mbx-Used-Weight-1m:
+      - '3'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'self'
+      X-Content-Security-Policy:
+      - default-src 'self'
+      X-Webkit-Csp:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, OPTIONS
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 efd481542a303e167a3110e3c0ffee24.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE51-C1
+      X-Amz-Cf-Id:
+      - pmR8lubh-8gZJV9hzZjscRn-DlclzLY6nUkrjpFDfibVPykOxmp14w==
+    body:
+      encoding: UTF-8
+      string: '[[1639047600000,"188.43000000","188.83000000","186.89000000","187.63000000","66954.31000000",1639051199999,"12593160.07710000",16949,"27703.15000000","5212670.46430000","0"],[1639051200000,"187.62000000","188.67000000","186.62000000","188.14000000","51780.34000000",1639054799999,"9715883.96100000",13547,"24907.61000000","4674692.31760000","0"]]'
+  recorded_at: Thu, 09 Dec 2021 12:50:15 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/fapi/v1/klines?interval=1h&limit=2&symbol=SOLUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '267'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:15 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Mbx-Used-Weight-1m:
+      - '3'
+      X-Response-Time:
+      - 0ms
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 d49c4749b641723498222f1791d0bf32.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - JRMduC6A0mShyQH9urlK4Avsbe0wMdZDtN-wLi1264kpkpYpQmu9VA==
+    body:
+      encoding: ASCII-8BIT
+      string: '[[1639047600000,"188.3710","188.7900","186.8940","187.6000","117303",1639051199999,"22053661.9830",19638,"55915","10513814.9690","0"],[1639051200000,"187.6000","188.6390","186.5510","188.0610","150097",1639054799999,"28154775.1060",22401,"70865","13295819.5140","0"]]'
+  recorded_at: Thu, 09 Dec 2021 12:50:15 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=SOLUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:15 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Application-Context:
+      - future-bigdata-service:BIN_PROD:9105
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 fbf94e317a2eadeb551cc7c3ef6e546d.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - bFu0yP4qT9IQmLwfO8WMTZU_8W6Gcak3a7VclzX_jVZnGeHFN_ttTg==
+    body:
+      encoding: UTF-8
+      string: '[{"symbol":"SOLUSDT","longAccount":"0.8430","longShortRatio":"5.3694","shortAccount":"0.1570","timestamp":1639051200000}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:15 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=SOLUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:16 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Application-Context:
+      - future-bigdata-service:BIN_PROD:9105
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 2249efa6c1c2e694b3beed3ec7f720d6.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - mgBm7PY2KWzzWcIMEM2jtLwoOPIkAUGt-ywoG2AM8xXq-B5Be_DP4w==
+    body:
+      encoding: UTF-8
+      string: '[{"symbol":"SOLUSDT","sumOpenInterest":"1008794.00000000","sumOpenInterestValue":"189321468.43561072","timestamp":1639051200000}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:16 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=SOLUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '77'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:16 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 9f6f98693a92fb28f50ee1be22989de3.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - CaHSYD_9UcAMYV1DCbnoCyVGzX5Ocbs_swXaQRWzZUyilbap_XWxwg==
+    body:
+      encoding: UTF-8
+      string: '[{"symbol":"SOLUSDT","fundingTime":1639036800000,"fundingRate":"0.00010000"}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:16 GMT
+- request:
+    method: get
+    uri: https://api.binance.com/api/v3/klines?interval=1h&limit=2&symbol=SOLUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '346'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:16 GMT
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      X-Mbx-Uuid:
+      - fc9412cd-06c3-47e1-99b5-6b024a4fb9c0
+      X-Mbx-Used-Weight:
+      - '4'
+      X-Mbx-Used-Weight-1m:
+      - '4'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'self'
+      X-Content-Security-Policy:
+      - default-src 'self'
+      X-Webkit-Csp:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, OPTIONS
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 876f21cb99bf6b98d953c30c556bfc9f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE51-C1
+      X-Amz-Cf-Id:
+      - 3yez2hOXqaatLbpDYFx4JZN7GvsrH2LbsqQxrgBcvEBdwrKXKEdDyg==
+    body:
+      encoding: UTF-8
+      string: '[[1639047600000,"188.43000000","188.83000000","186.89000000","187.63000000","66954.31000000",1639051199999,"12593160.07710000",16949,"27703.15000000","5212670.46430000","0"],[1639051200000,"187.62000000","188.67000000","186.62000000","188.14000000","51780.34000000",1639054799999,"9715883.96100000",13547,"24907.61000000","4674692.31760000","0"]]'
+  recorded_at: Thu, 09 Dec 2021 12:50:16 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/fapi/v1/klines?interval=1h&limit=2&symbol=SOLUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '267'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:16 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Mbx-Used-Weight-1m:
+      - '4'
+      X-Response-Time:
+      - 1ms
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 da9e0dc9303c4988b8e0a706d84368a1.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - o6ldY9sBrbYziRLh9on9HKpFao3PqLoXSs4Bsf5U7PMXFr6uB4xUnA==
+    body:
+      encoding: ASCII-8BIT
+      string: '[[1639047600000,"188.3710","188.7900","186.8940","187.6000","117303",1639051199999,"22053661.9830",19638,"55915","10513814.9690","0"],[1639051200000,"187.6000","188.6390","186.5510","188.0880","150062",1639054799999,"28148192.7660",22389,"70853","13293562.9440","0"]]'
+  recorded_at: Thu, 09 Dec 2021 12:50:16 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=SOLUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:16 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Application-Context:
+      - future-bigdata-service:BIN_PROD:9105
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 c587edeea2bc3d04595013a344ba707f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - x5H6JxM6UuWtIE3Cesdzxtp7t739KNJd9E2GPtH4MmuOqn23C1G8Og==
+    body:
+      encoding: UTF-8
+      string: '[{"symbol":"SOLUSDT","longAccount":"0.8430","longShortRatio":"5.3694","shortAccount":"0.1570","timestamp":1639051200000}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:16 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=SOLUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:16 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Application-Context:
+      - future-bigdata-service:BIN_PROD:9105
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 20fee759c4ab9f99878f36c1be252866.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - M2v0acEgBPa40hjJq9WKngDcN3ZjaGFUVI7fViZTTGrMCFgp69Aefg==
+    body:
+      encoding: UTF-8
+      string: '[{"symbol":"SOLUSDT","sumOpenInterest":"1008794.00000000","sumOpenInterestValue":"189321468.43561072","timestamp":1639051200000}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:16 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=SOLUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '77'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:16 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 9f6f98693a92fb28f50ee1be22989de3.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - vRLhWxhbUykDg1RWbh07sNbwsXU84J20vfHmfy7bFpGR1BZrQZFDvw==
+    body:
+      encoding: UTF-8
+      string: '[{"symbol":"SOLUSDT","fundingTime":1639036800000,"fundingRate":"0.00010000"}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:16 GMT
+- request:
+    method: get
+    uri: https://api.binance.com/api/v3/klines?interval=1h&limit=2&symbol=SOLUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '346'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:16 GMT
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      X-Mbx-Uuid:
+      - e45ffc1c-f6ce-415a-b158-2f23d0acc0d7
+      X-Mbx-Used-Weight:
+      - '5'
+      X-Mbx-Used-Weight-1m:
+      - '5'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'self'
+      X-Content-Security-Policy:
+      - default-src 'self'
+      X-Webkit-Csp:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, OPTIONS
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 a5360ecc08e8db6327b49f3dde2d69fe.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE51-C1
+      X-Amz-Cf-Id:
+      - o3TFGQzNvu3SuQX0sMG8hZ9oVJhNc3X2YtCmv0B9n7tNY2_Zz5WOhQ==
+    body:
+      encoding: UTF-8
+      string: '[[1639047600000,"188.43000000","188.83000000","186.89000000","187.63000000","66954.31000000",1639051199999,"12593160.07710000",16949,"27703.15000000","5212670.46430000","0"],[1639051200000,"187.62000000","188.67000000","186.62000000","188.14000000","51780.34000000",1639054799999,"9715883.96100000",13547,"24907.61000000","4674692.31760000","0"]]'
+  recorded_at: Thu, 09 Dec 2021 12:50:16 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/fapi/v1/klines?interval=1h&limit=2&symbol=SOLUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '267'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:16 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Mbx-Used-Weight-1m:
+      - '5'
+      X-Response-Time:
+      - 0ms
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 096a6b8eead4c03424ba5f53bb356c57.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - LEgCZV9rNI-g7ZGmgWLh7R93bSAKmr3rf1CzdiDsuSpKKkxwAdOvFA==
+    body:
+      encoding: ASCII-8BIT
+      string: '[[1639047600000,"188.3710","188.7900","186.8940","187.6000","117303",1639051199999,"22053661.9830",19638,"55915","10513814.9690","0"],[1639051200000,"187.6000","188.6390","186.5510","188.1360","150145",1639054799999,"28163802.6720",22415,"70905","13303342.7510","0"]]'
+  recorded_at: Thu, 09 Dec 2021 12:50:16 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=TINAJIMBO
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:17 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Application-Context:
+      - future-bigdata-service:BIN_PROD:9105
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 96902189172dc36e37becde22ad7bd8b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - 7z9SABeHg8GjG-fWPML2JFBrj0MxFwHtIHj30PcO24UFYc1oeEKrmQ==
+    body:
+      encoding: UTF-8
+      string: "[]"
+  recorded_at: Thu, 09 Dec 2021 12:50:17 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=TINAJIMBO
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:17 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Application-Context:
+      - future-bigdata-service:BIN_PROD:9105
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 d49c4749b641723498222f1791d0bf32.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - 3wUw300oalnzlFcFNwjVzy8xvF0Ud6gug-ufqOX95RZfFhNx0aq5_g==
+    body:
+      encoding: UTF-8
+      string: "[]"
+  recorded_at: Thu, 09 Dec 2021 12:50:17 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=TINAJIMBO
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '2'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:17 GMT
+      Server:
+      - Tengine
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 86d025c89ad18e16ad8b1972120c332a.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - Ffq6jE9dcqwgOmlTvX8leZs4LZX65yoISYxzKlbZ0zSBSZBDktLQPw==
+    body:
+      encoding: UTF-8
+      string: "[]"
+  recorded_at: Thu, 09 Dec 2021 12:50:17 GMT
+- request:
+    method: get
+    uri: https://api.binance.com/api/v3/klines?interval=1h&limit=2&symbol=TINAJIMBO
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '38'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:17 GMT
+      Server:
+      - nginx
+      X-Mbx-Uuid:
+      - cb5feaa5-be8b-42b0-a001-65da1d0c5d17
+      X-Mbx-Used-Weight:
+      - '6'
+      X-Mbx-Used-Weight-1m:
+      - '6'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'self'
+      X-Content-Security-Policy:
+      - default-src 'self'
+      X-Webkit-Csp:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 cc2bbb2dd268dde5bf623e62e48e20fc.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE51-C1
+      X-Amz-Cf-Id:
+      - 5u_VKaJ6-oSiZI_kyccFEG3H6Pxlw63Cang3Mi6J_qnqsmuDBVTLbg==
+    body:
+      encoding: UTF-8
+      string: '{"code":-1121,"msg":"Invalid symbol."}'
+  recorded_at: Thu, 09 Dec 2021 12:50:17 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=BTCUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:17 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Application-Context:
+      - future-bigdata-service:BIN_PROD:9105
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 2249efa6c1c2e694b3beed3ec7f720d6.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - qg4BmLyycsSsvZELowbK0tEE6KVuWgTDPziFFZcJwGEqV-a0p0Yp6A==
+    body:
+      encoding: UTF-8
+      string: '[{"symbol":"BTCUSDT","longAccount":"0.6849","longShortRatio":"2.1736","shortAccount":"0.3151","timestamp":1639051200000}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:17 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=BTCUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:17 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Application-Context:
+      - future-bigdata-service:BIN_PROD:9105
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 1f4456ae43e3f809277839b8d0cbf1bb.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - VVCNGMiE9DbOTMMOZ9TJeTnQyzgVcA8cMkAn_CHLZr70p_z-6ZxxHw==
+    body:
+      encoding: UTF-8
+      string: '[{"symbol":"BTCUSDT","sumOpenInterest":"39934.69000000","sumOpenInterestValue":"1962857573.64597038","timestamp":1639051200000}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:17 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=BTCUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '77'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:17 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 7570f485f03bad71f82f7f4b41147dca.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - 9FTI66eQivCdEI88OgQEY-S1hBf8Syk6KBspMppEdCdz_7ZJquT8yg==
+    body:
+      encoding: UTF-8
+      string: '[{"symbol":"BTCUSDT","fundingTime":1639036800000,"fundingRate":"0.00010000"}]'
+  recorded_at: Thu, 09 Dec 2021 12:50:17 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/fapi/v1/klines?interval=1h&limit=2&symbol=BTCUSDT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '287'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:18 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Mbx-Used-Weight-1m:
+      - '6'
+      X-Response-Time:
+      - 0ms
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 ba6b942710aa259103f983d062cdf775.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - jGD_k1fYXBgip8dJzPdb4v3oQvxt_ESKw5QFo7s3Mp_cszTiNEjVtA==
+    body:
+      encoding: ASCII-8BIT
+      string: '[[1639047600000,"49291.65","49399.00","49021.82","49150.01","7708.554",1639051199999,"379239953.50193",83232,"3625.795","178395629.92422","0"],[1639051200000,"49150.00","49646.12","48935.35","49379.17","11502.443",1639054799999,"566789309.91639",121177,"6186.978","304897037.76860","0"]]'
+  recorded_at: Thu, 09 Dec 2021 12:50:18 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:18 GMT
       Server:
       - Tengine
       Vary:
@@ -2102,11 +2445,83 @@ http_interactions:
       X-Amz-Cf-Pop:
       - TPE50-C1
       X-Amz-Cf-Id:
-      - Oi6_HQiw_wqiL5wtic9x23ivpyUrOTeUM8vFj-JBj2-Rmk3Ph8Xo6A==
+      - tYiERifh3qA01K80mJ8kRD5lr1tGfgeDCO4XdXN2pGmbkLxTNNn1sg==
     body:
       encoding: UTF-8
       string: "[]"
-  recorded_at: Sun, 05 Dec 2021 08:20:56 GMT
+  recorded_at: Thu, 09 Dec 2021 12:50:18 GMT
+- request:
+    method: get
+    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Mbx-Apikey:
+      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
+      Connection:
+      - close
+      Host:
+      - fapi.binance.com
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Dec 2021 12:50:18 GMT
+      Server:
+      - Tengine
+      Vary:
+      - Accept-Encoding
+      X-Application-Context:
+      - future-bigdata-service:BIN_PROD:9105
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
+      Content-Security-Policy:
+      - default-src 'self'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 4f2817c6e7331ffa75cf2d68f1cddd6c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - TPE50-C1
+      X-Amz-Cf-Id:
+      - JpElcYIRsOb6FmobwlQBnN-cDGaFCX1qtG4JNhfCA-PLWQ8JYdtO0g==
+    body:
+      encoding: UTF-8
+      string: "[]"
+  recorded_at: Thu, 09 Dec 2021 12:50:18 GMT
 - request:
     method: get
     uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
@@ -2136,7 +2551,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Sun, 05 Dec 2021 08:20:56 GMT
+      - Thu, 09 Dec 2021 12:50:18 GMT
       Server:
       - Tengine
       Access-Control-Allow-Origin:
@@ -2165,650 +2580,19 @@ http_interactions:
       - 1; mode=block
       X-Cache:
       - Miss from cloudfront
-      Via:
-      - 1.1 11ffd4d244c14ea5cdb241441724531b.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE50-C1
-      X-Amz-Cf-Id:
-      - P_LenmsjCVAjqFWf-hlZvsOo2nA5HrclaAR5DQlhkJltiejhefUYFw==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sun, 05 Dec 2021 08:20:56 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=BTCUSDT,%20SOLUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sun, 05 Dec 2021 13:15:44 GMT
-      Server:
-      - Tengine
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      X-Cache:
-      - Error from cloudfront
-      Via:
-      - 1.1 bd10c7cefd8295a0ff40302b0e4b3977.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - pwuNJKqgn2RSlnlpEdnY5QvqQFUMOfwCiYPx0WC7SI6lqfGwEGjsDA==
-    body:
-      encoding: ASCII-8BIT
-      string: ''
-  recorded_at: Sun, 05 Dec 2021 13:15:44 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=BTCUSDT,%20ETHUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sun, 05 Dec 2021 13:25:10 GMT
-      Server:
-      - Tengine
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      X-Cache:
-      - Error from cloudfront
-      Via:
-      - 1.1 573b65dea6781c706800bbfcf3ec1516.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - qa-V47EavQVtIO0dKWe9GutuGG_7WM4Vi9wlHfJjDN7KNCAcUEjKFg==
-    body:
-      encoding: ASCII-8BIT
-      string: ''
-  recorded_at: Sun, 05 Dec 2021 13:25:09 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=BTCUSDT,ETHUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sun, 05 Dec 2021 13:25:19 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Application-Context:
-      - future-bigdata-service:BIN_PROD:9105
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 876f21cb99bf6b98d953c30c556bfc9f.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - PREjufv207R_WBcFsHbedNAaKiO2GnkYH7tYOumVUogevPUXWy6F4Q==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sun, 05 Dec 2021 13:25:19 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=BTCUSDT,ETHUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sun, 05 Dec 2021 13:25:20 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Application-Context:
-      - future-bigdata-service:BIN_PROD:9105
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 65964bf10ae7013b0019c15b8c7cb411.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - gxn8c9cY7tSsCIyeLoBLRHUI15OCo9fgCdo2BWDK9bTRftJ5EB2k0w==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sun, 05 Dec 2021 13:25:20 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=BTCUSDT,ETHUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '2'
-      Connection:
-      - close
-      Date:
-      - Sun, 05 Dec 2021 13:25:20 GMT
-      Server:
-      - Tengine
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 2a35f47e8effac5e2ab050c099aacc95.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - YeiOtPuzi3XR7gF7au46gpheoRuwKYbcZHjzybuvFuoY3CmshQ3q1w==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sun, 05 Dec 2021 13:25:20 GMT
-- request:
-    method: get
-    uri: https://api.binance.com/api/v3/klines?interval=1h&limit=2&symbol=BTCUSDT,ETHUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-      Host:
-      - api.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '108'
-      Connection:
-      - close
-      Date:
-      - Sun, 05 Dec 2021 13:25:20 GMT
-      Server:
-      - nginx
-      X-Mbx-Uuid:
-      - 6a6b2fb8-e91b-4cd3-9397-fdaac2e75985
-      X-Mbx-Used-Weight:
-      - '1'
-      X-Mbx-Used-Weight-1m:
-      - '1'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Content-Security-Policy:
-      - default-src 'self'
-      X-Content-Security-Policy:
-      - default-src 'self'
-      X-Webkit-Csp:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Pragma:
-      - no-cache
-      Expires:
-      - '0'
-      X-Cache:
-      - Error from cloudfront
       Via:
       - 1.1 41d758bee13953e753f6df8ad516691e.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - TPE50-C1
       X-Amz-Cf-Id:
-      - Pk2pnsx5UmD6plSdM71NOp_m-V45uywFgq0DOa-smPLJ8AybXzp7Uw==
-    body:
-      encoding: UTF-8
-      string: '{"code":-1100,"msg":"Illegal characters found in parameter ''symbol'';
-        legal range is ''^[A-Z0-9-_.]{1,20}$''."}'
-  recorded_at: Sun, 05 Dec 2021 13:25:20 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=BTCUSDT%7D
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sun, 05 Dec 2021 13:31:15 GMT
-      Server:
-      - Tengine
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      X-Cache:
-      - Error from cloudfront
-      Via:
-      - 1.1 b0abe882e46bdc540eee38204e28d759.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - fVXox_WRbiZkNQCjK2ri1f2aW2skPEsQ77BGwH4w4D082FVVjp6W_g==
-    body:
-      encoding: ASCII-8BIT
-      string: ''
-  recorded_at: Sun, 05 Dec 2021 13:31:15 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=BTCUSDT,SOLUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sun, 05 Dec 2021 13:48:28 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Application-Context:
-      - future-bigdata-service:BIN_PROD:9105
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 94a5bf09bd03cd8ac68dabdad56c40b3.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - PuG5PiXA96OI4Qj5JQJFIN0fAq4GoIEIdytEiJL4dRfQhJWjK935-g==
+      - HjMcVTAQFsAEr8mRX08xRiflHI8G3xhxuz24_sndXeDaJKtlYBXzSw==
     body:
       encoding: UTF-8
       string: "[]"
-  recorded_at: Sun, 05 Dec 2021 13:48:28 GMT
+  recorded_at: Thu, 09 Dec 2021 12:50:18 GMT
 - request:
     method: get
-    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=BTCUSDT,SOLUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sun, 05 Dec 2021 13:48:28 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Application-Context:
-      - future-bigdata-service:BIN_PROD:9105
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 0e2886f2f2f8b98f7eaf91c8c6ee8645.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - 2fOMcyBYCpOKx9oqlSCcTb0SFHhTzSUra6V194R-7EGLvKJQeVVnMQ==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sun, 05 Dec 2021 13:48:28 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=BTCUSDT,SOLUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '2'
-      Connection:
-      - close
-      Date:
-      - Sun, 05 Dec 2021 13:48:29 GMT
-      Server:
-      - Tengine
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 ec4d5e18da821a10fe37918f056967b0.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - bxX_SK5sMCdG2HcBQpPZazZkgpoyaKYecD0CQNRKIbcK6_so4VYSFw==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sun, 05 Dec 2021 13:48:29 GMT
-- request:
-    method: get
-    uri: https://api.binance.com/api/v3/klines?interval=1h&limit=2&symbol=BTCUSDT,SOLUSDT
+    uri: https://api.binance.com/api/v3/klines?interval=1h&limit=2&symbol=fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
     body:
       encoding: UTF-8
       string: ''
@@ -2833,15 +2617,15 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Sun, 05 Dec 2021 13:48:29 GMT
+      - Thu, 09 Dec 2021 12:50:18 GMT
       Server:
       - nginx
       X-Mbx-Uuid:
-      - 17e8048d-2c8f-456e-9d42-fc2a17cb6fd4
+      - 71e62bae-2e2e-438b-ac6a-a4e538b265b3
       X-Mbx-Used-Weight:
-      - '1'
+      - '7'
       X-Mbx-Used-Weight-1m:
-      - '1'
+      - '7'
       Strict-Transport-Security:
       - max-age=31536000; includeSubdomains
       X-Frame-Options:
@@ -2865,295 +2649,14 @@ http_interactions:
       X-Cache:
       - Error from cloudfront
       Via:
-      - 1.1 7cd0cd576fa5f09b5851ea05b7feecc4.cloudfront.net (CloudFront)
+      - 1.1 30b9dcf2682a498ca65a84ceeaaee6c1.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - TPE51-C1
       X-Amz-Cf-Id:
-      - J_NSpto7ccf5j07FxG-Cfx322m6CMBT2PWTAEk2XFwdi1rflnLAynA==
+      - gsyx7A81frrXRynjKfFeLmoq61khoNwCxZbEbv0xwYRgWmPrzvQN2A==
     body:
       encoding: UTF-8
       string: '{"code":-1100,"msg":"Illegal characters found in parameter ''symbol'';
         legal range is ''^[A-Z0-9-_.]{1,20}$''."}'
-  recorded_at: Sun, 05 Dec 2021 13:48:29 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/globalLongShortAccountRatio?limit=1&period=1h&symbol=SOLUSDT,BTCUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sun, 05 Dec 2021 13:49:23 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Application-Context:
-      - future-bigdata-service:BIN_PROD:9105
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 f00ea1bee8d7ea7a9b5f075d3383a44e.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - Cf0IOTKc7Ubr7_-gOPO08YHngyrOD6B9QNQbRtDWGbATWztqAZj9Pg==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sun, 05 Dec 2021 13:49:23 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/futures/data/openInterestHist?limit=1&period=1h&symbol=SOLUSDT,BTCUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Date:
-      - Sun, 05 Dec 2021 13:49:23 GMT
-      Server:
-      - Tengine
-      Vary:
-      - Accept-Encoding
-      X-Application-Context:
-      - future-bigdata-service:BIN_PROD:9105
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 bd10c7cefd8295a0ff40302b0e4b3977.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - f3D2Y206aiziu_RXYwvywn2e5bjTi1N07VP333_be3RMyrdZOQjulg==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sun, 05 Dec 2021 13:49:23 GMT
-- request:
-    method: get
-    uri: https://fapi.binance.com/fapi/v1/fundingRate?limit=1&symbol=SOLUSDT,BTCUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      X-Mbx-Apikey:
-      - fh5stcBWhLGyYslwaQBLvJeo4UVM962zqHnPlhqmI7hWXE8ounsHfuxM1q4dh5Ui
-      Connection:
-      - close
-      Host:
-      - fapi.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '2'
-      Connection:
-      - close
-      Date:
-      - Sun, 05 Dec 2021 13:49:23 GMT
-      Server:
-      - Tengine
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,clienttype,Content-Type,lang,x-ui-request-trace,bnc-uuid"
-      Content-Security-Policy:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 0daf49953d3bbc7b405b84a5295b52d4.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - gIk6Pb8itTFDDGtZQQ3W06XoahqWlCga-DBBIihISXoRSdvH-ORPMw==
-    body:
-      encoding: UTF-8
-      string: "[]"
-  recorded_at: Sun, 05 Dec 2021 13:49:23 GMT
-- request:
-    method: get
-    uri: https://api.binance.com/api/v3/klines?interval=1h&limit=2&symbol=SOLUSDT,BTCUSDT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-      Host:
-      - api.binance.com
-      User-Agent:
-      - http.rb/5.0.4
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '108'
-      Connection:
-      - close
-      Date:
-      - Sun, 05 Dec 2021 13:49:23 GMT
-      Server:
-      - nginx
-      X-Mbx-Uuid:
-      - 88d6fe9c-c271-4c8c-92a1-b5e3f686aac4
-      X-Mbx-Used-Weight:
-      - '1'
-      X-Mbx-Used-Weight-1m:
-      - '1'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Content-Security-Policy:
-      - default-src 'self'
-      X-Content-Security-Policy:
-      - default-src 'self'
-      X-Webkit-Csp:
-      - default-src 'self'
-      Cache-Control:
-      - no-cache, no-store, must-revalidate
-      Pragma:
-      - no-cache
-      Expires:
-      - '0'
-      X-Cache:
-      - Error from cloudfront
-      Via:
-      - 1.1 8998788f3fd868ad25b9404e8c5b09f9.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - TPE51-C1
-      X-Amz-Cf-Id:
-      - Xu-4eTN_52xRd6G10whEsFfMbMaSzp2DD4cpVQwX_ughuv9gAO0lDQ==
-    body:
-      encoding: UTF-8
-      string: '{"code":-1100,"msg":"Illegal characters found in parameter ''symbol'';
-        legal range is ''^[A-Z0-9-_.]{1,20}$''."}'
-  recorded_at: Sun, 05 Dec 2021 13:49:23 GMT
+  recorded_at: Thu, 09 Dec 2021 12:50:18 GMT
 recorded_with: VCR 6.0.0
