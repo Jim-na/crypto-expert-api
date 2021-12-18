@@ -15,10 +15,13 @@ module CryptoExpert
       attribute :time,                  Integer.optional
       attribute :spot_volume,           Float.optional
       attribute :spot_closeprice,       Float.optional
-      attribute :funding_rate,          Array.optional
-      attribute :longshort_ratio,       Array.optional
-      attribute :open_interest,         Array.optional
+      attribute :funding_rate,          Float.optional
+      attribute :longshort_ratio,       Float.optional
+      attribute :open_interest,         Float.optional
       attribute :spot_change_percent,   Float.optional
+      attribute :funding_rate_history,          Float.optional
+      attribute :longshort_ratio_history,       Float.optional
+      attribute :open_interest_history,         Float.optional
       # TODO: price movement direction
       # price now - history
       def to_attr_hash

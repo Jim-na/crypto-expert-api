@@ -42,7 +42,10 @@ module CryptoExpert
             funding_rate: funding_rate,
             longshort_ratio: longshort_ratio,
             open_interest: open_interest,
-            spot_change_percent: spot_change_percent
+            spot_change_percent: spot_change_percent,
+            funding_rate_history: funding_rate_history,
+            longshort_ratio_history: longshort_ratio_history,
+            open_interest_history: open_interest_history
           )
         end
 
@@ -69,7 +72,7 @@ module CryptoExpert
         end
 
         def signal
-          puts CryptoExpert::Binance::SignalCalculator.new(@data,volume_change_percent,spot_change_percent).signal_output
+          # puts CryptoExpert::Binance::SignalCalculator.new(@data,volume_change_percent,spot_change_percent).signal_output
           @calculator.new(@data,volume_change_percent,spot_change_percent).signal_output
         end
 
@@ -87,15 +90,39 @@ module CryptoExpert
         end
 
         def funding_rate
-          [@data['now'].funding_rate, @data['history'].funding_rate]
+          @data['now'].funding_rate
         end
 
         def longshort_ratio
-          [@data['now'].longshort_ratio, @data['history'].longshort_ratio]
+          @data['now'].longshort_ratio
         end
 
         def open_interest
-          [@data['now'].open_interest, @data['history'].open_interest]
+          @data['now'].open_interest
+        end
+        
+        def funding_rate_history
+          if @data['history'].nil?
+            0.0
+          else
+            @data['history'].funding_rate
+          end
+        end
+
+        def longshort_ratio_history
+          if @data['history'].nil?
+            0.0
+          else
+            @data['history'].longshort_ratio
+          end
+        end
+
+        def open_interest_history
+          if @data['history'].nil?
+            0.0
+          else
+            @data['history'].open_interest
+          end
         end
       end
     end
