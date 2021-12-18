@@ -69,8 +69,8 @@ module CryptoExpert
         end
 
         def signal
-          # puts CryptoExpert::Binance::SignalCalculator.minipair_volume_thres(50)
-          @calculator.minipair_volume_thres(volume_change_percent)
+          puts CryptoExpert::Binance::SignalCalculator.new(@data,volume_change_percent,spot_change_percent).signal_output
+          @calculator.new(@data,volume_change_percent,spot_change_percent).signal_output
         end
 
         def time
@@ -87,15 +87,15 @@ module CryptoExpert
         end
 
         def funding_rate
-          @data['now'].funding_rate
+          [@data['now'].funding_rate, @data['history'].funding_rate]
         end
 
         def longshort_ratio
-          @data['now'].longshort_ratio
+          [@data['now'].longshort_ratio, @data['history'].longshort_ratio]
         end
 
         def open_interest
-          @data['now'].open_interest
+          [@data['now'].open_interest, @data['history'].open_interest]
         end
       end
     end
