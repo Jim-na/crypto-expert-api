@@ -6,6 +6,7 @@ module CryptoExpert
   # Web App
   class App < Roda
     plugin :halt
+    plugin :caching
     plugin :flash
     plugin :all_verbs # recognizes HTTP verbs beyond GET/POST (e.g., DELETE)
     use Rack::MethodOverride # for other HTTP verbs (with plugin all_verbs)
@@ -64,6 +65,8 @@ module CryptoExpert
           routing.is do
             # GET /minipair?list={base64_json_array_of_minipair_symbol}
             routing.get do
+              response.cache_control public: true, max_age: 300
+
               list_req = Request::EncodedMiniPairSignalList.new(routing.params)
               result = Service::ListMiniPairs.new.call(list_request: list_req)
 
