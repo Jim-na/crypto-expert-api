@@ -40,6 +40,9 @@ gem 'rack-cache', '~> 1.13'
 gem 'redis', '~> 4.5'
 gem 'redis-rack-cache', '~> 2.2'
 
+# asynchronize
+gem 'aws-sdk-sqs', '~> 1.48'
+
 # Validation
 gem 'dry-struct', '~> 1.4'
 gem 'dry-types', '~> 1.5'
