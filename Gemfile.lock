@@ -100,14 +100,12 @@ GEM
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
     method_source (1.0.0)
-    minitest (5.14.4)
+    minitest (5.15.0)
     minitest-rg (5.2.0)
       minitest (~> 5.0)
     multi_json (1.15.0)
     nio4r (2.5.8)
     nokogiri (1.12.5-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
     openssl (2.2.1)
       ipaddr
@@ -116,7 +114,7 @@ GEM
       watir (>= 6.10.3)
     page_navigation (0.10)
       data_magic (>= 0.22)
-    parser (3.0.2.0)
+    parser (3.0.3.2)
       ast (~> 2.4.1)
     path_expander (1.1.0)
     pg (1.2.3)
@@ -144,7 +142,7 @@ GEM
       kwalify (~> 0.7.0)
       parser (~> 3.0.0)
       rainbow (>= 2.0, < 4.0)
-    regexp_parser (2.1.1)
+    regexp_parser (2.2.0)
     representable (3.1.1)
       declarative (< 0.1.0)
       trailblazer-option (>= 0.1.1, < 0.2.0)
@@ -152,18 +150,18 @@ GEM
     rexml (3.2.5)
     roar (1.1.1)
       representable (~> 3.0)
-    roda (3.49.0)
+    roda (3.51.0)
       rack
     rubocop (0.7.2)
       rainbow (>= 1.1.4)
-    ruby_parser (3.18.0)
+    ruby_parser (3.18.1)
       sexp_processor (~> 4.16)
     rubyzip (2.3.2)
-    selenium-webdriver (4.0.3)
+    selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
-    sequel (5.50.0)
+    sequel (5.51.0)
     sexp_processor (4.16.0)
     simplecov (0.21.2)
       docile (~> 1.1)
@@ -202,7 +200,7 @@ PLATFORMS
   x86_64-darwin-19
   x86_64-darwin-20
   x86_64-linux
-
+  
 DEPENDENCIES
   dry-monads (~> 1.4)
   dry-struct (~> 1.4)

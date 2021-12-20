@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/init.rb": {
         "lines": [
           null,
           null,
@@ -10,14 +10,14 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/config/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/config/init.rb": {
         "lines": [
           null,
           null,
           1
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/config/environment.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -61,7 +61,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/init.rb": {
         "lines": [
           null,
           null,
@@ -70,7 +70,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/domain/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/domain/init.rb": {
         "lines": [
           null,
           null,
@@ -80,7 +80,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/domain/currencypair/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/domain/currencypair/init.rb": {
         "lines": [
           null,
           null,
@@ -92,7 +92,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/domain/currencypair/entities/tempminipair.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/domain/currencypair/entities/tempminipair.rb": {
         "lines": [
           null,
           null,
@@ -124,7 +124,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/domain/currencypair/mappers/tempminipair_mapper.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/domain/currencypair/mappers/tempminipair_mapper.rb": {
         "lines": [
           null,
           null,
@@ -211,7 +211,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/domain/currencypair/repositories/for.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/domain/currencypair/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -237,7 +237,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/domain/currencypair/repositories/tempminipairs.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/domain/currencypair/repositories/tempminipairs.rb": {
         "lines": [
           null,
           null,
@@ -256,7 +256,7 @@
           1,
           26,
           null,
-          25,
+          13,
           null,
           null,
           null,
@@ -276,7 +276,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/domain/currencypair/repositories/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/domain/currencypair/repositories/init.rb": {
         "lines": [
           null,
           null,
@@ -285,7 +285,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/domain/signal/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/domain/signal/init.rb": {
         "lines": [
           null,
           null,
@@ -297,7 +297,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/domain/signal/lib/signal_calculator.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/domain/signal/lib/signal_calculator.rb": {
         "lines": [
           null,
           null,
@@ -305,19 +305,95 @@
           1,
           null,
           1,
+          null,
+          1,
+          1,
+          1,
           1,
           1,
           1,
           null,
+          1,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
           null,
           null,
           1,
+          null,
           18,
           0,
           18,
           0,
           null,
           18,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          36,
+          26,
+          null,
+          10,
+          10,
+          0,
+          10,
+          0,
+          null,
+          10,
+          null,
+          null,
           null,
           null,
           null,
@@ -325,7 +401,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/domain/signal/entities/minipair.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/domain/signal/entities/minipair.rb": {
         "lines": [
           null,
           null,
@@ -348,6 +424,9 @@
           1,
           1,
           1,
+          1,
+          1,
+          1,
           null,
           null,
           1,
@@ -360,7 +439,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/domain/signal/mappers/minipair_mapper.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/domain/signal/mappers/minipair_mapper.rb": {
         "lines": [
           null,
           null,
@@ -397,6 +476,9 @@
           null,
           1,
           18,
+          null,
+          null,
+          null,
           null,
           null,
           null,
@@ -418,32 +500,28 @@
           null,
           1,
           36,
-          2,
+          26,
           null,
-          34,
+          10,
           null,
+          null,
+          null,
+          1,
+          36,
+          26,
+          null,
+          10,
+          null,
+          null,
+          null,
+          1,
+          null,
+          18,
           null,
           null,
           1,
           18,
-          1,
           null,
-          17,
-          null,
-          null,
-          null,
-          1,
-          null,
-          18,
-          null,
-          null,
-          1,
-          18,
-          null,
-          null,
-          null,
-          1,
-          18,
           null,
           null,
           1,
@@ -460,6 +538,34 @@
           null,
           1,
           18,
+          null,
+          null,
+          1,
+          18,
+          null,
+          null,
+          1,
+          18,
+          13,
+          null,
+          5,
+          null,
+          null,
+          null,
+          1,
+          18,
+          13,
+          null,
+          5,
+          null,
+          null,
+          null,
+          1,
+          18,
+          13,
+          null,
+          5,
+          null,
           null,
           null,
           null,
@@ -467,7 +573,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/infrastructure/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/infrastructure/init.rb": {
         "lines": [
           null,
           null,
@@ -477,7 +583,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/infrastructure/gateways/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/infrastructure/gateways/init.rb": {
         "lines": [
           null,
           null,
@@ -486,7 +592,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/infrastructure/gateways/binance_api.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/infrastructure/gateways/binance_api.rb": {
         "lines": [
           null,
           null,
@@ -555,7 +661,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/infrastructure/gateways/http_api.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/infrastructure/gateways/http_api.rb": {
         "lines": [
           null,
           null,
@@ -606,7 +712,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/infrastructure/database/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/infrastructure/database/init.rb": {
         "lines": [
           null,
           null,
@@ -616,7 +722,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/infrastructure/database/orms/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/infrastructure/database/orms/init.rb": {
         "lines": [
           null,
           null,
@@ -625,7 +731,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/infrastructure/database/orms/minipair_orm.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/infrastructure/database/orms/minipair_orm.rb": {
         "lines": [
           null,
           null,
@@ -645,7 +751,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/infrastructure/cache/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/infrastructure/cache/init.rb": {
         "lines": [
           null,
           null,
@@ -654,7 +760,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/infrastructure/cache/redis_cache.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/infrastructure/cache/redis_cache.rb": {
         "lines": [
           null,
           null,
@@ -680,7 +786,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/application/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/application/init.rb": {
         "lines": [
           null,
           null,
@@ -689,7 +795,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/application/requests/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/application/requests/init.rb": {
         "lines": [
           null,
           null,
@@ -698,7 +804,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/application/requests/minipair_signal_list.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/application/requests/minipair_signal_list.rb": {
         "lines": [
           null,
           null,
@@ -750,14 +856,14 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/application/services/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/application/services/init.rb": {
         "lines": [
           1,
           4,
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/application/services/add_minipair.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/application/services/add_minipair.rb": {
         "lines": [
           null,
           null,
@@ -800,7 +906,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/application/services/get_minipair_signal.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/application/services/get_minipair_signal.rb": {
         "lines": [
           null,
           null,
@@ -853,7 +959,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/application/services/list_minipairs.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/application/services/list_minipairs.rb": {
         "lines": [
           null,
           null,
@@ -910,14 +1016,14 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/application/controllers/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/application/controllers/init.rb": {
         "lines": [
           1,
           3,
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/application/controllers/app.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/application/controllers/app.rb": {
         "lines": [
           null,
           null,
@@ -925,6 +1031,7 @@
           null,
           1,
           null,
+          1,
           1,
           1,
           1,
@@ -1007,7 +1114,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/application/controllers/helpers.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/application/controllers/helpers.rb": {
         "lines": [
           null,
           null,
@@ -1027,7 +1134,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/presentation/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/presentation/init.rb": {
         "lines": [
           null,
           null,
@@ -1037,7 +1144,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/presentation/responses/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/presentation/responses/init.rb": {
         "lines": [
           null,
           null,
@@ -1046,7 +1153,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/presentation/responses/api_result.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/presentation/responses/api_result.rb": {
         "lines": [
           null,
           null,
@@ -1075,7 +1182,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/presentation/responses/minipairs_list.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/presentation/responses/minipairs_list.rb": {
         "lines": [
           null,
           null,
@@ -1087,7 +1194,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/presentation/representers/init.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/presentation/representers/init.rb": {
         "lines": [
           null,
           null,
@@ -1096,7 +1203,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/presentation/representers/http_response_representer.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/presentation/representers/http_response_representer.rb": {
         "lines": [
           null,
           null,
@@ -1139,7 +1246,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/presentation/representers/minipair_representer.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/presentation/representers/minipair_representer.rb": {
         "lines": [
           null,
           null,
@@ -1156,80 +1263,6 @@
           1,
           null,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/presentation/representers/minipairs_representer.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/presentation/representers/openstruct_with_links.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/app/presentation/representers/tempminipair_representer.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
           1,
           1,
           1,
@@ -1257,7 +1290,84 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/spec/helpers/vcr_helper.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/presentation/representers/minipairs_representer.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/presentation/representers/openstruct_with_links.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/app/presentation/representers/tempminipair_representer.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/spec/helpers/vcr_helper.rb": {
         "lines": [
           null,
           null,
@@ -1289,7 +1399,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/spec/tests/integration/layers/gateway_database_spec.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/spec/tests/integration/layers/gateway_database_spec.rb": {
         "lines": [
           null,
           null,
@@ -1342,7 +1452,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/spec/helpers/database_helper.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/spec/helpers/database_helper.rb": {
         "lines": [
           null,
           null,
@@ -1357,7 +1467,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/spec/tests/integration/services/get_minipair_signal_spec.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/spec/tests/integration/services/get_minipair_signal_spec.rb": {
         "lines": [
           null,
           null,
@@ -1403,7 +1513,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/spec/tests/integration/services/list_minipairs_spec.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/spec/tests/integration/services/list_minipairs_spec.rb": {
         "lines": [
           null,
           null,
@@ -1464,7 +1574,7 @@
           null
         ]
       },
-      "/Users/aaa/Documents/GitHub/crypto-expert-api/spec/tests/unit/gateway_bn_spec.rb": {
+      "/Users/tina/Documents/_Graduate/SOA/crypto-expert/api-crypto-expert/spec/tests/unit/gateway_bn_spec.rb": {
         "lines": [
           null,
           null,
@@ -1517,7 +1627,7 @@
         ]
       }
     },
-    "timestamp": 1639370826
+    "timestamp": 1639828135
   },
   "Unit Tests": {
     "coverage": {

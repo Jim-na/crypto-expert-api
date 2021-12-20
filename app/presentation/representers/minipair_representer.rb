@@ -22,6 +22,9 @@ module CryptoExpert
       property :longshort_ratio
       property :open_interest
       property :spot_change_percent
+      property :funding_rate_history
+      property :longshort_ratio_history
+      property :open_interest_history
 
       link :self do
         "#{App.config.API_HOST}/api/v1/minipair/#{symbol}"
