@@ -12,7 +12,7 @@ module CryptoExpert
       include Dry.Types
 
       attribute :signals, Strict::Array.of(MiniPair)
-      
+
       # TODO: price movement direction
       # price now - history
       def to_attr_hash
@@ -20,7 +20,6 @@ module CryptoExpert
         hash[time].to_s
         hash
       end
-      
     end
   end
 end

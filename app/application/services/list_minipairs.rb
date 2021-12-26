@@ -40,7 +40,6 @@ module CryptoExpert
         puts e.backtrace.join("\n")
         Failure(Response::ApiResult.new(status: :bad_request, message: NO_PAIR_ERR))
       end
-
     end
   end
 end

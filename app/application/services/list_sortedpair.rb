@@ -14,8 +14,7 @@ module CryptoExpert
 
       private
 
-      NO_PAIR_ERR = 'Add a Mini Pair to get started'
-      
+      NO_PAIR_ERR = "Some pairs can't be found in Binance"
 
       # Expects list of movies in input[:list_request]
       def validate_list(input)
@@ -29,22 +28,15 @@ module CryptoExpert
 
       def list_minipair_signal(input)
         list = input[:list]
-        
-        minipairs = Binance::SignalsListMapper.new().get_sortlist(list).signals
+
+        minipairs = Binance::SignalsListMapper.new.get_sortlist(list).signals
         minipairs.then { |minipairs| Response::MinipairsList.new(minipairs) }
-            .then { |list| Response::ApiResult.new(status: :ok, message: list) }
-            .then { |result| Success(result) }
-        # list.map do |pair|
-        # #   Binance::MiniPairMapper.new(pair).get
-        #     SignalsListMapper.new().get_sortlist(pair)
-        # end
-          
-        # Success(Response::ApiResult.new(status: :created, message: minipairs.signals ))
+          .then { |list| Response::ApiResult.new(status: :ok, message: list) }
+          .then { |result| Success(result) }
       rescue StandardError => e
         puts e.backtrace.join("\n")
         Failure(Response::ApiResult.new(status: :bad_request, message: NO_PAIR_ERR))
       end
-
     end
   end
 end

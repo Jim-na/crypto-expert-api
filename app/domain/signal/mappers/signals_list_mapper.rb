@@ -5,7 +5,7 @@ require_relative 'minipair_mapper'
 module CryptoExpert
   module Binance
     # map the Spot Pair info
-    class SignalsListMapper # < SignalCalculator
+    class SignalsListMapper
       # extend SignalCalculator
       def initialize
         #   @minipair_mapper = CryptoExpert::Binance::MiniPairMapper
@@ -38,7 +38,7 @@ module CryptoExpert
 
         def signals
           minipairs = @data.map do |symbol|
-                MiniPairMapper.new(symbol).get
+            MiniPairMapper.new(symbol).get
           end
           # puts minipairs
           # puts @calculator
@@ -50,10 +50,9 @@ module CryptoExpert
         #     MiniPairMapper.new(symbol).get
         #   end
         # end
-        
       end
     end
   end
 end
 # SignalsListMapper.new().get_sortlist(['BTCUSDT'])
-# b =  MiniPairMapper.new('ETHUSDT').get;a = MiniPairMapper.new('BTCUSDT').get; c = MiniPairMapper.new('SOLUSDT').get;l = [a,b,c] 
+# b =  MiniPairMapper.new('ETHUSDT').get;a = MiniPairMapper.new('BTCUSDT').get; c = MiniPairMapper.new('SOLUSDT').get;l = [a,b,c]
