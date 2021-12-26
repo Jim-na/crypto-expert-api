@@ -12,6 +12,7 @@ module CryptoExpert
       attribute :symbol, Strict::String
       attribute :volume_change_percent, Float.optional
       attribute :signal,                String.optional
+      attribute :signal_score,          Integer.optional
       attribute :time,                  Integer.optional
       attribute :spot_volume,           Float.optional
       attribute :spot_closeprice,       Float.optional

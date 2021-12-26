@@ -69,7 +69,7 @@ module CryptoExpert
 
               list_req = Request::EncodedMiniPairSignalList.new(routing.params)
               result = Service::ListMiniPairs.new.call(list_request: list_req)
-
+              puts result
               if result.failure?
                 failed = Representer::HttpResponse.new(result.failure)
                 routing.halt failed.http_status_code, failed.to_json
@@ -81,6 +81,28 @@ module CryptoExpert
             end
           end
         end
+        
+        routing.on 'sortedpair' do
+          routing.is do
+            # GET /minipair?list={base64_json_array_of_minipair_symbol}
+            routing.get do
+              response.cache_control public: true, max_age: 300
+
+              list_req = Request::EncodedMiniPairSignalList.new(routing.params)
+              result = Service::ListSignalsPairs.new.call(list_request: list_req)
+              puts "app.rb",result
+              if result.failure?
+                failed = Representer::HttpResponse.new(result.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
+
+              http_response = Representer::HttpResponse.new(result.value!)
+              response.status = http_response.http_status_code
+              Representer::MiniPairList.new(result.value!.message).to_json
+            end
+          end
+        end
+        
       end
     end
   end

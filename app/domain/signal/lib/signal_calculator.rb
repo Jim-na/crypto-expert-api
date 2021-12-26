@@ -32,6 +32,11 @@ module CryptoExpert
         end
         # signal = open_interest_change + longshort_ratio_change + volume_thres
       end
+      
+      def signal_score_output
+        volume_thres + spot_direction + funding_rate_change + longshort_ratio_change + open_interest_change
+      end
+      
       # TODO : define price movement and L/S ratio... etc then calculate signal
       # This is the original simple version.
       def volume_thres
