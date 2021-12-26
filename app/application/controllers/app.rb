@@ -84,13 +84,15 @@ module CryptoExpert
         
         routing.on 'sortedpair' do
           routing.is do
-            # GET /minipair?list={base64_json_array_of_minipair_symbol}
+            # TODO: defined the requested pair list first, not use session?
+            # means this GET API only response a list of defined pairs.
+            # GET /sortedpair?list={base64_json_array_of_minipair_symbol}
             routing.get do
               response.cache_control public: true, max_age: 300
 
               list_req = Request::EncodedMiniPairSignalList.new(routing.params)
               result = Service::ListSignalsPairs.new.call(list_request: list_req)
-              puts "app.rb",result
+              # puts "app.rb",result
               if result.failure?
                 failed = Representer::HttpResponse.new(result.failure)
                 routing.halt failed.http_status_code, failed.to_json
