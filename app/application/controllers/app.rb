@@ -91,8 +91,8 @@ module CryptoExpert
             routing.get do
               response.cache_control public: true, max_age: 300
 
-              list_req = Request::EncodedMiniPairSignalList.new(routing.params)
-              result = Service::ListSignalsPairs.new.call(list_request: list_req)
+              # list_req = Request::EncodedMiniPairSignalList.new(routing.params)
+              result = Service::ListSignalsPairs.new.call()
               # puts "app.rb",result
               if result.failure?
                 failed = Representer::HttpResponse.new(result.failure)

@@ -1,6 +1,7 @@
 # frozen_string_literal: false
 
 require_relative 'minipair_mapper'
+require_relative 'yml_to_pairlist'
 
 module CryptoExpert
   module Binance
@@ -12,7 +13,8 @@ module CryptoExpert
         @calculator = CryptoExpert::Binance::SignalSort
       end
 
-      def get_sortlist(symbol_list)
+      def get_sortlist
+        symbol_list = Yml2Pairlist.new().pairlist
         SignalsListMapper.build_entity(symbol_list)
       end
 
