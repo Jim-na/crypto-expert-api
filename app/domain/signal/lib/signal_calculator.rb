@@ -20,7 +20,8 @@ module CryptoExpert
         @longshort_ratio = @data['now'].longshort_ratio
         @open_interest = @data['now'].open_interest
       end
-
+      
+      # TODO : check signal definition again
       def signal_output
         # "hi"
         if open_interest_change.positive? && longshort_ratio_change.negative? && volume_thres.positive?
@@ -37,7 +38,6 @@ module CryptoExpert
         volume_thres + spot_direction + funding_rate_change + longshort_ratio_change + open_interest_change
       end
 
-      # TODO : define price movement and L/S ratio... etc then calculate signal
       # This is the original simple version.
       def volume_thres
         if @volume_change_percent > VOL_BULL_THRES

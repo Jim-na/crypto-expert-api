@@ -1,4 +1,3 @@
-# TODO: write api spec
 # frozen_string_literal: true
 
 require_relative '../../helpers/spec_helper'

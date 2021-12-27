@@ -45,7 +45,6 @@ module CryptoExpert
         end
 
         routing.on 'minipair' do
-          # TODO: => DONE: on string => post symbol to get this symbol's signal
           routing.on String do |symbol|
             routing.post do
               minipair_signal = Service::GetMiniPairSignal.new.call(symbol)
@@ -60,8 +59,6 @@ module CryptoExpert
               Representer::MiniPair.new(minipair_signal.value!.message).to_json
             end
           end
-          # TODO: => DONE: GET /minipair => get minipair(signal) list
-          # TODO => DONE: so we need a new service to get this list
           routing.is do
             # GET /minipair?list={base64_json_array_of_minipair_symbol}
             routing.get do
@@ -84,9 +81,6 @@ module CryptoExpert
         
         routing.on 'sortedpair' do
           routing.is do
-            # TODO: defined the requested pair list first, not use session?
-            # means this GET API only response a list of defined pairs.
-            # use APP.config??
             # GET /sortedpair?list={base64_json_array_of_minipair_symbol}
             routing.get do
               response.cache_control public: true, max_age: 300

@@ -23,7 +23,6 @@ module CryptoExpert
       attribute :funding_rate_history,          Float.optional
       attribute :longshort_ratio_history,       Float.optional
       attribute :open_interest_history,         Float.optional
-      # TODO: price movement direction
       # price now - history
       def to_attr_hash
         hash = to_hash.reject { |key, _| [:id].include? key }
