@@ -15,6 +15,7 @@ module CryptoExpert
       property :symbol
       property :volume_change_percent
       property :signal
+      property :signal_score
       property :time
       property :spot_volume
       property :spot_closeprice

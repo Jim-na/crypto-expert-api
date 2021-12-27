@@ -42,6 +42,7 @@ gem 'redis-rack-cache', '~> 2.2'
 
 # asynchronize
 gem 'aws-sdk-sqs', '~> 1.48'
+gem 'shoryuken', '~> 4'
 
 # Validation
 gem 'dry-struct', '~> 1.4'

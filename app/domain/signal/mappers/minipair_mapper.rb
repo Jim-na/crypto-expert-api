@@ -3,7 +3,8 @@
 module CryptoExpert
   module Binance
     # map the Spot Pair info
-    class MiniPairMapper # < SignalCalculator
+    # < SignalCalculator
+    class MiniPairMapper
       # extend SignalCalculator
       def initialize(symbol)
         @symbol = symbol
@@ -28,7 +29,7 @@ module CryptoExpert
       class DataMapper
         def initialize(data, calculator)
           @data = data
-          @calculator = calculator
+          @calculator = calculator.new(@data, volume_change_percent, spot_change_percent)
         end
 
         def build_entity
@@ -36,6 +37,7 @@ module CryptoExpert
             symbol: symbol,
             volume_change_percent: volume_change_percent,
             signal: signal,
+            signal_score: signal_score,
             time: time,
             spot_volume: spot_volume,
             spot_closeprice: spot_closeprice,
@@ -73,7 +75,11 @@ module CryptoExpert
 
         def signal
           # puts CryptoExpert::Binance::SignalCalculator.new(@data,volume_change_percent,spot_change_percent).signal_output
-          @calculator.new(@data,volume_change_percent,spot_change_percent).signal_output
+          @calculator.signal_output
+        end
+
+        def signal_score
+          @calculator.signal_score_output
         end
 
         def time
@@ -100,7 +106,7 @@ module CryptoExpert
         def open_interest
           @data['now'].open_interest
         end
-        
+
         def funding_rate_history
           if @data['history'].nil?
             0.0
