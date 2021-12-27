@@ -9,12 +9,12 @@ module CryptoExpert
     class Queue
       IDLE_TIMEOUT = 5 # seconds
 
-      def initialize(queue_url, config)
-        @queue_url = queue_url
+      def initialize(config)
+        @queue_url = sqs.get_queue_url(queue_name: config.CONCURRENCY_QUEUE).queue_url
         sqs = Aws::SQS::Client.new(
           access_key_id: config.AWS_ACCESS_KEY_ID,
           secret_access_key: config.AWS_SECRET_ACCESS_KEY,
-          region: config.AWS_REGION
+          region: config.AWS_REGIONs
         )
         @queue = Aws::SQS::Queue.new(url: queue_url, client: sqs)
       end
