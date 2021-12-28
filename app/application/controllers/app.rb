@@ -79,11 +79,12 @@ module CryptoExpert
           end
         end
         
+        # TODO: This service takes too long , maybe need some hint for user to wait
         routing.on 'sortedpair' do
           routing.is do
             # GET /sortedpair?list={base64_json_array_of_minipair_symbol}
             routing.get do
-              response.cache_control public: true, max_age: 300
+              response.cache_control public: true, max_age: 30000
 
               # list_req = Request::EncodedMiniPairSignalList.new(routing.params)
               result = Service::ListSignalsPairs.new.call()
