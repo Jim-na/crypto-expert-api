@@ -17,7 +17,7 @@ module CryptoExpert
       end
 
       def get_list
-        #   puts @data[0]
+        puts "in sognal sort getlist",@data[0]
         @data.sort_by { |p| -p.signal_score }
       end
     end

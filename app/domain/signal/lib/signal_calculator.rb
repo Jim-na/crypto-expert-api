@@ -24,14 +24,21 @@ module CryptoExpert
       # TODO : check signal definition again
       def signal_output
         # "hi"
-        if open_interest_change.positive? && longshort_ratio_change.negative? && volume_thres.positive?
+        if signal_score_output.positive?
           'BULL'
-        elsif open_interest_change.negative? && longshort_ratio_change >= 0 && volume_thres.negative?
+        elsif signal_score_output.negative?
           'BEAR'
         else
           'HOLD'
         end
-        # signal = open_interest_change + longshort_ratio_change + volume_thres
+        # if open_interest_change.positive? && longshort_ratio_change.negative? && volume_thres.positive?
+        #   'BULL'
+        # elsif open_interest_change.negative? && longshort_ratio_change >= 0 && volume_thres.negative?
+        #   'BEAR'
+        # else
+        #   'HOLD'
+        # end
+        
       end
 
       def signal_score_output

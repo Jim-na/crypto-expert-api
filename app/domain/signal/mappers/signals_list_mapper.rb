@@ -37,21 +37,21 @@ module CryptoExpert
         end
 
         private
-
-        def signals
-          minipairs = @data.map do |symbol|
-            MiniPairMapper.new(symbol).get
-          end
-          # puts minipairs
-          # puts @calculator
-          @calculator.new(minipairs).get_list
-        end
-
+        
         # def minipairs
         #   @data.map do |symbol|
         #     MiniPairMapper.new(symbol).get
         #   end
         # end
+        
+        def signals
+          minipairs = @data.map do |symbol|
+            MiniPairMapper.new(symbol).get
+          end
+          # puts @calculator
+          @calculator.new(minipairs).get_list
+        end
+
       end
     end
   end
