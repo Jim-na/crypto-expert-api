@@ -40,14 +40,6 @@ module CryptoExpert
         puts e.backtrace.join("\n")
         Failure(Response::ApiResult.new(status: :bad_request, message: NO_PAIR_ERR))
       end
-
-      def view_minipair(input)
-        viewable_minipairs = Views::MiniPairList.new(input)
-        Success(Response::ApiResult.new(status: :created, message: viewable_minipairs))
-      rescue StandardError => e
-        puts e.backtrace.join("\n")
-        Failure(Response::ApiResult.new(status: :internal_error, message: VIEW_PAIR_ERR))
-      end
     end
   end
 end

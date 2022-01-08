@@ -3,7 +3,8 @@
 module CryptoExpert
   module Binance
     # map the Spot Pair info
-    class MiniPairMapper # < SignalCalculator
+    # < SignalCalculator
+    class MiniPairMapper
       # extend SignalCalculator
       def initialize(symbol)
         @symbol = symbol
@@ -28,7 +29,7 @@ module CryptoExpert
       class DataMapper
         def initialize(data, calculator)
           @data = data
-          @calculator = calculator
+          @calculator = calculator.new(@data, volume_change_percent, spot_change_percent)
         end
 
         def build_entity
@@ -36,13 +37,17 @@ module CryptoExpert
             symbol: symbol,
             volume_change_percent: volume_change_percent,
             signal: signal,
+            signal_score: signal_score,
             time: time,
             spot_volume: spot_volume,
             spot_closeprice: spot_closeprice,
             funding_rate: funding_rate,
             longshort_ratio: longshort_ratio,
             open_interest: open_interest,
-            spot_change_percent: spot_change_percent
+            spot_change_percent: spot_change_percent,
+            funding_rate_history: funding_rate_history,
+            longshort_ratio_history: longshort_ratio_history,
+            open_interest_history: open_interest_history
           )
         end
 
@@ -69,8 +74,12 @@ module CryptoExpert
         end
 
         def signal
-          # puts CryptoExpert::Binance::SignalCalculator.minipair_volume_thres(50)
-          @calculator.minipair_volume_thres(volume_change_percent)
+          # puts CryptoExpert::Binance::SignalCalculator.new(@data,volume_change_percent,spot_change_percent).signal_output
+          @calculator.signal_output
+        end
+
+        def signal_score
+          @calculator.signal_score_output
         end
 
         def time
@@ -96,6 +105,30 @@ module CryptoExpert
 
         def open_interest
           @data['now'].open_interest
+        end
+
+        def funding_rate_history
+          if @data['history'].nil?
+            0.0
+          else
+            @data['history'].funding_rate
+          end
+        end
+
+        def longshort_ratio_history
+          if @data['history'].nil?
+            0.0
+          else
+            @data['history'].longshort_ratio
+          end
+        end
+
+        def open_interest_history
+          if @data['history'].nil?
+            0.0
+          else
+            @data['history'].open_interest
+          end
         end
       end
     end

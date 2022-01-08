@@ -6,6 +6,7 @@ module CryptoExpert
   # Web App
   class App < Roda
     plugin :halt
+    plugin :caching
     plugin :flash
     plugin :all_verbs # recognizes HTTP verbs beyond GET/POST (e.g., DELETE)
     use Rack::MethodOverride # for other HTTP verbs (with plugin all_verbs)
@@ -44,7 +45,6 @@ module CryptoExpert
         end
 
         routing.on 'minipair' do
-          # TODO: => DONE: on string => post symbol to get this symbol's signal
           routing.on String do |symbol|
             routing.post do
               minipair_signal = Service::GetMiniPairSignal.new.call(symbol)
@@ -59,16 +59,13 @@ module CryptoExpert
               Representer::MiniPair.new(minipair_signal.value!.message).to_json
             end
           end
-          # TODO: => DONE: GET /minipair => get minipair(signal) list
-          # TODO => DONE: so we need a new service to get this list
           routing.is do
             # GET /minipair?list={base64_json_array_of_minipair_symbol}
             routing.get do
-              response.cache_control public: true, max_age: 300
 
               list_req = Request::EncodedMiniPairSignalList.new(routing.params)
               result = Service::ListMiniPairs.new.call(list_request: list_req)
-
+              
               if result.failure?
                 failed = Representer::HttpResponse.new(result.failure)
                 routing.halt failed.http_status_code, failed.to_json
@@ -80,6 +77,28 @@ module CryptoExpert
             end
           end
         end
+        
+        # TODO: This service takes too long , maybe need some hint for user to wait
+        routing.on 'sortedpair' do
+          routing.is do
+            # GET /sortedpair?list={base64_json_array_of_minipair_symbol}
+            routing.get do
+
+              # list_req = Request::EncodedMiniPairSignalList.new(routing.params)
+              result = Service::ListSignalsPairs.new.call()
+              # puts "app.rb",result
+              if result.failure?
+                failed = Representer::HttpResponse.new(result.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
+
+              http_response = Representer::HttpResponse.new(result.value!)
+              response.status = http_response.http_status_code
+              Representer::MiniPairList.new(result.value!.message).to_json
+            end
+          end
+        end
+        
       end
     end
   end

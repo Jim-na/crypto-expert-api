@@ -10,7 +10,7 @@ module CryptoExpert
       include HttpApi
       BASIC_URL = 'https://api.binance.com/'
       FUTURE_URL = 'https://fapi.binance.com/'
-      TIME_INTERVAL = '1h'
+      TIME_INTERVAL = '4h'
       LIMIT = 1
 
       def initialize(token)

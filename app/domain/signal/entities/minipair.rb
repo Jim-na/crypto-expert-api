@@ -12,14 +12,17 @@ module CryptoExpert
       attribute :symbol, Strict::String
       attribute :volume_change_percent, Float.optional
       attribute :signal,                String.optional
+      attribute :signal_score,          Integer.optional
       attribute :time,                  Integer.optional
-      attribute :spot_volume, Float.optional
+      attribute :spot_volume,           Float.optional
       attribute :spot_closeprice,       Float.optional
       attribute :funding_rate,          Float.optional
       attribute :longshort_ratio,       Float.optional
       attribute :open_interest,         Float.optional
-      attribute :spot_change_percent, Float.optional
-      # TODO: price movement direction
+      attribute :spot_change_percent,   Float.optional
+      attribute :funding_rate_history,          Float.optional
+      attribute :longshort_ratio_history,       Float.optional
+      attribute :open_interest_history,         Float.optional
       # price now - history
       def to_attr_hash
         hash = to_hash.reject { |key, _| [:id].include? key }

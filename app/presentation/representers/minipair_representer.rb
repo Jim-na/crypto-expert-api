@@ -15,6 +15,7 @@ module CryptoExpert
       property :symbol
       property :volume_change_percent
       property :signal
+      property :signal_score
       property :time
       property :spot_volume
       property :spot_closeprice
@@ -22,6 +23,9 @@ module CryptoExpert
       property :longshort_ratio
       property :open_interest
       property :spot_change_percent
+      property :funding_rate_history
+      property :longshort_ratio_history
+      property :open_interest_history
 
       link :self do
         "#{App.config.API_HOST}/api/v1/minipair/#{symbol}"
