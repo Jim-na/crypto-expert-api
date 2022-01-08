@@ -75,7 +75,7 @@ module CryptoExpert
       def longshort_ratio_change
         if @data['history'].nil?
           0
-        elsif @data['now'].funding_rate > @data['history'].funding_rate
+        elsif @data['now'].funding_rate < @data['history'].funding_rate
           1
         else
           -1
