@@ -62,7 +62,6 @@ module CryptoExpert
           routing.is do
             # GET /minipair?list={base64_json_array_of_minipair_symbol}
             routing.get do
-              #response.cache_control public: true, max_age: 300
 
               list_req = Request::EncodedMiniPairSignalList.new(routing.params)
               result = Service::ListMiniPairs.new.call(list_request: list_req)
@@ -84,7 +83,6 @@ module CryptoExpert
           routing.is do
             # GET /sortedpair?list={base64_json_array_of_minipair_symbol}
             routing.get do
-              #response.cache_control public: true, max_age: 30000
 
               # list_req = Request::EncodedMiniPairSignalList.new(routing.params)
               result = Service::ListSignalsPairs.new.call()
