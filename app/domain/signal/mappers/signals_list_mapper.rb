@@ -46,7 +46,10 @@ module CryptoExpert
         
         def signals
           minipairs = @data.map do |symbol|
-            MiniPairMapper.new(symbol).get
+            #MiniPairMapper.new(symbol).get
+            val = Repository::Signals.find_symbol(symbol)
+            puts val
+            val
           end
           # puts @calculator
           @calculator.new(minipairs).get_list
