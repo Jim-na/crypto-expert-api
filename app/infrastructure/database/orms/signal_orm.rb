@@ -9,7 +9,7 @@ module CryptoExpert
       plugin :timestamps, update_on_create: true
       
       def self.create(info)
-        create(info)
+        first(symbol: info[:symbol]){time > Time.now.to_i - 14400000} || create(info)
       end
 
     end

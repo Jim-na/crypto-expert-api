@@ -65,7 +65,9 @@ module CryptoExpert
       end
 
       def funding_rate_change
-        if @data['now'].funding_rate > @data['history'].funding_rate
+        if @data['history'].nil?
+          0
+        elsif @data['now'].funding_rate > @data['history'].funding_rate
           1
         else
           -1

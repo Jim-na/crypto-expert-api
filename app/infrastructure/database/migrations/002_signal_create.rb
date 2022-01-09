@@ -11,7 +11,7 @@ Sequel.migration do
       Float       :volume_change_percent
       String      :signal
       Integer     :signal_score
-      Integer     :time
+      String      :time
       Float       :spot_volume
       Float       :spot_closeprice
       Float       :funding_rate
