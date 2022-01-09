@@ -20,7 +20,7 @@ module CryptoExpert
           volume_change_percent: db_record.volume_change_percent,
           signal: db_record.signal,
           signal_score: db_record.signal_score,
-          time: db_record.time,
+          time: db_record.time.to_i,
           spot_volume: db_record.spot_volume,
           spot_closeprice: db_record.spot_closeprice,
           funding_rate: db_record.funding_rate,
