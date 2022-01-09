@@ -9,7 +9,7 @@ module CryptoExpert
       end
 
       def self.find_symbol(symbol)
-        rebuild_entity Database::SignalOrm.first(symbol: symbol)
+        rebuild_entity Database::SignalOrm.last(symbol: symbol)
       end
 
       def self.rebuild_entity(db_record)

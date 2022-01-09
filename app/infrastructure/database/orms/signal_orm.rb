@@ -8,8 +8,8 @@ module CryptoExpert
     class SignalOrm < Sequel::Model(:signal)
       plugin :timestamps, update_on_create: true
       
-      def self.create(info)
-        first(symbol: info[:symbol]){time > Time.now.to_i - 14400000} || create(info)
+      def self.find_or_create(info)
+        last(symbol: info[:symbol]) || create(info)
       end
 
     end

@@ -9,7 +9,7 @@ module CryptoExpert
       plugin :timestamps, update_on_create: true
 
       def self.find_or_create(info)
-        first(symbol: info[:symbol]) || create(info)
+        last(symbol: info[:symbol]) || create(info)
       end
     end
   end
